@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="GameLoader">
+		<item key="password" value="123123"/>
+		<item key="sourceMountPoint" value=""/>
+		<item key="vssDataDir" value="\\192.168.6.205\flash\YJVSS"/>
+		<item key="username" value="release"/>
+		<item key="supportsMultipleCheckouts" value="false"/>
+		<item key="mountPoint" value=""/>
+		<section name="Mappings">
+			<section name="0">
+				<item key="local" value="/"/>
+				<item key="recursive" value="false"/>
+				<item key="vss" value="$/Work/GameLoader/"/>
+			</section>
+		</section>
+	</section>
+	<section name="OopsEngine">
+		<item key="password" value="123123"/>
+		<item key="sourceMountPoint" value=""/>
+		<item key="vssDataDir" value="\\192.168.6.205\flash\YJVSS"/>
+		<item key="username" value="release"/>
+		<item key="supportsMultipleCheckouts" value="false"/>
+		<item key="mountPoint" value=""/>
+		<section name="Mappings">
+			<section name="0">
+				<item key="local" value="/"/>
+				<item key="recursive" value="false"/>
+				<item key="vss" value="$/Work/OopsEngine/"/>
+			</section>
+		</section>
+	</section>
+	<section name="OopsFramework">
+		<item key="password" value="123123"/>
+		<item key="sourceMountPoint" value=""/>
+		<item key="vssDataDir" value="\\192.168.6.205\flash\YJVSS"/>
+		<item key="username" value="release"/>
+		<item key="supportsMultipleCheckouts" value="false"/>
+		<item key="mountPoint" value=""/>
+		<section name="Mappings">
+			<section name="0">
+				<item key="local" value="/"/>
+				<item key="recursive" value="false"/>
+				<item key="vss" value="$/Work/OopsFramework/"/>
+			</section>
+		</section>
+	</section>
+	<section name="VSSProviderSettings">
+		<item key="password" value=""/>
+		<item key="username" value="release"/>
+		<item key="mountPoint" value="$/Work/OopsFramework"/>
+		<list key="vssDataDir">
+			<item value="\\192.168.6.205\flash\YJVSS"/>
+		</list>
+	</section>
+	<section name="Game">
+		<item key="password" value="123123"/>
+		<item key="sourceMountPoint" value=""/>
+		<item key="vssDataDir" value="\\192.168.6.205\flash\YJVSS"/>
+		<item key="username" value="release"/>
+		<item key="supportsMultipleCheckouts" value="false"/>
+		<item key="mountPoint" value=""/>
+		<section name="Mappings">
+			<section name="0">
+				<item key="local" value="/"/>
+				<item key="recursive" value="false"/>
+				<item key="vss" value="$/Work/Game/"/>
+			</section>
+		</section>
+	</section>
+</section>

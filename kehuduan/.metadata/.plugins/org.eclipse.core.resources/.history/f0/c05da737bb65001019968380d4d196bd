@@ -1,0 +1,14 @@
+package {
+	import flash.display.Sprite;
+
+	public class Test extends Sprite
+	{
+		public function Test()
+		{
+//			var date:Date = new Date();
+//			trace ( date.month,"  "+date.day );
+			var a:String = "aaa";
+			trace( a.split("_").length );
+		}
+	}
+}

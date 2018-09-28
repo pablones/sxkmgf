@@ -1,0 +1,3 @@
+#Wed Jun 01 13:14:44 CST 2011
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<watchExpressions>\r\n<expression enabled\="true" text\="GameCommonData.SameSecnePlayerList[taskInfo.taskCommitNpcId]"/>\r\n<expression enabled\="true" text\="a"/>\r\n<expression enabled\="true" text\="ongameSkillResource"/>\r\n<expression enabled\="true" text\="animationSkill"/>\r\n</watchExpressions>\r\n
+eclipse.preferences.version=1

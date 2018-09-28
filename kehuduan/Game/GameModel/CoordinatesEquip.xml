@@ -1,0 +1,30 @@
+﻿<Root>
+   <!-- <CoordinatesEquip Id="套装编号(int)1-套装ID为0的不是套装"
+                    Count="套装装备数量(int)"
+                    Name="套装名"
+                    EId1="Properties.Id(int)"
+                    EId2=""
+                    EId3=""
+                    EId4=""
+                    EId5=""
+                    EId6=""
+                    EId7=""
+                    EId8=""
+                    CEAAId1="AppendAttribute.Id(int)"
+                    CEAAId2=""
+                    CEAAId3=""
+                    CEAAId4=""
+                    CEAAId5=""
+                    CEAAId6=""
+                    CEAAId7=""
+                    CEAAId8="" /> -->
+                    
+	<CoordinatesEquip Id="1"
+                    Count="2"
+                    Name="NB的套装"
+                    EId1="111011"
+                    EId2="121001"
+                    CEAAId1="1"
+                    CEAAId2="2"
+   					/>                    
+</Root>

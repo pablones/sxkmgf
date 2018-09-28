@@ -1,0 +1,9 @@
+#Thu Jul 07 13:11:57 CST 2011
+org.eclipse.debug.ui.switch_perspective_on_suspend=never
+pref_state_memento.org.eclipse.debug.ui.VariableView=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<VariablesViewMemento org.eclipse.debug.ui.SASH_DETAILS_PART\="299" org.eclipse.debug.ui.SASH_VIEW_PART\="700">\r\n<COLUMN_SIZES IMemento.internal.id\="org.eclipse.debug.ui.VARIALBE_COLUMN_PRESENTATION.COL_VAR_VALUE" SIZE\="307"/>\r\n<COLUMN_SIZES IMemento.internal.id\="org.eclipse.debug.ui.VARIALBE_COLUMN_PRESENTATION.COL_VAR_NAME" SIZE\="241"/>\r\n</VariablesViewMemento>
+eclipse.preferences.version=1
+preferredDetailPanes=DefaultDetailPane\:DefaultDetailPane|
+org.eclipse.debug.ui.save_dirty_editors_before_launch=always
+org.eclipse.debug.ui.PREF_LAUNCH_PERSPECTIVES=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<launchPerspectives/>\r\n
+pref_state_memento.org.eclipse.debug.ui.ExpressionView=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<VariablesViewMemento org.eclipse.debug.ui.SASH_DETAILS_PART\="241" org.eclipse.debug.ui.SASH_VIEW_PART\="758"/>
+org.eclipse.debug.ui.user_view_bindings=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<viewBindings>\r\n<view id\="org.eclipse.debug.ui.VariableView">\r\n<perspective id\="com.adobe.flexbuilder.editors.mxml.ui.perspectives.development" userAction\="opened"/>\r\n<perspective id\="com.adobe.flexbuilder.debug.ui.perspectives.debug" userAction\="closed"/>\r\n</view>\r\n<view id\="org.eclipse.debug.ui.BreakpointView">\r\n<perspective id\="com.adobe.flexbuilder.debug.ui.perspectives.debug" userAction\="opened"/>\r\n</view>\r\n<view id\="org.eclipse.ui.console.ConsoleView">\r\n<perspective id\="com.adobe.flexbuilder.editors.mxml.ui.perspectives.development" userAction\="opened"/>\r\n</view>\r\n</viewBindings>\r\n

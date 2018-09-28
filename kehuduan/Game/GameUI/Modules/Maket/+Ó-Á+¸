@@ -1,0 +1,17 @@
+1.Data包：
+	1、MarketConstData	:	商城各种数据
+	2、MarketEvent		:	商城各种事件
+
+2.Mediator包
+	1、MarketMediator	：	商城界面外部接口类
+	2、MarketPreviewMediator：预览界面类
+
+3.Proxy包
+	1、MarketGridManager	：	商城红框效果与点击购买处理
+	2、MarketNetAction	
+
+4.UI包
+	1、MarketGoodsItem	：	普通商品组件
+	2、MarketPrivilegeManager	：	特价商品组件管理类
+	3、MarketUIManager	：	商城主要的UI管理
+	4、MarketUtils		

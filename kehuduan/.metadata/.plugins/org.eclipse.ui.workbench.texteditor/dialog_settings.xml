@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="725"/>
+		<item key="DIALOG_Y_ORIGIN" value="433"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="986"/>
+		<item key="DIALOG_HEIGHT" value="330"/>
+		<item key="DIALOG_FONT_NAME" value="1|宋体|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|宋体"/>
+		<item key="DIALOG_Y_ORIGIN" value="242"/>
+		<item key="DIALOG_WIDTH" value="274"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<item key="selection" value="preventWallowView"/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<list key="findhistory">
+			<item value="preventWallowView"/>
+			<item value="gc()"/>
+			<item value="isConnectBreak"/>
+			<item value="CHANGE_MAP"/>
+			<item value="GameCommonData.GameNets"/>
+			<item value="dependenceCdTime"/>
+			<item value="3_4"/>
+			<item value="4_3"/>
+		</list>
+		<list key="replacehistory">
+			<item value="GameCommonData.wordDic"/>
+			<item value=""/>
+		</list>
+	</section>
+</section>

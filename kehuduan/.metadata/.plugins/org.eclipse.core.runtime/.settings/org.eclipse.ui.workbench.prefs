@@ -1,0 +1,6 @@
+#Mon May 30 15:19:13 CST 2011
+ColorsAndFontsPreferencePage.expandedCategories=Torg.eclipse.ui.workbenchMisc\tTorg.eclipse.debug.ui.presentation\tTorg.eclipse.jdt.ui.presentation\tTorg.eclipse.compare.contentmergeviewer.TextMergeViewer
+org.eclipse.jface.textfont=1|Courier New|9.75|0|WINDOWS|1|-13|0|0|0|400|0|0|0|0|3|2|1|49|Courier New;
+eclipse.preferences.version=1
+ENABLED_DECORATORS=com.adobe.flexbuilder.editors.common.ui.project.applicationDecorator\:true,com.adobe.flexbuilder.editors.common.ui.project.classpathDecorator\:true,org.vssplugin.ui.LabelDecorator\:true,org.eclipse.datatools.connectivity.sqm.core.internal.ui.explorer.DependencyDecoration\:true,org.eclipse.datatools.connectivity.sqm.core.internal.ui.explorer.ColumnDecoration\:true,org.eclipse.datatools.connectivity.sqm.core.internal.ui.explorer.ForeignKeyDecoration\:true,org.eclipse.datatools.connectivity.sqm.internal.core.ui.bookmarkDecoration\:true,org.eclipse.datatools.connectivity.ui.decorator.contentextension\:false,org.eclipse.jdt.ui.override.decorator\:true,org.eclipse.team.cvs.ui.decorator\:true,org.eclipse.ui.LinkedResourceDecorator\:true,
+ColorsAndFontsPreferencePage.selectedElement=Forg.eclipse.jface.textfont

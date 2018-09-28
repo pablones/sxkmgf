@@ -1,0 +1,19 @@
+package {
+	import flash.display.Sprite;
+
+	public class tttttset extends Sprite
+	{
+		public function tttttset()
+		{
+			init();
+		}
+		
+		private var obj:Object;
+		private function init():void
+		{
+			trace(obj.data);
+			obj.data = 111;
+			trace(obj.data);
+		}
+	}
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flexLibProperties version="1">
+<includeClasses>
+<classEntry path="org.puremvc.as3.multicore.core.Controller"/>
+<classEntry path="org.puremvc.as3.multicore.core.Model"/>
+<classEntry path="org.puremvc.as3.multicore.core.View"/>
+<classEntry path="org.puremvc.as3.multicore.interfaces.ICommand"/>
+<classEntry path="org.puremvc.as3.multicore.interfaces.IController"/>
+<classEntry path="org.puremvc.as3.multicore.interfaces.IFacade"/>
+<classEntry path="org.puremvc.as3.multicore.interfaces.IMediator"/>
+<classEntry path="org.puremvc.as3.multicore.interfaces.IModel"/>
+<classEntry path="org.puremvc.as3.multicore.interfaces.INotification"/>
+<classEntry path="org.puremvc.as3.multicore.interfaces.INotifier"/>
+<classEntry path="org.puremvc.as3.multicore.interfaces.IObserver"/>
+<classEntry path="org.puremvc.as3.multicore.interfaces.IProxy"/>
+<classEntry path="org.puremvc.as3.multicore.interfaces.IView"/>
+<classEntry path="org.puremvc.as3.multicore.patterns.command.MacroCommand"/>
+<classEntry path="org.puremvc.as3.multicore.patterns.command.SimpleCommand"/>
+<classEntry path="org.puremvc.as3.multicore.patterns.facade.Facade"/>
+<classEntry path="org.puremvc.as3.multicore.patterns.mediator.Mediator"/>
+<classEntry path="org.puremvc.as3.multicore.patterns.observer.Notification"/>
+<classEntry path="org.puremvc.as3.multicore.patterns.observer.Notifier"/>
+<classEntry path="org.puremvc.as3.multicore.patterns.observer.Observer"/>
+<classEntry path="org.puremvc.as3.multicore.patterns.proxy.Proxy"/>
+</includeClasses>
+<includeResources/>
+<namespaceManifests/>
+</flexLibProperties>

@@ -1,0 +1,9 @@
+图层结构
+Engine(Game->Sprite)
+  |- UI(DrawableGameComponent)
+  |- GameSceneComponent(DrawableGameComponent)
+  	 |- GameScene
+  	    |- GameSceneLayer(Sprite)					mouseEnabled = false;
+  	       |- GameElement -> EntityElement
+  	       |- GameElementAnimal
+  	          |- GameElementSkins

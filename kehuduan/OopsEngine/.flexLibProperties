@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="false" useMultiPlatformConfig="false" version="1">
+  <includeClasses>
+    <classEntry path="OopsEngine.Utils.IO.Binary"/>
+    <classEntry path="OopsEngine.Skill.JobGameSkill"/>
+    <classEntry path="OopsEngine.Scene.StrategyElement.Person.GameElementMountData"/>
+    <classEntry path="OopsEngine.Scene.StrategyScene.GameSceneEdit"/>
+    <classEntry path="OopsEngine.Graphics.Animation.AnimationPlayer"/>
+    <classEntry path="OopsEngine.Scene.StrategyElement.Person.GameElementEnemy"/>
+    <classEntry path="OopsEngine.Scene.StrategyElement.Person.GameElementPet"/>
+    <classEntry path="OopsEngine.Exception.ExceptionResources"/>
+    <classEntry path="OopsEngine.Scene.StrategyElement.Person.GameElementEnemyAnimation"/>
+    <classEntry path="OopsEngine.Scene.GameSceneConfig"/>
+    <classEntry path="OopsEngine.AI.PathFinder.MapTileModel"/>
+    <classEntry path="OopsEngine.Role.AdditionalAtt"/>
+    <classEntry path="OopsEngine.Scene.StrategyElement.GameElementAnimal"/>
+    <classEntry path="OopsEngine.Scene.StrategyElement.GameElementData"/>
+    <classEntry path="OopsEngine.Skill.GameSkillMode"/>
+    <classEntry path="OopsEngine.Graphics.Font"/>
+    <classEntry path="OopsEngine.Scene.StrategyElement.Person.GameElementNPC"/>
+    <classEntry path="OopsEngine.Scene.CommonData"/>
+    <classEntry path="OopsEngine.Graphics.Draw"/>
+    <classEntry path="OopsEngine.AI.PathFinder.AStar"/>
+    <classEntry path="OopsEngine.Skill.GameSkillLevel"/>
+    <classEntry path="OopsEngine.Utils.RandomUtility"/>
+    <classEntry path="OopsEngine.Skill.SkillAnimation"/>
+    <classEntry path="OopsEngine.Scene.StrategyElement.Person.GameElementEnemySkin"/>
+    <classEntry path="OopsEngine.Graphics.Animation.AnimationEventArgs"/>
+    <classEntry path="OopsEngine.Utils.Vector2"/>
+    <classEntry path="OopsEngine.Role.Appellation"/>
+    <classEntry path="OopsEngine.AI.PathFinder.IMapTileModel"/>
+    <classEntry path="OopsEngine.Scene.StrategyElement.Person.GameElementBanner"/>
+    <classEntry path="OopsEngine.Utils.ArrayUtility"/>
+    <classEntry path="OopsEngine.Scene.StrategyElement.Person.GameElementPlayerSkin"/>
+    <classEntry path="OopsEngine.AI.MapPathFinder.MapNode"/>
+    <classEntry path="OopsEngine.Scene.StrategyElement.Person.GameElementNPCData"/>
+    <classEntry path="OopsEngine.Role.SkinNameController"/>
+    <classEntry path="OopsEngine.Utils.IO.BinaryData"/>
+    <classEntry path="OopsEngine.Skill.GameSkillBuff"/>
+    <classEntry path="OopsEngine.Scene.StrategyElement.Person.GameElementTernalAnimation"/>
+    <classEntry path="OopsEngine.Skill.GameSkillData"/>
+    <classEntry path="OopsEngine.Utils.SmoothMove"/>
+    <classEntry path="OopsEngine.GameComponents.FpsComponent"/>
+    <classEntry path="OopsEngine.Scene.GameScene"/>
+    <classEntry path="OopsEngine.Engine"/>
+    <classEntry path="OopsEngine.Role.GameRole"/>
+    <classEntry path="OopsEngine.Scene.StrategyElement.Person.GameElementStall"/>
+    <classEntry path="OopsEngine.Scene.GameSceneLayer"/>
+    <classEntry path="OopsEngine.Role.RoleJob"/>
+    <classEntry path="OopsEngine.Scene.StrategyElement.Person.GameElementPlayerAnimation"/>
+    <classEntry path="OopsEngine.Scene.StrategyElement.Person.GameElementPlayer"/>
+    <classEntry path="OopsEngine.Scene.Handler"/>
+    <classEntry path="OopsEngine.Skill.WeirdyGameSkill"/>
+    <classEntry path="OopsEngine.Skill.GameSkillResource"/>
+    <classEntry path="OopsEngine.Scene.StrategyElement.Person.GameElementEnemyData"/>
+    <classEntry path="OopsEngine.Skill.GameSkillEffect"/>
+    <classEntry path="OopsEngine.Role.GamePetRole"/>
+    <classEntry path="OopsEngine.Scene.GameSceneBackground"/>
+    <classEntry path="OopsEngine.Graphics.Animation.AnimationClip"/>
+    <classEntry path="OopsEngine.Scene.StrategyElement.Person.GameElementNPCSkin"/>
+    <classEntry path="OopsEngine.GameComponents.UIComponent"/>
+    <classEntry path="OopsEngine.Utils.MathUtility"/>
+    <classEntry path="OopsEngine.Scene.StrategyElement.GameElementSkins"/>
+    <classEntry path="OopsEngine.Scene.GameElement"/>
+    <classEntry path="OopsEngine.Skill.GameSkill"/>
+    <classEntry path="OopsEngine.Role.ChangeSkinInfo"/>
+    <classEntry path="OopsEngine.AI.MapPathFinder.MapFinder"/>
+    <classEntry path="OopsEngine.Graphics.Animation.AnimationFrame"/>
+    <classEntry path="OopsEngine.Scene.StrategyScene.GameScenePlay"/>
+    <classEntry path="OopsEngine.Skill.GameAudioResource"/>
+    <classEntry path="OopsEngine.Scene.StrategyElement.Person.GameElementPlayerData"/>
+    <classEntry path="OopsEngine.Scene.GameSceneComponent"/>
+    <classEntry path="OopsEngine.Entity.EntityElement"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>

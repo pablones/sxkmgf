@@ -1,0 +1,7 @@
+<Root>
+  <!-- <AppendAttribute Id="附加属性编号(int)1"  TypeId="附加属性类型(int)" Name="附加属性名(string)例：力量" Value="附加属性数值(int)" /> -->
+  <AppendAttribute Id="1"  TypeId="1" Name="力量" Value="12" />
+  <AppendAttribute Id="2"  TypeId="1" Name="体力" Value="112" />
+  <AppendAttribute Id="3"  TypeId="1" Name="定力" Value="12" />
+  <AppendAttribute Id="4"  TypeId="1" Name="身法" Value="112" />
+</Root>

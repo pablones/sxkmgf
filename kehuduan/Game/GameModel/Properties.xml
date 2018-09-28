@@ -1,0 +1,142 @@
+﻿<Root>
+		<!--
+			id  //物品ID
+			Name //物品名称
+			Job //职业限制
+			Sex //性别限制
+			UseType //使用类型(物品类型)
+			Level //等级限制
+			UpperLimit //物品上限 装备持久
+			Time		//使用时间限制
+			HP			//药品加血
+			MP			//药品加蓝
+			SP			//药品加怒气
+			AAId1		//装备附加属性
+			Registering	//套装ID
+			Effect		//使用效果说明
+			BaseId1		//基本属性
+			PriceIn		//买入价格
+		    PriceOut	//卖出价格
+		 -->
+  		<Properties Id="1"
+	              TypeId="300001"
+	              Name="小瓶血药"
+	              Job="0"
+	              Sex="0"
+	              UseType="药品"
+	              Level="1"
+	              UpperLimit="100"
+	              Time="1"
+	              HP="1000"
+	              MP="0"
+	              SP="0"
+		      PriceIn="100"
+		      PriceOut="100"
+	             >
+	   			使用后恢复1000点生命
+	  	</Properties>
+	  	<Properties Id="1"
+	              TypeId="111011"
+	              Name="测试护肩"
+	              Job="0"
+	              Sex="0"
+	              UseType="护肩"
+	              Level="1"
+	              UpperLimit="10000"
+	              Time="1"
+	              Registering="1"
+			BaseId1="10100"
+              	      BaseId2="20100"
+	              AAId1="0"
+              	  	AAId2="0"
+              	  AAId3="0"
+              	  AAId4="0"
+			 Effect="使用后获得10点金币"
+			PriceIn="100"
+		      PriceOut="100"
+	             >
+	   			这个是个非常NB的装备
+	  	</Properties>
+	  	<Properties Id="1"
+	              TypeId="121001"
+	              Name="测试上衣"
+	              Job="0"
+	              Sex="2"
+	              UseType="上衣"
+	              Level="1"
+	              UpperLimit="10000"
+	              Time="1"
+	              Registering="1"
+			BaseId1="30100"
+              	      BaseId2="40100"
+	              AAId1="0"
+              	 AAId2="0"
+		PriceIn="100"
+		      PriceOut="100"
+	             >
+	   			这个是个非常NB的装备
+	  	</Properties> 
+	  	<Properties Id="1"
+	              TypeId="141001"
+	              Name="测试武器"
+	              Job="0"
+	              Sex="1"
+	              UseType="武器"
+	              Level="1"
+	              UpperLimit="10000"
+	              Time="1"
+	              Registering="0"
+			BaseId1="70100"
+              	      BaseId2="80100"
+	              AAId1="0"
+              	  AAId2="0"
+			PriceIn="100"
+		      PriceOut="100"
+	             >
+	   			这个是个非常NB的装备
+	  	</Properties> 
+	  	<Properties Id="1"
+	              TypeId="131001"
+	              Name="测试头盔"
+	              Job="0"
+	              Sex="1"
+	              UseType="头盔"
+	              Level="1"
+	              UpperLimit="10000"
+	              Time="1"
+	              Registering="0"
+			BaseId1="50100"
+              	      BaseId2="60100"
+	              AAId1="0"
+              	      AAId2="0"
+			PriceIn="100"
+		      PriceOut="100"
+	             >
+	   			这个是个非常NB的装备,绝对NB
+	  	</Properties>
+		<Properties Id="1"
+	              TypeId="230501"
+	              Name="测试少林时装"
+	              Job="0"
+	              Sex="1"
+	              UseType="时装"
+	              Level="1"
+	              UpperLimit="10000"
+	              Time="1"
+	              Registering="0"
+			BaseId1="10090"
+              	      BaseId2="20090"
+	              AAId1="0"
+              	      AAId2="0"
+			PriceIn="100"
+		      PriceOut="100"
+	             >
+	   			这个是个非常NB的装备,绝对NB
+	  	</Properties>   
+	  	<Properties Id="1"
+	              TypeId="999998"
+	              AAId1="1"
+              	  AAId2="2"
+	             >
+	  	</Properties>  
+</Root>

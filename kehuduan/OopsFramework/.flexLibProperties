@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="false" useMultiPlatformConfig="false" version="1">
+  <includeClasses>
+    <classEntry path="OopsFramework.Content.SmartURL"/>
+    <classEntry path="OopsFramework.Content.ContentManager"/>
+    <classEntry path="OopsFramework.Content.ContentTypeReader"/>
+    <classEntry path="OopsFramework.Collections.ArrayCollection"/>
+    <classEntry path="OopsFramework.Content.Loading.VideoItem"/>
+    <classEntry path="OopsFramework.Utils.Timer"/>
+    <classEntry path="OopsFramework.Utils.Type"/>
+    <classEntry path="OopsFramework.IGameComponent"/>
+    <classEntry path="OopsFramework.Content.Loading.URLItem"/>
+    <classEntry path="OopsFramework.Audio.AudioEngine"/>
+    <classEntry path="OopsFramework.Content.Loading.BulkLoader"/>
+    <classEntry path="OopsFramework.IDisposable"/>
+    <classEntry path="OopsFramework.Content.ContentCache"/>
+    <classEntry path="OopsFramework.Exception.ExceptionResources"/>
+    <classEntry path="OopsFramework.Debug.TraceAppender"/>
+    <classEntry path="OopsFramework.DrawableGameComponent"/>
+    <classEntry path="OopsFramework.Debug.Logger"/>
+    <classEntry path="OopsFramework.Content.Loading.SmartURL"/>
+    <classEntry path="OopsFramework.Net.BaseSocketEvent"/>
+    <classEntry path="OopsFramework.Debug.LogEntry"/>
+    <classEntry path="OopsFramework.Content.Loading.BulkProgressEvent"/>
+    <classEntry path="OopsFramework.Content.Loading.ImageItem"/>
+    <classEntry path="OopsFramework.GameComponent"/>
+    <classEntry path="OopsFramework.Content.Provider.BulkLoaderResourceProvider"/>
+    <classEntry path="OopsFramework.Collections.DictionaryCollection"/>
+    <classEntry path="OopsFramework.Net.BaseHttp"/>
+    <classEntry path="OopsFramework.Content.Loading.XMLItem"/>
+    <classEntry path="OopsFramework.Content.Loading.BinaryItem"/>
+    <classEntry path="OopsFramework.IDrawable"/>
+    <classEntry path="OopsFramework.Content.Provider.ResourceProvider"/>
+    <classEntry path="OopsFramework.Game"/>
+    <classEntry path="OopsFramework.IUpdateable"/>
+    <classEntry path="OopsFramework.Debug.ILogAppender"/>
+    <classEntry path="OopsFramework.Net.BaseSocket"/>
+    <classEntry path="OopsFramework.Content.Provider.IResourceProvider"/>
+    <classEntry path="OopsFramework.GameTime"/>
+    <classEntry path="OopsFramework.Content.Loading.SoundItem"/>
+    <classEntry path="OopsFramework.Memory"/>
+    <classEntry path="OopsFramework.Content.Loading.LoadingItem"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>

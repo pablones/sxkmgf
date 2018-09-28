@@ -1,0 +1,8 @@
+﻿<Root>
+	<E Id="1" Title="蘑菇点点" Swf="1" Dir="7" X="108" Y="24" />
+  <E Id="2" Title="洋葱头" Swf="1" Dir="9" X="108" Y="24" />
+  <E Id="3" Title="包子" Swf="2" Dir="7" X="108" Y="24" />
+  <E Id="4" Title="免斯基" Swf="2" Dir="9" X="108" Y="20" />
+  <E Id="5" Title="泡泡兵" Swf="3" Dir="7" X="108" Y="20" /> 
+	<E Id="6" Title="小白狐" Swf="3" Dir="9" X="108" Y="20" />
+</Root>

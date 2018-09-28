@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench version="2.0">
+<workbenchAdvisor/>
+<window height="738" maximized="true" width="1024" x="74" y="-3">
+<fastViewData fastViewLocation="1024">
+<orientation position="512" view="com.adobe.flexbuilder.editors.mxml.states.StatesView"/>
+<orientation position="512" view="org.eclipse.debug.ui.VariableView"/>
+</fastViewData>
+<perspectiveBar>
+<itemSize x="364"/>
+</perspectiveBar>
+<coolbarLayout locked="0">
+<coolItem id="group.file" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="129" y="22"/>
+<coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="191" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="39" y="22"/>
+<coolItem id="group.nav" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="183" y="22"/>
+<coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.compare.CompareEditor" itemType="typePlaceholder" x="85" y="22"/>
+<coolItem id="com.adobe.flexbuilder.editors.mxml.MXMLEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="group.help" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+</coolbarLayout>
+<page aggregateWorkingSetId="Aggregate for window 1301570993875" focus="true" label="Workspace - Flex Debugging">
+<editors>
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
+<part id="11"/>
+<part id="12"/>
+<part id="13"/>
+<part id="14"/>
+<part id="15"/>
+<part id="16"/>
+</presentation>
+</folder>
+</info>
+</editorArea>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="Game.as" partName="Game.as" path="D:/附魔版本/Game/Game.as" title="Game.as" tooltip="Game/Game.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Game/Game.as"/>
+<editorState selectionHPixel="0" selectionLength="0" selectionOffset="1567"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="GameCommonData.as" partName="GameCommonData.as" path="D:/附魔版本/Game/GameCommonData.as" title="GameCommonData.as" tooltip="Game/GameCommonData.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Game/GameCommonData.as"/>
+<editorState selectionHPixel="0" selectionLength="0" selectionOffset="10164"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="OtherMediator.as" partName="OtherMediator.as" path="D:/附魔版本/Game/GameUI/Modules/RoleProperty/Mediator/OtherMediator.as" title="OtherMediator.as" tooltip="Game/GameUI/Modules/RoleProperty/Mediator/OtherMediator.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Game/GameUI/Modules/RoleProperty/Mediator/OtherMediator.as"/>
+<editorState selectionHPixel="0" selectionLength="0" selectionOffset="1040"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="CloseAllViewCommand.as" partName="CloseAllViewCommand.as" path="D:/附魔版本/Game/GameUI/Command/CloseAllViewCommand.as" title="CloseAllViewCommand.as" tooltip="Game/GameUI/Command/CloseAllViewCommand.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Game/GameUI/Command/CloseAllViewCommand.as"/>
+<editorState selectionHPixel="0" selectionLength="0" selectionOffset="927"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="UIUtils.as" partName="UIUtils.as" path="D:/附魔版本/Game/GameUI/UIUtils.as" title="UIUtils.as" tooltip="Game/GameUI/UIUtils.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Game/GameUI/UIUtils.as"/>
+<editorState selectionHPixel="0" selectionLength="0" selectionOffset="4754"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="AlertMediator.as" partName="AlertMediator.as" path="D:/附魔版本/Game/GameUI/Modules/Alert/AlertMediator.as" title="AlertMediator.as" tooltip="Game/GameUI/Modules/Alert/AlertMediator.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Game/GameUI/Modules/Alert/AlertMediator.as"/>
+<editorState selectionHPixel="0" selectionLength="0" selectionOffset="5469"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="UseItemCommand.as" partName="UseItemCommand.as" path="D:/附魔版本/Game/GameUI/Modules/Bag/Command/UseItemCommand.as" title="UseItemCommand.as" tooltip="Game/GameUI/Modules/Bag/Command/UseItemCommand.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Game/GameUI/Modules/Bag/Command/UseItemCommand.as"/>
+<editorState selectionHPixel="0" selectionLength="0" selectionOffset="6838"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="BagData.as" partName="BagData.as" path="D:/附魔版本/Game/GameUI/Modules/Bag/Proxy/BagData.as" title="BagData.as" tooltip="Game/GameUI/Modules/Bag/Proxy/BagData.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Game/GameUI/Modules/Bag/Proxy/BagData.as"/>
+<editorState selectionHPixel="0" selectionLength="0" selectionOffset="12823"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="GridManager.as" partName="GridManager.as" path="D:/附魔版本/Game/GameUI/Modules/Bag/Proxy/GridManager.as" title="GridManager.as" tooltip="Game/GameUI/Modules/Bag/Proxy/GridManager.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Game/GameUI/Modules/Bag/Proxy/GridManager.as"/>
+<editorState selectionHPixel="0" selectionLength="0" selectionOffset="417"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="NewerHelpUIMediaror.as" partName="NewerHelpUIMediaror.as" path="D:/附魔版本/Game/GameUI/Modules/NewerHelp/Mediator/NewerHelpUIMediaror.as" title="NewerHelpUIMediaror.as" tooltip="Game/GameUI/Modules/NewerHelp/Mediator/NewerHelpUIMediaror.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Game/GameUI/Modules/NewerHelp/Mediator/NewerHelpUIMediaror.as"/>
+<editorState selectionHPixel="0" selectionLength="0" selectionOffset="683"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="DialogConstData.as" partName="DialogConstData.as" path="D:/附魔版本/Game/GameUI/Modules/NPCChat/Proxy/DialogConstData.as" title="DialogConstData.as" tooltip="Game/GameUI/Modules/NPCChat/Proxy/DialogConstData.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Game/GameUI/Modules/NPCChat/Proxy/DialogConstData.as"/>
+<editorState selectionHPixel="0" selectionLength="0" selectionOffset="419"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="NPCShopMediator.as" partName="NPCShopMediator.as" path="D:/附魔版本/Game/GameUI/Modules/NPCShop/Mediator/NPCShopMediator.as" title="NPCShopMediator.as" tooltip="Game/GameUI/Modules/NPCShop/Mediator/NPCShopMediator.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Game/GameUI/Modules/NPCShop/Mediator/NPCShopMediator.as"/>
+<editorState selectionHPixel="0" selectionLength="0" selectionOffset="852"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="IntroConst.as" partName="IntroConst.as" path="D:/附魔版本/Game/GameUI/Modules/ToolTip/Const/IntroConst.as" title="IntroConst.as" tooltip="Game/GameUI/Modules/ToolTip/Const/IntroConst.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Game/GameUI/Modules/ToolTip/Const/IntroConst.as"/>
+<editorState selectionHPixel="0" selectionLength="0" selectionOffset="21691"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="ToolTipUtil.as" partName="ToolTipUtil.as" path="D:/附魔版本/Game/GameUI/Modules/ToolTip/Mediator/ToolTipUtils/ToolTipUtil.as" title="ToolTipUtil.as" tooltip="Game/GameUI/Modules/ToolTip/Mediator/ToolTipUtils/ToolTipUtil.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Game/GameUI/Modules/ToolTip/Mediator/ToolTipUtils/ToolTipUtil.as"/>
+<editorState selectionHPixel="0" selectionLength="0" selectionOffset="29163"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="NewUnityContributeMediator.as" partName="NewUnityContributeMediator.as" path="D:/附魔版本/Game/GameUI/Modules/UnityNew/Mediator/NewUnityContributeMediator.as" title="NewUnityContributeMediator.as" tooltip="Game/GameUI/Modules/UnityNew/Mediator/NewUnityContributeMediator.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Game/GameUI/Modules/UnityNew/Mediator/NewUnityContributeMediator.as"/>
+<editorState selectionHPixel="0" selectionLength="0" selectionOffset="670"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="PlayerAction.as" partName="PlayerAction.as" path="D:/附魔版本/Game/Net/ActionProcessor/PlayerAction.as" title="PlayerAction.as" tooltip="Game/Net/ActionProcessor/PlayerAction.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Game/Net/ActionProcessor/PlayerAction.as"/>
+<editorState selectionHPixel="0" selectionLength="0" selectionOffset="16560"/>
+</editor>
+<editor activePart="true" focus="true" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="GameLoader.as" partName="GameLoader.as" path="D:/附魔版本/GameLoader/GameLoader.as" title="GameLoader.as" tooltip="GameLoader/GameLoader.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GameLoader/GameLoader.as"/>
+<editorState selectionHPixel="0" selectionLength="0" selectionOffset="11116"/>
+</editor>
+</editors>
+<views>
+<view id="org.eclipse.debug.ui.ExpressionView" partName="Expressions"/>
+<view id="com.adobe.flash.profiler.ext.ui.MemoryUsageGraph:1" partName="Memory Usage">
+<viewState/>
+</view>
+<view id="org.eclipse.debug.ui.VariableView" partName="Variables">
+<viewState/>
+</view>
+<view id="org.eclipse.debug.ui.DebugView" partName="Debug">
+<viewState/>
+</view>
+<view id="com.adobe.flash.profiler.ext.ui.MemoryUsageGraph:0" partName="Memory Usage">
+<viewState/>
+</view>
+<view id="com.adobe.flash.profiler.ui.LiveObjects:1" partName="Live Objects">
+<viewState/>
+</view>
+<view id="com.adobe.flash.profiler.ui.OfflineMonitor" partName="Saved Profiling Data"/>
+<view id="org.eclipse.search.ui.views.SearchView" partName="Search">
+<viewState isPinned="false">
+<view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
+</viewState>
+</view>
+<view id="org.eclipse.ui.views.ProgressView" partName="Progress">
+<viewState/>
+</view>
+<view id="org.eclipse.team.ui.GenericHistoryView" partName="History">
+<viewState/>
+</view>
+<view id="com.adobe.flexbuilder.navigator" partName="Flex Navigator ">
+<viewState LINK_NAVIGATOR_TO_EDITOR="0" sorter="1">
+<filters>
+<filter element=".flexProperties" isEnabled="true"/>
+<filter element=".actionScriptProperties" isEnabled="true"/>
+<filter element=".project" isEnabled="true"/>
+<filter element=".settings" isEnabled="true"/>
+<filter element=".flexLibProperties" isEnabled="true"/>
+<filter element=".DS_Store" isEnabled="true"/>
+<filter element=".*" isEnabled="false"/>
+<filter element="*.class" isEnabled="false"/>
+<filter element="*.scc" isEnabled="true"/>
+</filters>
+<expanded>
+<element path="/Game"/>
+<element path="/Game/Swc"/>
+<element path="/Game/UIComponentLib"/>
+<element path="/GameLoader"/>
+<element path="/OopsEngine"/>
+<element path="/OopsFramework"/>
+<element path="/OopsFramework/OopsFramework"/>
+</expanded>
+<selection>
+<element path="/GameLoader/GameLoader.as"/>
+</selection>
+</viewState>
+</view>
+<view id="com.adobe.flash.profiler.ui.LiveObjects:0" partName="Live Objects">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
+<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
+<viewState>
+<isTrackingSelection value="false"/>
+</viewState>
+</view>
+<view id="com.adobe.flash.profiler.ui.Monitor" partName="Profile">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.ProblemView" partName="Problems">
+<viewState columnWidth0="1645" columnWidth1="163" columnWidth2="293" columnWidth3="63" columnWidth4="0" horizontalPosition="0" verticalPosition="0">
+<columnOrder columnOrderIndex="0"/>
+<columnOrder columnOrderIndex="1"/>
+<columnOrder columnOrderIndex="2"/>
+<columnOrder columnOrderIndex="3"/>
+<columnOrder columnOrderIndex="4"/>
+</viewState>
+</view>
+</views>
+<perspectives activePart="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" activePerspective="com.adobe.flexbuilder.debug.ui.perspectives.debug">
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="com.adobe.flexbuilder.editors.mxml.ui.perspectives.DevelopmentPerspectiveFactory" id="com.adobe.flexbuilder.editors.mxml.ui.perspectives.development" label="Flex Development"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.dbwizard.actionSet"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.editors.common.modeswitch"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.standalone.navigate"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.upgrade"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.ui.OpenStartPage"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.ws.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.WorkingSetActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.update.ui.softwareUpdates"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.standalone.launch"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.zzz.editors.common.ui.project.publish"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.editors.actionscript.ui.NavigationActions"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
+<show_view_action id="com.adobe.flexbuilder.editors.mxml.components.ComponentsView"/>
+<show_view_action id="com.adobe.flexbuilder.editors.mxml.inspector.view.PropertiesView"/>
+<show_view_action id="com.adobe.flexbuilder.editors.mxml.states.StatesView"/>
+<show_view_action id="com.adobe.flexbuilder.navigator"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.mxml.ui.wizards.NewMXMLApplication"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.mxml.ui.wizards.NewMXMLComponent"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.mxml.ui.wizards.NewMXMLModule"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.actionscript.wizards.NewActionScriptFile.flex"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.actionscript.classWizard.flex"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.actionscript.interfaceWizard.flex"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.css.wizards.NewCSSFile"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.common.ui.project.wizards.newproject"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.common.ui.project.wizards.NewActionScriptProjectWizard"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.common.ui.project.wizards.FlexLibraryProjectWizard"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<perspective_action id="com.adobe.flexbuilder.editors.mxml.ui.perspectives.development"/>
+<perspective_action id="com.adobe.flexbuilder.debug.ui.perspectives.debug"/>
+<perspective_action id="com.adobe.flash.profiler.ui.ProfilingPerspective"/>
+<view id="com.adobe.flexbuilder.navigator"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.search.ui.views.SearchView"/>
+<view id="org.eclipse.ui.views.ProgressView"/>
+<view id="org.eclipse.team.ui.GenericHistoryView"/>
+<view id="org.eclipse.debug.ui.VariableView"/>
+<view id="org.eclipse.debug.ui.DebugView"/>
+<fastViewBars/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.ui.internal.ViewStack@5de82a">&#x0A;<folder activePageID="com.adobe.flexbuilder.navigator" appearance="2" expanded="2">&#x0A;<page content="com.adobe.flexbuilder.navigator" label="Flex Navigator "/>
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33">&#x0A;<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="756" ratioRight="252" relationship="2" relative="org.eclipse.ui.internal.ViewStack@5de82a">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.23690037" ratioLeft="321" ratioRight="1034" relationship="2" relative="org.eclipse.ui.internal.ViewStack@5de82a"/>
+<info part="com.adobe.flexbuilder.editors.mxml.states.StatesView" ratio="0.64931846" ratioLeft="524" ratioRight="283" relationship="2" relative="org.eclipse.ui.editorss"/>
+<info part="com.adobe.flexbuilder.editors.mxml.inspector.view.PropertiesView" ratio="0.24929972" ratioLeft="178" ratioRight="536" relationship="4" relative="com.adobe.flexbuilder.editors.mxml.states.StatesView"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1ecd95f" ratio="0.7863158" ratioLeft="747" ratioRight="203" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="com.adobe.flexbuilder.editors.mxml.components.ComponentsView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1badeb1" ratio="0.8174603" ratioLeft="515" ratioRight="115" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
+<page content="org.eclipse.ui.views.ProgressView" label="Progress"/>
+<page content="org.eclipse.team.ui.GenericHistoryView" label="History"/>
+<presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33">&#x0A;<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@50a1d5" ratio="0.7167798" ratioLeft="739" ratioRight="292" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33">&#x0A;<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="com.adobe.flexbuilder.debug.ui.perspectives.FlexDebugPerspectiveFactory" id="com.adobe.flexbuilder.debug.ui.perspectives.debug" label="Flex Debugging"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.dbwizard.actionSet"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.editors.common.modeswitch"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.standalone.navigate"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.upgrade"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.ui.OpenStartPage"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.ws.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.WorkingSetActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.update.ui.softwareUpdates"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.standalone.launch"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.zzz.editors.common.ui.project.publish"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.editors.actionscript.ui.NavigationActions"/>
+<show_view_action id="org.eclipse.debug.ui.VariableView"/>
+<show_view_action id="org.eclipse.debug.ui.BreakpointView"/>
+<show_view_action id="org.eclipse.debug.ui.ExpressionView"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.debug.ui.DebugView"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="com.adobe.flexbuilder.editors.mxml.components.ComponentsView"/>
+<show_view_action id="com.adobe.flexbuilder.editors.mxml.inspector.view.PropertiesView"/>
+<show_view_action id="com.adobe.flexbuilder.editors.mxml.states.StatesView"/>
+<show_view_action id="com.adobe.flexbuilder.navigator"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.mxml.ui.wizards.NewMXMLApplication"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.mxml.ui.wizards.NewMXMLComponent"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.mxml.ui.wizards.NewMXMLModule"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.actionscript.wizards.NewActionScriptFile.flex"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.actionscript.classWizard.flex"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.actionscript.interfaceWizard.flex"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.css.wizards.NewCSSFile"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.common.ui.project.wizards.newproject"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.common.ui.project.wizards.NewActionScriptProjectWizard"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.common.ui.project.wizards.FlexLibraryProjectWizard"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<perspective_action id="com.adobe.flexbuilder.editors.mxml.ui.perspectives.development"/>
+<perspective_action id="com.adobe.flexbuilder.debug.ui.perspectives.debug"/>
+<perspective_action id="com.adobe.flash.profiler.ui.ProfilingPerspective"/>
+<view id="com.adobe.flexbuilder.navigator"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.search.ui.views.SearchView"/>
+<view id="org.eclipse.ui.views.ProgressView"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.debug.ui.DebugView"/>
+<view id="com.adobe.flash.profiler.ui.Monitor"/>
+<fastViewBars>
+<fastViewBar fastViewLocation="131072" id="org.eclipse.ui.internal.ViewStack@11b5077" orientation="256" selectedTabId="org.eclipse.debug.ui.BreakpointView" style="0">
+<fastViews>
+<view id="org.eclipse.debug.ui.ExpressionView" ratio="0.3"/>
+<view id="org.eclipse.debug.ui.BreakpointView" ratio="0.2985782"/>
+</fastViews>
+</fastViewBar>
+</fastViewBars>
+<layout>
+<mainWindow>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@697697">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.VariableView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33"/>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="1434" ratioRight="478" relationship="2" relative="org.eclipse.ui.internal.ViewStack@697697">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@11b5077" ratio="0.17921686" ratioLeft="238" ratioRight="1090" relationship="2" relative="org.eclipse.ui.internal.ViewStack@697697">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
+<page content="org.eclipse.debug.ui.BreakpointView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@360771" ratio="0.65873015" ratioLeft="415" ratioRight="215" relationship="4" relative="org.eclipse.ui.internal.ViewStack@11b5077">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
+<page content="org.eclipse.ui.views.ProgressView" label="Progress"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<page content="com.adobe.flash.profiler.ui.Monitor" label="Profile"/>
+<page content="org.eclipse.team.ui.GenericHistoryView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+</presentation>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="128" ratioRight="384" relationship="4" relative="org.eclipse.ui.internal.ViewStack@11b5077"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@6b0d2" ratio="0.49921012" ratioLeft="316" ratioRight="317" relationship="4" relative="org.eclipse.ui.internal.ViewStack@697697">
+<folder activePageID="com.adobe.flexbuilder.navigator" appearance="2" expanded="2">
+<page content="com.adobe.flexbuilder.navigator" label="Flex Navigator "/>
+<presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="0" fixed="0" version="0.016">
+<descriptor class="com.adobe.flash.profiler.ui.PerspectiveFactory" id="com.adobe.flash.profiler.ui.ProfilingPerspective" label="Flex Profiling"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.dbwizard.actionSet"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.editors.common.modeswitch"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.standalone.navigate"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.upgrade"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.ui.OpenStartPage"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.ws.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.WorkingSetActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.update.ui.softwareUpdates"/>
+<alwaysOnActionSet id="com.adobe.flash.profiler.ui.ProfileActionSet"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.standalone.launch"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<show_view_action id="com.adobe.flash.profiler.ui.Monitor"/>
+<show_view_action id="com.adobe.flash.profiler.ui.OfflineMonitor"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="com.adobe.flexbuilder.editors.mxml.components.ComponentsView"/>
+<show_view_action id="com.adobe.flexbuilder.editors.mxml.inspector.view.PropertiesView"/>
+<show_view_action id="com.adobe.flexbuilder.editors.mxml.states.StatesView"/>
+<show_view_action id="com.adobe.flexbuilder.navigator"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.mxml.ui.wizards.NewMXMLApplication"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.mxml.ui.wizards.NewMXMLComponent"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.mxml.ui.wizards.NewMXMLModule"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.actionscript.wizards.NewActionScriptFile.flex"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.actionscript.classWizard.flex"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.actionscript.interfaceWizard.flex"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.css.wizards.NewCSSFile"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.common.ui.project.wizards.newproject"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.common.ui.project.wizards.NewActionScriptProjectWizard"/>
+<new_wizard_action id="com.adobe.flexbuilder.editors.common.ui.project.wizards.FlexLibraryProjectWizard"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<perspective_action id="com.adobe.flexbuilder.editors.mxml.ui.perspectives.development"/>
+<perspective_action id="com.adobe.flexbuilder.debug.ui.perspectives.debug"/>
+<perspective_action id="com.adobe.flash.profiler.ui.ProfilingPerspective"/>
+<view id="com.adobe.flash.profiler.ui.Monitor"/>
+<view id="com.adobe.flash.profiler.ui.OfflineMonitor"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="com.adobe.flash.profiler.ext.ui.MemoryUsageGraph:0"/>
+<view id="com.adobe.flash.profiler.ext.ui.MemoryUsageGraph:1"/>
+<view id="com.adobe.flash.profiler.ui.LiveObjects:0"/>
+<view id="com.adobe.flash.profiler.ui.LiveObjects:1"/>
+<fastViewBars/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="ProfileTopLeft">&#x0A;<folder activePageID="com.adobe.flash.profiler.ui.Monitor" appearance="2" expanded="2">&#x0A;<page content="com.adobe.flash.profiler.ui.Monitor" label="Profile"/>
+<page content="com.adobe.flash.profiler.ui.OfflineMonitor" label="Saved Profiling Data"/>
+<presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33">&#x0A;<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.7498122" ratioLeft="998" ratioRight="333" relationship="2" relative="ProfileTopLeft">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.24960506" ratioLeft="158" ratioRight="475" relationship="4" relative="ProfileTopLeft"/>
+<info folder="true" part="ProfileBottom" ratio="0.6" ratioLeft="285" ratioRight="190" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="com.adobe.flash.profiler.ui.LiveObjects:1" appearance="2" expanded="2">&#x0A;<page content="com.adobe.flash.profiler.ui.LiveObjects:0" label="Live Objects"/>
+<page content="com.adobe.flash.profiler.ui.LiveObjects:1" label="Live Objects"/>
+<page content="com.adobe.flash.profiler.ui.LiveObjects:*" label="LabelNotFound"/>
+<page content="com.adobe.flash.profiler.ui.PerformanceProfile:*" label="LabelNotFound"/>
+<page content="com.adobe.flash.profiler.ui.MethodStats:*" label="LabelNotFound"/>
+<page content="com.adobe.flash.profiler.ui.ObjectStats:*" label="LabelNotFound"/>
+<page content="com.adobe.flash.profiler.ui.MemorySnapshot:*" label="LabelNotFound"/>
+<page content="com.adobe.flash.profiler.ui.LoiteringObjects:*" label="LabelNotFound"/>
+<page content="com.adobe.flash.profiler.ui.ObjectReferences:*" label="LabelNotFound"/>
+<page content="com.adobe.flash.profiler.ui.AllocationTrace:*" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33">&#x0A;<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="ProfileTopRight" ratio="0.49962434" ratioLeft="665" ratioRight="666" relationship="2" relative="ProfileTopLeft">&#x0A;<folder activePageID="com.adobe.flash.profiler.ext.ui.MemoryUsageGraph:1" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="com.adobe.flash.profiler.ext.ui.MemoryUsageGraph:0" label="Memory Usage"/>
+<page content="com.adobe.flash.profiler.ext.ui.MemoryUsageGraph:1" label="Memory Usage"/>
+<page content="com.adobe.flash.profiler.ext.ui.MemoryUsageGraph:*" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.internal.presentations.r33.WorkbenchPresentationFactory_33">&#x0A;<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+</perspectives>
+<workingSets/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Game/Game.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Game/LoadInterface.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/GameLoader/GameLoader.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Game/Game.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Game/GameUI/Modules/CompensateStorage/mediator/CompensateStorageMediator.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Game/GameUI/Modules/StrengthenTransfer/Mediator/StrengthenTransferMediator.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Game/GameUI/Modules/Artifice/Mediator/ArtificeMediator.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Game/GameUI/Modules/RoleProperty/Mediator/EquipMediator.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Game/GameUI/Modules/PreventWallow/Mediator/PreventWallowMediator.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Game/Controller/TerraceController.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Game/Controller/CooldownController.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Game/GameCommonData.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Game/GameCommonData.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Game/GameUI/Modules/RoleProperty/Mediator/OtherMediator.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Game/GameUI/Command/CloseAllViewCommand.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Game/GameUI/UIUtils.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Game/GameUI/Modules/Alert/AlertMediator.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Game/GameUI/Modules/Bag/Command/UseItemCommand.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Game/GameUI/Modules/Bag/Proxy/BagData.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Game/Controller/TerraceController.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Game/GameUI/Modules/Bag/Proxy/GridManager.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Game/GameUI/Modules/NewerHelp/Mediator/NewerHelpUIMediaror.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Game/GameUI/Modules/NPCChat/Proxy/DialogConstData.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Game/GameUI/Modules/NPCShop/Mediator/NPCShopMediator.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Game/GameUI/Modules/ToolTip/Const/IntroConst.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Game/GameUI/Modules/ToolTip/Mediator/ToolTipUtils/ToolTipUtil.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Game/GameUI/Modules/UnityNew/Mediator/NewUnityContributeMediator.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Game/Net/ActionProcessor/PlayerAction.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/GameLoader/GameLoader.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/Game/Game.as"/>
+</editors>
+<item historyLabel="Game.as" index="0">
+<position info="not_deleted" x="442" y="0"/>
+</item>
+<item historyLabel="LoadInterface.as" index="1">
+<position info="not_deleted" x="463" y="0"/>
+</item>
+<item historyLabel="GameLoader.as" index="2">
+<position/>
+</item>
+<item historyLabel="Game.as" index="3">
+<position info="not_deleted" x="442" y="0"/>
+</item>
+<item historyLabel="CompensateStorageMediator.as" index="4">
+<position info="not_deleted" x="2321" y="0"/>
+</item>
+<item historyLabel="StrengthenTransferMediator.as" index="5">
+<position info="not_deleted" x="3435" y="0"/>
+</item>
+<item historyLabel="ArtificeMediator.as" index="6">
+<position info="not_deleted" x="2417" y="0"/>
+</item>
+<item historyLabel="EquipMediator.as" index="7">
+<position info="not_deleted" x="13040" y="0"/>
+</item>
+<item historyLabel="PreventWallowMediator.as" index="8">
+<position/>
+</item>
+<item historyLabel="TerraceController.as" index="9">
+<position info="not_deleted" x="129" y="0"/>
+</item>
+<item historyLabel="TerraceController.as" index="9">
+<position info="not_deleted" x="5248" y="0"/>
+</item>
+<item historyLabel="TerraceController.as" index="9">
+<position info="not_deleted" x="5330" y="10"/>
+</item>
+<item historyLabel="TerraceController.as" index="9">
+<position info="not_deleted" x="5287" y="0"/>
+</item>
+<item historyLabel="TerraceController.as" index="9">
+<position info="not_deleted" x="1067" y="0"/>
+</item>
+<item historyLabel="TerraceController.as" index="9">
+<position info="not_deleted" x="5330" y="10"/>
+</item>
+<item historyLabel="TerraceController.as" index="9">
+<position info="not_deleted" x="885" y="0"/>
+</item>
+<item historyLabel="TerraceController.as" index="9">
+<position info="not_deleted" x="603" y="7"/>
+</item>
+<item historyLabel="TerraceController.as" index="9">
+<position info="not_deleted" x="5290" y="0"/>
+</item>
+<item historyLabel="TerraceController.as" index="9">
+<position info="not_deleted" x="603" y="7"/>
+</item>
+<item historyLabel="CooldownController.as" index="10">
+<position info="not_deleted" x="299" y="0"/>
+</item>
+<item historyLabel="CooldownController.as" index="10">
+<position info="not_deleted" x="3067" y="0"/>
+</item>
+<item historyLabel="Game.as" index="3">
+<position info="not_deleted" x="825" y="0"/>
+</item>
+<item historyLabel="GameCommonData.as" index="11">
+<position/>
+</item>
+<item historyLabel="Game.as" index="3">
+<position info="not_deleted" x="1567" y="0"/>
+</item>
+<item historyLabel="GameCommonData.as" index="12">
+<position/>
+</item>
+<item historyLabel="OtherMediator.as" index="13">
+<position/>
+</item>
+<item historyLabel="CloseAllViewCommand.as" index="14">
+<position info="not_deleted" x="927" y="0"/>
+</item>
+<item historyLabel="UIUtils.as" index="15">
+<position/>
+</item>
+<item historyLabel="AlertMediator.as" index="16">
+<position/>
+</item>
+<item historyLabel="UseItemCommand.as" index="17">
+<position/>
+</item>
+<item historyLabel="BagData.as" index="18">
+<position/>
+</item>
+<item historyLabel="TerraceController.as" index="19">
+<position/>
+</item>
+<item historyLabel="BagData.as" index="18">
+<position info="not_deleted" x="11810" y="0"/>
+</item>
+<item historyLabel="UIUtils.as" index="15">
+<position info="not_deleted" x="4754" y="0"/>
+</item>
+<item historyLabel="AlertMediator.as" index="16">
+<position info="not_deleted" x="5124" y="0"/>
+</item>
+<item historyLabel="UseItemCommand.as" index="17">
+<position info="not_deleted" x="4281" y="0"/>
+</item>
+<item historyLabel="BagData.as" index="18">
+<position info="not_deleted" x="12823" y="0"/>
+</item>
+<item historyLabel="GridManager.as" index="20">
+<position/>
+</item>
+<item historyLabel="NewerHelpUIMediaror.as" index="21">
+<position/>
+</item>
+<item historyLabel="DialogConstData.as" index="22">
+<position info="not_deleted" x="419" y="0"/>
+</item>
+<item historyLabel="NPCShopMediator.as" index="23">
+<position info="not_deleted" x="852" y="0"/>
+</item>
+<item historyLabel="IntroConst.as" index="24">
+<position/>
+</item>
+<item historyLabel="ToolTipUtil.as" index="25">
+<position info="not_deleted" x="29163" y="0"/>
+</item>
+<item historyLabel="NewUnityContributeMediator.as" index="26">
+<position/>
+</item>
+<item historyLabel="AlertMediator.as" index="16">
+<position info="not_deleted" x="5469" y="0"/>
+</item>
+<item historyLabel="UseItemCommand.as" index="17">
+<position info="not_deleted" x="6838" y="0"/>
+</item>
+<item historyLabel="PlayerAction.as" index="27">
+<position info="not_deleted" x="16255" y="0"/>
+</item>
+<item historyLabel="GameLoader.as" index="28">
+<position/>
+</item>
+<item historyLabel="Game.as" index="29">
+<position info="not_deleted" x="1567" y="0"/>
+</item>
+<item active="true" historyLabel="GameLoader.as" index="28">
+<position info="not_deleted" x="10367" y="0"/>
+</item>
+</navigationHistory>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+</page>
+<workbenchWindowAdvisor/>
+<actionBarAdvisor/>
+<trimLayout>
+<trimArea IMemento.internal.id="131072">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@11b5077"/>
+</trimArea>
+<trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
+</trimArea>
+<trimArea IMemento.internal.id="1024">
+<trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
+<trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+</trimArea>
+</trimLayout>
+</window>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="GameLoader.as" tooltip="GameLoader/GameLoader.as">
+<persistable path="/GameLoader/GameLoader.as"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="PlayerAction.as" tooltip="Game/Net/ActionProcessor/PlayerAction.as">
+<persistable path="/Game/Net/ActionProcessor/PlayerAction.as"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="NewUnityContributeMediator.as" tooltip="Game/GameUI/Modules/UnityNew/Mediator/NewUnityContributeMediator.as">
+<persistable path="/Game/GameUI/Modules/UnityNew/Mediator/NewUnityContributeMediator.as"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="ToolTipUtil.as" tooltip="Game/GameUI/Modules/ToolTip/Mediator/ToolTipUtils/ToolTipUtil.as">
+<persistable path="/Game/GameUI/Modules/ToolTip/Mediator/ToolTipUtils/ToolTipUtil.as"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="IntroConst.as" tooltip="Game/GameUI/Modules/ToolTip/Const/IntroConst.as">
+<persistable path="/Game/GameUI/Modules/ToolTip/Const/IntroConst.as"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="NPCShopMediator.as" tooltip="Game/GameUI/Modules/NPCShop/Mediator/NPCShopMediator.as">
+<persistable path="/Game/GameUI/Modules/NPCShop/Mediator/NPCShopMediator.as"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="DialogConstData.as" tooltip="Game/GameUI/Modules/NPCChat/Proxy/DialogConstData.as">
+<persistable path="/Game/GameUI/Modules/NPCChat/Proxy/DialogConstData.as"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="NewerHelpUIMediaror.as" tooltip="Game/GameUI/Modules/NewerHelp/Mediator/NewerHelpUIMediaror.as">
+<persistable path="/Game/GameUI/Modules/NewerHelp/Mediator/NewerHelpUIMediaror.as"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="GridManager.as" tooltip="Game/GameUI/Modules/Bag/Proxy/GridManager.as">
+<persistable path="/Game/GameUI/Modules/Bag/Proxy/GridManager.as"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="TerraceController.as" tooltip="Game/Controller/TerraceController.as">
+<persistable path="/Game/Controller/TerraceController.as"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="BagData.as" tooltip="Game/GameUI/Modules/Bag/Proxy/BagData.as">
+<persistable path="/Game/GameUI/Modules/Bag/Proxy/BagData.as"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="UseItemCommand.as" tooltip="Game/GameUI/Modules/Bag/Command/UseItemCommand.as">
+<persistable path="/Game/GameUI/Modules/Bag/Command/UseItemCommand.as"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="AlertMediator.as" tooltip="Game/GameUI/Modules/Alert/AlertMediator.as">
+<persistable path="/Game/GameUI/Modules/Alert/AlertMediator.as"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="UIUtils.as" tooltip="Game/GameUI/UIUtils.as">
+<persistable path="/Game/GameUI/UIUtils.as"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="CloseAllViewCommand.as" tooltip="Game/GameUI/Command/CloseAllViewCommand.as">
+<persistable path="/Game/GameUI/Command/CloseAllViewCommand.as"/>
+</file>
+</mruList>
+</workbench>

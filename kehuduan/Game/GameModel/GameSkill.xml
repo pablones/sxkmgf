@@ -1,0 +1,29 @@
+﻿<Root>
+ <Skill      SkillID ="2"                          技能编号 
+              SkillName ="普通攻击"                  技能名称 
+              SkillReamark=""                      技能说明     
+              Job ="16"                            职业编号 
+              
+              CoolTime="0"                         冷却时间
+              LevelCoolTime="0"                    冷却时间增值
+              
+
+              Distance="5"                         攻击距离
+              Affect=""                            效果
+              Effect="H"                           飞行动画
+              HitEffect="T"                        爆炸效果
+              SkillMode="2"                        0 被动技能
+              SkillArea="0"                        范围
+              MP="0"                               耗蓝
+              LevelMP="0"                          蓝的增值
+              NeedLevel="10"                       最低级别
+              BookID="0"                           书籍编号
+              Exp="1"                              经验值
+	          Buff="0"                             buff     
+	          攻击类型
+	          数值
+	          增量 
+             >
+  </Skill>
+</Root>
+ 

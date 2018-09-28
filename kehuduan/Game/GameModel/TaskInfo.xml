@@ -1,0 +1,62 @@
+﻿<root>
+	<task id="101" 
+		taskType="主线任务"
+        taskid="1"
+        isChain="1"
+		step="1"
+		type="1"
+		maskIndex="0"
+		processMask="3"
+		taskName="三闯少林(一)" 
+		taskArea="江陵,1001,78,78" 
+		taskLevel="1"
+		taskTime="无"
+        taskNPC="丁芷芙,1001,78,87" 
+		taskCommitNPC="玄常,1001,78,87"
+		>
+			<taskTip><![CDATA[<font color='#fffe65'>任务目标：</font><br><font color='#ffffff'>  在少林</font><font color='#0000ff'><a href='event:1001,78,78,101'>[78,78]\fx</a></font><font color='#ffffff'>找到玄常，替丁芷芙求情。</font>]]></taskTip>
+			<taskProcess1><![CDATA[<font color='#ffffff'>杀死两只一级的</font><font color='#00ff00'>怪物</font><font color='#00ff00'><a href='event:1001,78,78,0'>[78,78]\fx</a>($0$/$2$)$</font></font>]]></taskProcess1>
+			<taskProcess2><![CDATA[<font color='#ffffff'>杀死两只二级的</font><font color='#00ff00'>怪物</font><font color='#00ff00'><a href='event:1001,78,78,0'>[78,78]\fx</a>($0$/$2$)$</font></font>]]></taskProcess2>
+			<taskProcess3></taskProcess3>
+			<taskProcess4></taskProcess4>
+			<taskProcess5></taskProcess5>
+			<taskProcess6></taskProcess6>
+			<taskDes> <![CDATA[<font color='#fffe65'>任务内容：</font><br><font color='#ffffff'>我一定要上少林</font>  ]]> </taskDes>
+			<taskFinish><![CDATA[<font color='#fffe65'>任务内容：</font><br><font color='#fffe65'>阿弥陀佛，施主请回吧。若再无理取闹，休怪我少林弟子不讲究情面，一概棍棒赶下山去。</font>  ]]></taskFinish>
+			<taskUnFinish><![CDATA[<font color='#fffe65'>任务内容：</font><br><font color='#fffe65'>你还没有完成我布置的任务，请尽快完成。</font>  ]]></taskUnFinish>
+			<taskPrize1><![CDATA[<font color='#ffffff'>你将获得10个\cs</font>  ]]></taskPrize1>
+			<taskPrize2><![CDATA[<font color='#ffffff'>你将获得经验值：123</font>  ]]></taskPrize2>
+			<taskPrize3>130000,150000,190000</taskPrize3>
+			
+	</task>	
+	<task id="102" 
+		taskType="主线任务"
+        taskid="1"
+        isChain="1"
+		step="2"
+		type="1"
+		maskIndex="0"
+		processMask="8"
+		taskName="三闯少林（二）" 
+		taskArea="江陵,1001,78,78" 
+		taskLevel="1"
+		taskTime="无"
+        taskNPC="丁芷芙,1001,78,87" 
+		taskCommitNPC="玄常,1001,78,87"
+		>
+			<taskTip><![CDATA[<font color='#fffe65'>任务目标：</font><br><font color='#ffffff'>  在少林</font><font color='#0000ff'><a href='event:1001,78,78,102'>[78,78]\fx</a></font><font color='#ffffff'>找到玄常，替丁芷芙求情。</font>]]></taskTip>
+			<taskProcess1></taskProcess1>
+			<taskProcess2></taskProcess2>
+			<taskProcess3></taskProcess3>
+			<taskProcess4><![CDATA[<font color='#ffffff'>找到两个<font color='#00ff00'>血瓶<a href='event:1001,78,78,0'>[78,78]</a></font>($0$/$2$)$</font>]]></taskProcess4>
+			<taskProcess5></taskProcess5>
+			<taskProcess6></taskProcess6>
+			<taskDes> <![CDATA[<font color='#fffe65'>任务内容：</font><br><font color='#ffffff'>束带结发</font>  ]]> </taskDes>
+			<taskFinish><![CDATA[<font color='#fffe65'>任务内容：</font><br><font color='#fffe65'>阿弥陀佛，施主请回吧。若再无理取闹，休怪我少林弟子不讲究情面，一概棍棒赶下山去。</font>  ]]></taskFinish>
+			<taskUnFinish><![CDATA[<font color='#fffe65'>任务内容：</font><br><font color='#fffe65'>你还没有完成我布置的任务，请尽快完成。</font>  ]]></taskUnFinish>
+			<taskPrize1><![CDATA[<font color='#ffffff'>你将获得10个\cs</font>  ]]></taskPrize1>
+			<taskPrize2><![CDATA[<font color='#ffffff'>你将获得经验值：123</font>  ]]></taskPrize2>
+			<taskPrize3>210000</taskPrize3>
+			
+	</task>	
+</root>

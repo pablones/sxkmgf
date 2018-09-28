@@ -1,0 +1,36 @@
+1.components包：两个类为购买润混石的下拉选择组件
+
+2.Data包：
+	SoulData：魂魄相关数据（详细数据，各项操作所需金钱）
+	SoulExtPropertyVO：扩展属性值对象
+	SoulSkillVO：魂魄技能值对象
+	SoulVO：单个魂魄值对象
+
+3.Mediator包
+	1.ComposeRunStoneMediator 合成润魂石主类
+		initView() 初始化
+		upDataMoney() 跟新金钱
+		clickDownList() 下拉组件选项点击后进入
+		getPercentTxt() 得到成功率
+		dealAfterSend() 向服务器发送消息并成功返回后进入
+	2.ComposeSoulMediator  合成魂魄主类
+		addItemToCompose() 添加魂魄
+	3.ComposeTongStroneMediator 合成通灵玉主类
+	4.GrowUpPercentMediator 提升成长率
+	5.ImproveExtendProMediator 提升扩展属性
+	6.ImproveSkillMediator 提示魂魄技能
+	7.LearnExtendProMediator 学习扩展属性
+	8.LearnSoulSkillMediator 学习魂魄技能
+	9.RepeatExtendProMediator 重洗扩展属性
+	10.RepeatSkillMediator 重洗魂魄技能
+	11.RepeatStyleMediator 重洗魂魄属性
+	12.SoulMediator	魂魄面板主类
+	13.UseExtendGrooveMediator 开启扩展属性槽类
+
+4.Proxy包
+	1.ShowSoulComponent 得到扩展属性相关按钮组件类
+	2.initSoulVO 根据服务器传过来的值获取魂魄技能和扩展属性对象类
+
+5.View包
+	1.QuickBuyComponent 快速购买组件类
+	2.SoulComponents 魂魄面板的魂魄转动显示相关类

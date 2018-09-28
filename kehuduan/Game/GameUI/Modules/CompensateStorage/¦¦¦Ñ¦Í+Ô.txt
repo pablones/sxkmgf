@@ -1,0 +1,19 @@
+data
+	CompensateStorageData					保存补偿数据
+	CompensateStorageConst					事件定义(常量)
+	
+mediator
+	CompenstateStorageMediator				外部交互（接口）类
+
+tools
+	ShowMoneyCS.as							拷贝于ShowMoney.as，使其支持多个相同图标显示
+
+view
+	CompensateStorageDetailsViewManager		详细补偿信息界面管理类
+	CompensateStorageItemViewManager		道具补偿界面管理类
+	CompensateStorageOtherViewManager		其他补偿界面管理类
+	CompensateStoragePetViewManager			宠物补偿界面管理类
+	CompensateStorageViewManager			总界面管理类
+	CSViewManager							界面管理类接口
+	DetailsText								对TaskText类补充，用于显示滚动文本
+	
