@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+<!--
+body {
+	margin: auto;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	font-family: "Courier New", Courier, monospace;
+	width: 1024px;
+	font-size: 13px;
+}
+td {
+	border-top-color: #C2C2C2;
+	border-right-color: #C2C2C2;
+	border-bottom-color: #C2C2C2;
+	border-left-color: #C2C2C2;
+	font-size: 13px;
+}
+th {
+	color: #FFFFFF;
+	background-color: #333333;
+	text-align: left;
+	font-size: 13px;
+}
+.red {
+	color: #FF0000;
+}
+.b {
+	font-weight:bold;
+}
+.divbox {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 5px;
+	border: 2px solid #FF9900;
+}
+-->
+</style>
+</head>
+
+<body>
+<h1>PHP传值给FLASH</h1>
+<div class="divbox">
+<h2>玩家进入步骤</h2>
+<ol>
+  <li>玩家点击 4399 里面的游戏链接进入 youyuegame 游戏网页 http://gameServer/index.php </li>
+  <li> 服务器端index.php 接受到请求，查询用户是否存在，并且生成JS数据传送给SWF文件</li>
+  <li> FLASH游戏文件接受JS数据并且加载</li>
+  <li> 进入游戏成功，正式开始</li>
+</ol>
+</div>
+<div class="divbox">
+<h2>◆ 传值参数列表及说明 </h2>
+<table width="100%" border="1" bordercolor="#CCCCCC">
+  <tr>
+    <th width="100" nowrap="nowrap">Key</th>
+    <th nowrap="nowrap">说明与要求</th>
+  </tr>
+  <tr>
+    <td>4399uid</td>
+    <td>当前用户的4399的账号ID</td>
+  </tr>
+  <tr>
+    <td>userid</td>
+    <td>当前用户在 youyuegame 的账号ID </td>
+  </tr>
+  <tr>
+    <td>timestamp</td>
+    <td>进入本游戏页面时候的时间戳</td>
+  </tr>
+<tr>
+    <td>username</td>
+    <td>当前用户的用户名</td>
+  </tr>
+<tr>
+    <td>serverid</td>
+    <td>当前服务器的服号，其值格式S1,S2,S3</td>
+  </tr>
+  <tr>
+    <td>currurl</td>
+    <td> <p>当前URL</p>    </td>
+  </tr>
+</table>
+
+</p>
+</div>
+</body>
+</html>

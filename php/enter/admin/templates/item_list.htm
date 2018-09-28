@@ -1,0 +1,54 @@
+{include file="pageheader.htm"}
+<div class="main-div">
+    <form action="item.php" method="post" enctype="multipart/form-data" name="searchForm">
+        <table>
+             <tr>
+                <td width="60"> <strong>{$lang.username}:</strong> </td>
+                <td> <input type="text" name="username" value="{$info.username}"  /> </td>
+                <td  width="60"> <div align="left"><strong>{$lang.rolename}:</strong></div> </td>
+                <td> <input type="text" name="rolename" value="{$info.rolename}" /></td>
+             </tr>
+             <tr>
+                <td colspan="4">
+                        <input name="query" type="submit" class="button" id="query" value="{$lang.button_search}"/>
+                        <input name="reset" type="button" class='button' value='{$lang.button_reset}'"/> 
+                        <input type="hidden" name="act" value="search">                   
+                </td>
+             </tr>   
+        </table>
+    </form>
+</div>
+<h1>
+<span class="action-span" style="float:left">{$lang.bag_info}</span>
+</h1>
+{if $view eq 1}
+<div class="list-div" >
+	<table cellspacing='1' cellpadding='3'>
+  		<tr>
+  	  		<th>{$lang.username}</th>
+  	  		<th>{$lang.rolename}</th>
+  	  		<th>{$lang.level}</th>
+  	  		<th>{$lang.item_name}</th>
+  	  		<th>{$lang.item_strong}</th>
+  	  		<th>{$lang.item_start}</th>
+  	  		<th>{$lang.handle}</th>
+  		</tr>
+		{foreach from=$result item = res}
+    	<tr align="center">
+        	<td>{$res.account}</td>
+        	<td>{$res.playername}</td>
+        	<td>{$res.level}</td>
+       	 	<td>{$res.name}</td>
+			<td>{$res.addlev}</td>
+			<td>{$res.star}</td>
+
+        	<td>
+            	<span><a href = "item.php?act=edit&id={$res.id}&username={$info.username}&rolename={$info.rolename}">{$lang.edit}</a></span>
+        	</td>
+    	</tr>
+    	{/foreach}
+
+  </table>
+</div>
+{/if}
+{include file="pagefooter.htm"}

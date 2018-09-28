@@ -1,0 +1,40 @@
+{include file="pageheader.htm"}
+<table width="90%" id="mix-table"  align="center">
+    <form action="resource.php?act=activity_query" method="post" enctype="multipart/form-data" name="searchForm">
+    <tr>
+        <td width="80"><strong>{$lang.act_type}</strong></td>
+        <td>
+            <!-- TODO 后期处理-->
+            <select name="cardtype" id="cardtype" >
+                <option value="1">签名活动</option>
+                <option value="3">万兽之王</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td width="80"><strong>{$lang.act_account}</strong></td>
+        <td><input type ="file" name="act_account" id="act_account" /></td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <input name="query" type="submit" class="button" id="query" value="{$lang.button_search}"/>
+            <input name="reset" type="reset" class='button' value='{$lang.button_reset}' />
+        </td>
+    </tr>
+    </form>
+</table>
+{if $display eq 1}
+<div class="list-div">
+<table cellspacing='1' cellpadding='3'>
+    <tr>
+        <th>{$lang.error_account}</th>
+    </tr>
+    {foreach from=$error item = result}
+    <tr>    
+        <td width = "100%" align="center">{$result}</td>
+    </tr>
+    {/foreach}
+</table>
+</div>      
+{/if}
+{include file="pagefooter.htm"}

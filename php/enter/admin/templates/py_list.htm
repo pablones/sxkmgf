@@ -1,0 +1,53 @@
+{if $full_page}
+{include file="pageheader.htm"}
+{include file="p_search.htm"}
+
+<div class="list-div" id="listDiv">
+{/if}
+<form method="post" action="list_search" name="listForm" onsubmit="return confirmSubmit(this)">
+<table cellspacing='1' cellpadding='3'>
+    <tr>
+        <th align="left" width="130"><a href="javascript:listTable.sort('pay_date'); ">{$lang.pay_date}</a></th>
+        <th align="left" width="100"><a href="javascript:listTable.sort('pay_num'); ">{$lang.pay_num}</a></th>
+        <th align="left" width="100"><a href="javascript:listTable.sort('pay_amount'); ">{$lang.pay_amount}</a></th>
+        <th align="left" width="100"><a href="javascript:listTable.sort('pay_money'); ">{$lang.pay_money}</a></th>
+        <th align="left" width="100"><a href="javascript:listTable.sort('pay_gold'); ">{$lang.pay_gold}</a></th>
+        <th align="left"><a href="javascript:listTable.sort('pay_arpu'); ">{$lang.pay_arpu}</a></th>
+    </tr>
+    {foreach from=$res item = result}
+    <tr>
+        <td>{$result.logdate}</td>
+        <td>{$result.countuser}</td>
+        <td>{$result.count}</td>
+        <td>{$result.summoney}</td>
+        <td>{$result.sumgold}</td>
+        <td>{$result.arpu}</td>
+    </tr>
+    {/foreach}
+</table>
+<!-- 分页 TOOD 未来处理 -->
+<!-- 分页 -->
+<table id="page-table" cellspacing="0">
+    <tr>
+        <td align="center" nowrap="true">
+			<div id="turn-page">
+				{$lang.total_records} <span id="totalRecords">{$record_count}</span>
+				{$lang.total_pages} <span id="totalPages">{$page_count}</span>
+				{$lang.page_current} <span id="pageCurrent">{$filter.page}</span>
+			<span id="page-link">
+				<a href="pay_consume.php?act=list_query&pages=first">{$lang.page_first}</a>
+				<a href="pay_consume.php?act=list_query&pages={$prev}">{$lang.page_prev}</a>
+				<a href="pay_consume.php?act=list_query&pages={$next}">{$lang.page_next}</a>
+				<a href="pay_consume.php?act=list_query&pages=last">{$lang.page_last}</a>
+
+			</span>   
+		</div>
+		</td>
+    </tr>
+</table>
+</div>
+</form>
+
+{if $full_page}
+{include file="pagefooter.htm"}
+{/if}

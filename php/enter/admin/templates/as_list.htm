@@ -1,0 +1,32 @@
+{include file="pageheader.htm"}
+<div class="main-div">
+	<table>
+		<tr>
+			<td><strong>{$lang.err_server}</strong></td>
+		</tr>
+		<tr>
+			<td>
+				{foreach from=$err item = data}
+				<span>{$data},</span>
+				{/foreach}
+			</td>
+		</tr>
+	</table>
+</div>
+<div class="list-div">
+	<table>
+		<tr>
+			<td align="center"><strong>{$lang.server_num}</strong></td>
+			<td align="center"><strong>{$lang.all_rmb}</strong></td>
+			<td align="center"><strong>{$lang.all_yb}</strong></td>
+		</tr>
+		{foreach from=$data item = result}
+		<tr>
+			<td align="center">{$result.sid}</td>
+			<td align="center">{$result.rs.sum_paygold}</td>
+			<td align="center">{$result.rs.sum_paymoney}</td>
+		</tr>
+		{/foreach}
+	</table>
+</div>
+{include file="pagefooter.htm"}

@@ -1,0 +1,24 @@
+{include file="pageheader.htm"}
+<html>
+<head>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("#b01").click(function(){
+        var data = {tex:'1000',ex:'10'}
+        $.ajax({
+            type: "get",
+            url: 'ad_ex.php?act=add',
+            data: data,
+            global:false
+        });
+
+    });
+
+});
+</script>
+</head>
+<body>
+<button id="b01" type="button" >test</button>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+{include file="report_ratenum_count.htm"}
+<div class="tab-div">
+    <!-- tab bar -->
+    <div id="tabbar-div">
+      <p>
+        <span class="tab-front" id="general-tab">{$lang.ratenum}</span>
+        <span class="tab-back" id="area-tab">{$lang.ratenum_all_tj}</span>
+        <span class="tab-back" id="from-tab">{$lang.ratenum_pay_tj}</span>
+      </p>
+    </div>
+
+    <!-- tab body -->
+    <div id="tab-div">
+     <div class="list-div" id="listDiv">
+    <!-- 各等级人数统计表 -->
+        <table  id="general-table">
+           <tr>
+              <th align="left" width="150">{$lang.ratenum_level}</th>
+              <th align="left" width="150">{$lang.ratenum_all}</th>
+              <th align="left" width="150">{$lang.ratenum_pt}</th>
+              <th align="left">{$lang.ratenum_pay}</th>
+          </tr>
+    {foreach from=$info key=key  item = result}
+         <tr>
+            <td>{$key}</td>
+            <td>{$result.all}</td>
+            <td>{$result.pt}</td>
+            <td>{$result.pay}</td>
+         </tr>
+    {/foreach}
+
+         </table>
+      </div>
+   
+      <!-- 各等级人数统计图 -->
+            <table width="100%" id="area-table" style="display:none">
+              <tr>
+                  <td width="100%">
+                     <div id="all" style="width: 1700px; height: 600px; margin: 0 auto"></div>
+
+                  </td>
+              </tr>
+             </table>
+             
+         <!-- 各等级付费人数统计图 -->
+             <table width="100%" id="from-table" style="display:none">
+                <tr>
+                    <td width="100%" height="100%">
+                        <div id="pay" style="width: 1500px; height: 600px; margin: 0 auto"></div>
+                    </td>
+                </tr>
+             </table>             
+                 
+       </div>
+</div>
+
+
+{insert_scripts files="tab.js"}
+
+{include file="pagefooter.htm"}

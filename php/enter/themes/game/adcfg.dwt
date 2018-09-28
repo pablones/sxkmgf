@@ -1,0 +1,19 @@
+<form id = 'viewwrite' name = 'viewwrite' action = 'cfginfo.php' method ='post'>
+<table border = 1 align = "center" bordercolor = "#000000" style = "border:1px" width ="100%">
+	<tr>
+		<td colspan = "4" align="center"><span>凸.- -.凸</span></td>
+	</tr>
+	<tr>
+		<td><span>key</span></td>
+		<td><input type = "text" id ="key" name ="key" value =""/></td>
+		<td><span>cnt</span></td>
+		<td><input type = "text" id = "cnt" name = "cnt" value = ""/></td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			<input name ="act" type ="hidden" id ="act" value="rewrite"/>
+			<input name = "btn" type ="submit" id="btn" value="Commit"/>
+		</td>
+	</tr>
+</table>
+</form>

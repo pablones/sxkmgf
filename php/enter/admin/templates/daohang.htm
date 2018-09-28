@@ -1,0 +1,18 @@
+{include file="pageheader.htm"}
+
+<div class="main-div">
+    <form action="sys_config.php?act=clear_ver&type={$type}" method="post" enctype="multipart/form-data" name="searchForm">
+       {foreach from=$info key =key item = result}
+       <p><strong>{$key}</strong></p>
+       {foreach from=$result key =k item = r}
+       <a href="{$url.$key.$r}" target="_blank">{if $r<10}0{$r}{else}{$r}{/if}服&nbsp;&nbsp;&nbsp;</a>
+       {if ($k+1)%25==0}
+       <p></p>
+       {/if}
+       {/foreach}
+       {/foreach}
+    </form>
+</div>
+
+
+{include file="pagefooter.htm"}

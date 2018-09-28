@@ -1,0 +1,52 @@
+{include file="pageheader.htm"}
+<link type="text/css" href="./templates/js/jquery-ui-1.8.14.custom.css" rel="stylesheet" />	
+<script type="text/javascript" src="./templates/js/jquery.min.js"></script>
+<script type="text/javascript" src="./templates/js/jquery-ui-1.8.14.custom.min.js"></script>
+<script>
+	$(function() {
+		$("#start_time_id").datepicker();
+		$("#end_time_id").datepicker();
+	});
+</script>
+<div class="main-div">
+	<form action="mobsearch.php?act=query" method="post" enctype="multipart/form-data" name="searchForm">
+    	<table>
+       		<tr>
+                <td width="60"> <strong>{$lang.username}：</strong> </td>
+                <td> <input type="text" name="username" value=""  /> </td>
+              
+            </tr>
+			<tr>
+                <td colspan="3">
+                    <input name="query" type="submit" class="button" id="query" value="{$lang.button_search}"/>
+                	<input name="reset" type="reset" class='button' value='{$lang.button_reset}' />                    
+                </td>
+             </tr>   
+        </table>
+    </form>
+</div>
+<div class="list-div" >
+	<table cellspacing='1' cellpadding='3'>
+  		<tr>
+  	  		<th>{$lang.account_id}</th>
+  	  		<th>{$lang.account_name}</th>
+  	  		<th>{$lang.type}</th>
+  	 	 	<th>{$lang.typename}</th>
+  	  		<th>{$lang.generalize_id}</th>
+  	  		<th>{$lang.stateid}</th>
+  	  		<th>{$lang.state}</th>
+  		</tr>
+		
+    	<tr align="center">
+        	<td>{$result.account_id}</td>
+        	<td>{$result.rolename}</td>
+        	<td>{$result.type}</td>
+        	<td>{$result.typename}</td>
+        	<td>{$result.generalize_id}</td>
+        	<td>{$result.state}</td>
+        	<td>{$result.lstate}</td>
+    	</tr>
+    	
+  </table>
+</div>
+{include file="pagefooter.htm"}

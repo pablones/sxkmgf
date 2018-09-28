@@ -1,0 +1,62 @@
+{include file="pay_header.htm"}
+<link type="text/css" href="./templates/js/jquery-ui-1.8.14.custom.css" rel="stylesheet" />	
+<script type="text/javascript" src="./templates/js/jquery.min.js"></script>
+<script type="text/javascript" src="./templates/js/jquery-ui-1.8.14.custom.min.js"></script>
+<script>
+	$(function() {
+		$("#start_time_id").datepicker();
+		$("#end_time_id").datepicker();
+	});
+</script>
+
+<div class="main-div">
+    <form action="report.php?act=czmonth" method="post" enctype="multipart/form-data" name="searchForm">
+        <table>
+             <tr>
+                <td width="80"><div align="left"><strong>{$lang.create_stime}：</strong></div></td>
+                <td align="left" width="240">
+                    <input type="text" name="start_time" maxlength="60" size="20" readonly="readonly" id="start_time_id" />
+                </td>
+                <td  width="80"><div align="left"><strong>{$lang.create_etime}：</strong></div></td>
+               <td>
+                    <input type="text" name="end_time" maxlength="60" size="20" readonly="readonly" id="end_time_id" />
+                </td>
+              
+             <tr>
+                <td colspan="3">
+                        <input name="query" type="submit" class="button" id="query" value="{$lang.button_search}"/>
+                        <input name="reset" type="reset" class='button' value='{$lang.button_reset}' />
+                    
+                </td>
+             </tr>   
+        </table>
+    </form>
+</div>
+
+<div class="list-div">
+<table>
+    <tr>
+        <th align="left" width="150">{$lang.month}</th>
+        <th align="left" width="100">{$lang.czday_countuser}</th>
+        <th align="left" width="100">{$lang.czday_count}</th>
+        <th align="left" width="100">{$lang.czday_rmb}</th>
+        <th align="left" width="100">{$lang.czday_yb}</th>
+        <th align="left">{$lang.czday_arpu}</th>
+    </tr>
+    {foreach from=$info key=key item = result}
+    <tr>
+        <td>{$result.month}</td>
+        <td>{$result.countuser}</td>
+        <td>{$result.count}</td>
+        <td>{$result.summoney}</td>
+        <td>{$result.sumgold}</td>
+        <td>{$result.arpu}</td>
+    </tr>
+    {/foreach}
+</table>
+
+
+
+<!-- 分页 TOOD 未来处理 -->
+
+{include file="pagefooter.htm"}

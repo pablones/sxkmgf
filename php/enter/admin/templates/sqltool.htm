@@ -1,0 +1,75 @@
+{include file="pageheader.htm"}
+<link type="text/css" href="./templates/js/jquery-ui-1.8.14.custom.css" rel="stylesheet" />	
+<script type="text/javascript" src="./templates/js/jquery.min.js"></script>
+<script type="text/javascript" src="./templates/js/jquery-ui-1.8.14.custom.min.js"></script>
+
+<div class="main-div">
+<form id="fm" name="fm" method="post" action="sqltool.php">
+<table border="1" align="center" bordercolor="#000000" style="border:1px" width="100%">
+	<tr>
+		<td width="6%"><b>{$lang.edite}</b></td>
+		<td><textarea name="sql" cols="100" rows="10"></textarea></td>
+	</tr>
+	<tr>
+		<td width="5%"><b>{$lang.type}</b></td>
+		<td>
+			<input name ="query" type="radio" value="s"><b>{$lang.select}</b> &nbsp;
+			<input name = "query" type ="radio" value="m"><b>{$lang.update}</b> &nbsp;
+			
+ 		</td>
+	</tr>
+	<tr>
+		<td width = "5%"><b>{$lang.datadase}</b></td>
+		<td>
+			<input name = "db" type = "radio" value = "a"><b>accdb</b>&nbsp;
+			<input name = "db" type = "radio" value = "w" ><b>wangpu</b> &nbsp;
+			<input name = "db" type = "radio" value = "y" ><b>yjjh</b>  &nbsp;
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<input name ="act" type ="hidden" id ="act" value="query"/>
+			<input name = "btn" type ="submit" id="btn"  class='button' value="{$lang.button_set}"/>
+            <input name="reset" type="reset" class='button' value="{$lang.button_reset}" /> 
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+
+<div class="list-div" id="listDiv">
+
+{if $view eq 1}
+<table>
+    <tr align="left">
+        <th bgcolor="#FFFFCC" align="left"><span>{$lang.num}</span></th>
+	    {foreach from=$info key=k item=v}
+           <th bgcolor="#FFFFCC" align="left"><span>{$v}</span></th>
+	    {/foreach}
+    </tr>
+    {foreach from=$result key=k1 item=v1 name=rank}
+	<tr align="left">
+	   {if $k1%2==0}
+            <td><span>{$smarty.foreach.rank.iteration}</span></td>
+         	{foreach from=$info key=k2 item=v2}
+                <td><span>{$v1.$v2}</span></td>
+	        {/foreach}
+	    {else}
+	        <td bgcolor="#FFFFCC"><span>{$smarty.foreach.rank.iteration}</span></td>
+         	{foreach from=$info key=k2 item=v2}
+                <td bgcolor="#FFFFCC"><span>{$v1.$v2}</span></td>
+	        {/foreach}
+	    {/if}
+	</tr>
+    {/foreach}
+    
+</table>
+{/if}
+</div>
+{if $view eq 2}
+	<table style = "border:1px;">
+		<tr><td><span>success</span></td></tr>
+</table>
+{/if}
+
+{include file="pagefooter.htm"}

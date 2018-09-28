@@ -1,0 +1,298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>接口文档</title>
+<style type="text/css">
+<!--
+body {
+	margin: auto;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	font-family: "Courier New", Courier, monospace;
+	width: 1024px;
+	font-size: 13px;
+}
+td {
+	border-top-color: #C2C2C2;
+	border-right-color: #C2C2C2;
+	border-bottom-color: #C2C2C2;
+	border-left-color: #C2C2C2;
+	font-size: 13px;
+}
+th {
+	color: #FFFFFF;
+	background-color: #333333;
+	text-align: left;
+	font-size: 13px;
+}
+.red {
+	color: #FF0000;
+}
+.b {
+	font-weight:bold;
+}
+.divbox {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 5px;
+	border: 2px solid #FF9900;
+}
+-->
+</style>
+</head>
+
+<body>
+<h1>Read Me!（<span class="red">参数区分大小写</span>）</h1>
+<div class="divbox">
+<p>网站：http://122.224.103.173:8099/</p>
+<h2>◆ 接口一：游戏玩家登陆。</h2>
+<p>接口操作：4399服务器的程序访问Youyue服务器的程序：<br />
+程序地址：<a href="http://122.224.103.173:8099/4399/login.php"><strong>http://122.224.103.173:8099/4399/login.php</strong></a><br />
+请求方式：<strong>GET请求<br />
+</strong>页面编码：<strong>UTF-8</strong>  <br />
+参数如下：</p>
+<h3>游悦 login.php 参数如下：</h3>
+<table width="100%" border="1" bordercolor="#CCCCCC">
+  <tr>
+    <th width="100" nowrap="nowrap">Key</th>
+    <th nowrap="nowrap">Val</th>
+    <th width="120" nowrap="nowrap">是否必须?</th>
+    <th nowrap="nowrap">说明与要求</th>
+  </tr>
+  <tr>
+    <td>userid</td>
+    <td>&nbsp;</td>
+    <td>√</td>
+    <td>4399方的UID</td>
+  </tr>
+  <tr>
+    <td>username</td>
+    <td>&nbsp;</td>
+    <td>√</td>
+    <td>4399方的用户名</td>
+  </tr>
+  <tr>
+    <td>time</td>
+    <td>&nbsp;</td>
+    <td>√</td>
+    <td>PHP 函数 time() 的值 </td>
+  </tr>
+  <tr>
+    <td>serverid</td>
+    <td>&nbsp;</td>
+    <td>√</td>
+    <td>服务器号码</td>
+  </tr>
+  <tr>
+    <td>flag</td>
+    <td>&nbsp;</td>
+    <td>√</td>
+    <td> <p>flag参数的值= md5($_GET['userid'].urlencode($_GET['username']).$_GET['time'].$seccode),<br />
+      其中<strong>$seccode = '<span class="red">4399*:yjjh*:aX4L*:41@-504</span>';</strong>其他的为4399设置的数据。 <br />
+      </p>    </td>
+  </tr>
+  <tr>
+    <td>fcm</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>4399那边验证防沉迷的值，值 0 或者 1，0表示未通过防沉迷验证，1表示已经通过了防沉迷验证。 </td>
+  </tr>
+</table>
+<p>flag 中的 $seccode 的值为“<span class="red">4399*:yjjh*:aX4L*:41@-504</span>” 。 </p>
+<p>然后获取<strong> <a href="http://web.4399.com/api/yjjh/passport.php" target="_blank">http://web.4399.com/api/yjjh/passport.php</a></strong> 网页的返回值。
+<hr />
+<h3>传递给passport.php的参数如下：
+</h3>
+<table width="100%" border="1" bordercolor="#CCCCCC">
+  <tr>
+    <th width="100" nowrap="nowrap">Key</th>
+    <th nowrap="nowrap">Val</th>
+    <th width="120" nowrap="nowrap">是否必须?</th>
+    <th nowrap="nowrap">说明与要求</th>
+  </tr>
+  <tr>
+    <td>userid</td>
+    <td>&nbsp;</td>
+    <td>√</td>
+    <td>从4399传递过来的参数userid</td>
+  </tr>
+  <tr>
+    <td>username</td>
+    <td>&nbsp;</td>
+    <td>√</td>
+    <td>从4399传递过来的参数username</td>
+  </tr>
+  <tr>
+    <td>time</td>
+    <td>&nbsp;</td>
+    <td>√</td>
+    <td>从4399传递过来的参数time</td>
+  </tr>
+  <tr>
+    <td>flag</td>
+    <td>&nbsp;</td>
+    <td>√</td>
+    <td> <p>从4399传递过来的参数flag<br />
+      </p>    </td>
+  </tr>
+</table>
+<hr />
+<h3>4399 passport.php 返回值及其涵义：</h3>
+<table width="100%" border="1" bordercolor="#CCCCCC">
+  <tr>
+    <th width="150" nowrap="nowrap">Key</th>
+    <th nowrap="nowrap">含义说明</th>
+  </tr>
+  <tr>
+  <td>0</td>
+  <td>成功</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>账号不存在</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>账号未登录</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>登录超时</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>MD5错误</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>time时间错误</td>
+  </tr>
+</table>
+  </p>
+</div>
+<hr />
+<div class="divbox">
+<h2>◆ 接口二：游戏玩家充值： </h2>
+<p>4399服务器的程序请求网址：<strong><a href="http://wwww.youyuegame.com:8099/4399/pay_modes.php">http://wwww.youyuegame.com:8099/4399/pay_modes.php</a></strong><br />
+请求方式：GET请求<br />
+页面编码：<strong>UTF-8</strong><br />
+参数，必须的：
+<table width="100%" border="1" bordercolor="#CCCCCC">
+  <tr>
+    <th width="100" nowrap="nowrap">Key</th>
+    <th nowrap="nowrap">Val</th>
+    <th width="120" nowrap="nowrap">是否必须?</th>
+    <th nowrap="nowrap">说明与要求</th>
+  </tr>
+  <tr>
+    <td>PayNum</td>
+    <td>&nbsp;</td>
+    <td>√</td>
+    <td>4399提供的流水号</td>
+  </tr>
+  <tr>
+    <td>Mode</td>
+    <td>&nbsp;</td>
+    <td>√</td>
+    <td>值为1</td>
+  </tr>
+  <tr>
+    <td>PayToUser</td>
+    <td>&nbsp;</td>
+    <td>√</td>
+    <td>4399提供游戏玩家的账号</td>
+  </tr>
+  <tr>
+    <td>PayGold</td>
+    <td>&nbsp;</td>
+    <td>√</td>
+    <td> <p>充值元宝数，大于0的正整数</p>    </td>
+  </tr>
+  <tr>
+    <td>PayMoney</td>
+    <td>&nbsp;</td>
+    <td>√</td>
+    <td>充值金额，大于0，单位：人民币</td>
+  </tr>
+  <tr>
+    <td>PayTime</td>
+    <td>&nbsp;</td>
+    <td>√</td>
+    <td>4399提供的充值时间，PHP time() 函数生成</td>
+  </tr>
+  <tr>
+    <td>ServerName</td>
+    <td>&nbsp;</td>
+    <td>√</td>
+    <td>玩家充值时候选择的游戏服的服号。（注意大小写）</td>
+  </tr>
+<tr>
+    <td>ticket</td>
+    <td>&nbsp;</td>
+    <td>√</td>
+    <td>MD5加密值。<br />
+    其值等于ticket=md5($key.$Mode.$PayNum.$PayToUser.$PayMoney.$PayGold.$PayTime.$ServerName);<br />
+    其中$key = '<span class="b red">4399::XXQY::pay::frhSQBdJJmdnnUBZ</span>'; </td>
+  </tr>
+</table>
+
+<h3>返回值：(<span class="red">返回值全部为小写，中间无空格</span>)</h3>
+<table width="100%" border="1" bordercolor="#CCCCCC">
+  <tr>
+    <th width="150" nowrap="nowrap">Key</th>
+    <th nowrap="nowrap">含义说明</th>
+  </tr>
+  <tr>
+  <td>paynum_error</td>
+  <td>PayNum 参数错误</td>
+  </tr>
+  <tr>
+    <td>mode_error</td>
+    <td>Mode 参数错误</td>
+  </tr>
+  <tr>
+    <td>paygold_error</td>
+    <td>PayGold 参数错误</td>
+  </tr>
+  <tr>
+    <td>paytime_error</td>
+    <td>PayTime 参数错误</td>
+  </tr>
+  <tr>
+    <td>paynum_exist</td>
+    <td>PayNum 已经存在</td>
+  </tr>
+  <tr>
+    <td>username_error</td>
+    <td>UserName 参数错误</td>
+  </tr>
+  <tr>
+    <td>ticket_error</td>
+    <td>ticket 参数错误</td>
+  </tr>
+  <tr>
+    <td>bad_request</td>
+    <td>非法请求</td>
+  </tr>
+  <tr>
+    <td>servername_error</td>
+    <td>ServerName 参数错误</td>
+  </tr>
+  <tr>
+    <td>account_error</td>
+    <td>账户不存在</td>
+  </tr>
+  <tr>
+    <td>ok</td>
+    <td>充值成功</td>
+  </tr>
+  <tr>
+    <td>failed</td>
+    <td>充值失败</td>
+  </tr>
+</table>
+</p>
+</div>
+</body>
+</html>

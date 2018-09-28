@@ -1,0 +1,30 @@
+BODY {
+    MARGIN: auto 0px;
+    OVERFLOW: auto;
+    HEIGHT: 100%;
+    BACKGROUND-COLOR: #000000;
+    TEXT-ALIGN: center;
+    font-size:12px;
+	overflow: hidden;
+	
+    
+}
+html,body,#flashobjdiv {
+    height: 100%;
+}
+ a:link {
+   color:#E2CCA5;
+   text-decoration:none;
+ }
+a:visited {
+    color:#E2CCA5;
+    text-decoration:none;
+}
+a:hover {
+    color:#E2CCA5;
+    text-decoration:none;
+}
+a:active {
+    color:#E2CCA5;
+    text-decoration:none;
+}

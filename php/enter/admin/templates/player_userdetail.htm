@@ -1,0 +1,101 @@
+{include file="pageheader.htm"}
+
+<div class="list-div">
+<table>
+<tr> <td> <strong>{$lang.detail_tip1}&nbsp;[{$info.name}]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;({$lang.detail_role}:&nbsp; "{$info.role}"&nbsp;{$lang.detail_tip2})</strong></td></tr>
+
+</table>
+<table>
+    <tr>
+        <th width="90" align="left">{$lang.detail_account}</th>
+        <td>{$info.name}</td>
+    </tr>
+    <tr>
+        <th width="90" align="left">{$lang.detail_role}</th>
+        <td>{$info.role}</td>
+    </tr>
+    <tr>
+        <th width="90" align="left">{$lang.sex}</th>
+        <td>{$info.sex}</td>
+    </tr>
+    <tr>
+        <th width="90" align="left">{$lang.detail_reg_time}</th>
+        <td>{$info.reg_time}</td>
+    </tr>
+    <tr>
+        <th width="90" align="left">{$lang.detail_reg_ip}</th>  
+        <td>{$info.reg_ip}</td>
+    </tr>
+    <tr>
+        <th width="90" align="left">{$lang.detail_lastexit}</th>  
+        <td>{$info.last_exit}</td>
+    </tr>
+    
+
+    <tr>
+        <th width="90" align="left">{$lang.detail_yb}</th>
+        <td>{$info.yb}</td>
+    </tr>
+    <tr>
+        <th width="90" align="left">{$lang.detail_rmb}</th>
+        <td>{$info.rmb}</td>
+    </tr>
+    <tr>
+        <th width="90" align="left">{$lang.detail_gold1}</th>
+        <td>{$info.gold1}</td>
+    </tr>
+    <tr>
+        <th width="90" align="left">{$lang.detail_gold2}</th>  
+        <td>{$info.gold2}</td>
+    </tr>
+    <tr>
+        <th width="90" align="left">{$lang.detail_gold3}</th>  
+        <td>{$info.gold3}</td>
+    </tr>   
+     <tr>
+        <th width="90" align="left">{$lang.detail_gold4}</th>
+        <td>{$info.gold4}</td>
+    </tr>    
+    
+    
+    <tr>
+        <th width="90" align="left">{$lang.detail_feel}</th>
+        <td>{$info.Feel}</td>
+    </tr>
+    <tr>
+        <th width="90" align="left">{$lang.detail_job}</th>
+        <td>{$info.Fir_Job}</td>
+    </tr>
+    <tr>
+        <th width="90" align="left">{$lang.detail_joblevel}</th>  
+        <td>{$info.Fir_JobLv}</td>
+    </tr>
+    <tr>
+        <th width="90" align="left">{$lang.detail_job2}</th>
+        <td>{$info.Sec_Job}</td>
+    </tr>
+    <tr>
+        <th width="90" align="left">{$lang.detail_joblevel2}</th>  
+        <td>{$info.Sec_JobLv}</td>
+    </tr>   
+    <tr>
+        <th width="90" align="left">{$lang.detail_money}</th>  
+        <td>
+            <table>
+                <tr>
+                    <td width="70" align="left">{$lang.detail_sid}</td><td>{$lang.detail_yb_sy}</td>
+                 </tr>
+              {foreach from=$rec_vas key=k item =result }
+                 <tr>
+                    <td>{$k}</td><td>{$result}</td>
+                 </tr>
+              {/foreach}          
+            </table>
+        </td>
+    </tr>   
+
+    
+</table>
+<!-- 分页 TOOD 未来处理 -->
+</div>
+{include file="pagefooter.htm"}

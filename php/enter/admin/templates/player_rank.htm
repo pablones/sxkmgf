@@ -1,0 +1,53 @@
+{if $full_page}
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+
+{/if}
+
+
+<div class="list-div" id="listDiv">
+  <table cellspacing='1' cellpadding='3'>
+  	<tr>
+  	  <th>{$lang.ranking_pm}</th>
+  	  <th>{$lang.ranking_username}</th>
+  	  <th>{$lang.ranking_role}</th>
+  	  <th>{$lang.ranking_lv}</th>
+  	  <th>{$lang.ranking_pay_yb}</th>
+  	  <th>{$lang.ranking_pay_rmb}</th>
+  	</tr>
+ 
+{foreach from=$info item = result name=rank}
+    <tr align="center">
+        <td>{$smarty.foreach.rank.iteration} </td>
+        <td>{$result.name}</td>
+        <td>{$result.rolename}</td>
+        <td>{$result.level}</td>
+        <td>{$result.pay_yb}</td>
+        <td>{$result.pay_rmb}</td>
+    </tr>
+    {/foreach}
+
+  </table>
+</div>  
+
+{if $full_page}
+<!-- 分页 TOOD 未来处理 -->  
+  <table id="page-table" cellspacing="0">
+    <tr>
+        <td align="center" nowrap="true">{include file="page.htm"}</td>
+    </tr>
+  </table>
+
+
+<script type="text/javascript">
+    listTable.recordCount =  {$record_count};
+    listTable.pageCount = {$page_count};
+
+    {foreach from=$filter item=item key=key}
+        listTable.filter.{$key} = '{$item}';
+    {/foreach}
+
+
+</script>
+{include file="pagefooter.htm"}
+{/if}

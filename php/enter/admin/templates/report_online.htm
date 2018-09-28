@@ -1,0 +1,95 @@
+{include file="report_header.htm"}
+<link type="text/css" href="./templates/js/jquery-ui-1.8.14.custom.css" rel="stylesheet" />	
+<script type="text/javascript" src="./templates/js/jquery.min.js"></script>
+<script type="text/javascript" src="./templates/js/jquery-ui-1.8.14.custom.min.js"></script>
+<script>
+	$(function() {
+		$("#start_time_id").datepicker();
+		$("#end_time_id").datepicker();
+	});
+</script>
+
+<div class="main-div">
+    <form action="report.php?act=online" method="post" enctype="multipart/form-data" name="searchForm">
+        <table>
+             <tr>
+                <td  width="40" align="left"><strong>{$lang.online_date}：</strong></td>
+                <td>
+                    <input type="text" name="time" maxlength="60" size="20" readonly="readonly" id="start_time_id" />
+                </td>
+             <tr>
+                <td colspan="3">
+                        <input name="query" type="submit" class="button" id="query" value="{$lang.button_search}"/>
+                        <input name="reset" type="reset" class='button' value='{$lang.button_reset}' />
+                    
+                </td>
+             </tr>   
+        </table>
+    </form>
+</div>
+
+
+
+<div class="list-div">
+<table>
+    <tr>
+        <th width="150" align="left">{$lang.online_time}</th>
+        <th width="100" align="left">{$lang.online_one}</th>
+        <th width="100" align="left">{$lang.online_tow}</th>
+        <th width="100" align="left">{$lang.online_three}</th>
+        <th width="100" align="left">{$lang.online_four}</th>
+        <th width="100" align="left">{$lang.online_five}</th>
+        <th width="100" align="left">{$lang.online_six}</th>
+        <th align="left">{$lang.online_sum}</th>
+    </tr>
+    {foreach from=$time item = result}
+    <tr>
+        <td>{$result.times}</td>       
+        <td>
+        {if $info.$result.times.$lang.one}
+            {$info.$result.times.$lang.one}
+        {else}
+            0
+        {/if}
+        </td>        
+        <td>
+        {if $info.$result.times.$lang.two}
+            {$info.$result.times.$lang.two}
+        {else}
+           0
+        {/if}
+        <td>
+        {if $info.$result.times.$lang.three}
+            {$info.$result.times.$lang.three}
+        {else}
+           0
+        {/if}
+        </td>
+        <td>
+        {if $info.$result.times.$lang.four}
+            {$info.$result.times.$lang.four}
+        {else}
+           0
+        {/if}
+        </td>
+         <td>
+        {if $info.$result.times.$lang.five}
+            {$info.$result.times.$lang.five}
+        {else}
+           0
+        {/if}
+        </td>
+        <td>
+        {if $info.$result.times.$lang.six}
+            {$info.$result.times.$lang.six}
+        {else}
+           0
+        {/if}
+        </td>
+        <td>{$result.sum}</td>
+    </tr>
+    {/foreach}
+</table>
+<!-- 分页 TOOD 未来处理 -->
+
+{include file="pagefooter.htm"}

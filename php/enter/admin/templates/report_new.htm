@@ -1,0 +1,51 @@
+{include file="report_header.htm"}
+<link type="text/css" href="./templates/js/jquery-ui-1.8.14.custom.css" rel="stylesheet" />	
+<script type="text/javascript" src="./templates/js/jquery.min.js"></script>
+<script type="text/javascript" src="./templates/js/jquery-ui-1.8.14.custom.min.js"></script>
+<script>
+	$(function() {
+		$("#start_time_id").datepicker();
+		$("#end_time_id").datepicker();
+	});
+</script>
+
+<div class="main-div">
+    <form action="report.php?act=new" method="post" enctype="multipart/form-data" name="searchForm">
+        <table>
+             <tr>
+                <td  width="40"><div align="left"><strong>{$lang.online_date}：</strong></div></td>
+                <td >
+                    <input type="text" name="time" maxlength="60" size="20" readonly="readonly" id="start_time_id" />
+                </td>
+             <tr>
+                <td colspan="3">
+                        <input name="query" type="submit" class="button" id="query" value="{$lang.button_search}"/>
+                        <input name="reset" type="reset" class='button' value='{$lang.button_reset}' />
+                    
+                </td>
+             </tr>   
+        </table>
+    </form>
+</div>
+
+
+
+<div class="list-div">
+<table width="300">
+    <tr>
+        <th width="150" align="left">{$lang.new_time}</th>
+        <th width="150" align="left">{$lang.new_all}</th>
+        <th align="left">{$lang.new_pay}</th>
+    </tr>
+    {foreach from=$row item = result}
+    <tr>
+        <td>{$date}</td>
+        <td>{$result.count}</td>
+        <td>{$pay}</td>
+    </tr>
+    {/foreach}
+</table>
+<!-- 分页 TOOD 未来处理 -->
+
+</div>
+{include file="pagefooter.htm"}

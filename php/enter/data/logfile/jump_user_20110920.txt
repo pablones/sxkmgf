@@ -1,0 +1,9 @@
+2011-09-20 09:55:26[123.154.84.167]
+    username: 
+    userid  : 
+    4399uid : 
+    HTTP_COOKIE     :  fy5_bbs_ec13_lastvisit=1316499150; fysessionid=ue9nc9r00is8c6lg17cv3hda25; fy5_bbs_ec13_sid=38MgW9; fy5_bbs_ec13_lastact=1316510339%09uc.php%09; fy5_bbs_ec13_auth=6158Aurj2fw2S82X6bXLfqsBe17BV1Biu4gEXsncVseWjWP%2BXmYGLMp04j6sSnT7uLNosv5hrAo3XUSSUndn0dg5FQ
+    HTTP_HOST       :  yjjh1-s.fy5.com
+    HTTP_USER_AGENT :  Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.163 Safari/535.1
+--------------------------------------------
+

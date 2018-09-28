@@ -1,0 +1,9 @@
+2013-07-30 06:55:11 (4399[-1] --> IP:127.0.0.1) 
+    4399-User:  admin
+    4399-UID:   1
+    CURR-URI:  /enter/login.php?gamesrc=yjjh&serverid=S1&username=admin&password=1&button=%E6%8F%90%E4%BA%A4
+    HTTP_HOST:  127.0.0.1
+    4399-URL: http://web.4399.com/api/yjjh/passport.php?userid=0&username=admin&time=0&flag=      msg:BAD_REQUEST
+
+---------------------------------------------------
+

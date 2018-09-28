@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<playlist>
+		<music name="BGM001" nameWithScene="希望之歌" sceneID="-1" length="304"/>
+        <music name="BGM002" nameWithScene="希望之歌" sceneID="1001" length="95"/>
+		<music name="BGM003" nameWithScene="希望之歌" sceneID="1002" length="94"/>
+        <music name="BGM004" nameWithScene="希望之歌" sceneID="1003" length="93"/>
+        <music name="BGM005" nameWithScene="希望之歌" sceneID="1004" length="88"/>
+        <music name="BGM006" nameWithScene="希望之歌" sceneID="1005" length="91"/>
+        <music name="BGM007" nameWithScene="希望之歌" sceneID="1006" length="94"/>
+        <music name="BGM008" nameWithScene="希望之歌" sceneID="1007" length="62"/>
+        <music name="BGM009" nameWithScene="希望之歌" sceneID="1008" length="78"/>
+        <music name="BGM010" nameWithScene="希望之歌" sceneID="1009" length="75"/>
+        <music name="BGM011" nameWithScene="希望之歌" sceneID="1010" length="64"/>
+        <music name="BGM012" nameWithScene="希望之歌" sceneID="1011" length="66"/>
+        <music name="BGM013" nameWithScene="希望之歌" sceneID="1012" length="63"/>
+        <music name="BGM014" nameWithScene="希望之歌" sceneID="1013" length="60"/>
+        <music name="BGM015" nameWithScene="希望之歌" sceneID="1014" length="59"/>
+        <music name="BGM016" nameWithScene="希望之歌" sceneID="1015" length="64"/>
+        <music name="BGM017" nameWithScene="希望之歌" sceneID="1016" length="63"/>
+        <music name="BGM018" nameWithScene="希望之歌" sceneID="1017" length="61"/>
+        <music name="BGM019" nameWithScene="希望之歌" sceneID="1018" length="64"/>
+        <music name="BGM020" nameWithScene="希望之歌" sceneID="1019" length="64"/>
+        <music name="BGM021" nameWithScene="希望之歌" sceneID="1020" length="103"/>
+        <music name="BGM022" nameWithScene="希望之歌" sceneID="1021" length="99"/>
+        <music name="BGM023" nameWithScene="希望之歌" sceneID="1022" length="101"/>
+        <music name="BGM024" nameWithScene="希望之歌" sceneID="1023" length="103"/>
+        <music name="BGM025" nameWithScene="希望之歌" sceneID="1024" length="106"/>
+        <music name="BGM026" nameWithScene="希望之歌" sceneID="1025" length="91"/>
+        <music name="BGM027" nameWithScene="希望之歌" sceneID="1027" length="60"/>
+        <music name="BGM028" nameWithScene="希望之歌" sceneID="1028,1029,1031,1032,1033" length="65"/>
+        <music name="BGM029" nameWithScene="希望之歌" sceneID="2001" length="73"/>
+        <music name="BGM030" nameWithScene="希望之歌" sceneID="2002" length="66"/>
+        <music name="BGM031" nameWithScene="希望之歌" sceneID="2007" length="65"/>
+        <music name="BGM032" nameWithScene="希望之歌" sceneID="2008" length="63"/>
+        <music name="BGM033" nameWithScene="希望之歌" sceneID="2009" length="63"/>
+        <music name="BGM034" nameWithScene="希望之歌" sceneID="2012,2013,2014" length="71"/>
+        <music name="BGM035" nameWithScene="希望之歌" sceneID="3001,3002,3003,3004,3005" length="65"/>
+        <music name="BGM036" nameWithScene="希望之歌" sceneID="3006,3007,3008" length="61"/>
+        <music name="BGM037" nameWithScene="希望之歌" sceneID="3012,3013,3014,3015,3016,3017,3018" length="62"/>
+        <music name="BGM038" nameWithScene="希望之歌" sceneID="3019,3020,3021" length="60"/>
+        <music name="BGM039" nameWithScene="希望之歌" sceneID="3022" length="68"/>
+        <music name="BGM040" nameWithScene="希望之歌" sceneID="3024" length="64"/>
+</playlist>

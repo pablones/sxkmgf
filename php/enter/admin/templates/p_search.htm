@@ -1,0 +1,42 @@
+<link type="text/css" href="../templates/js/jquery-ui-1.8.14.custom.css" rel="stylesheet" />	
+<script type="text/javascript" src="../templates/js/jquery.min.js"></script>
+<script type="text/javascript" src="../templates/js/jquery-ui-1.8.14.custom.min.js"></script>
+<script>
+	$(function() {
+		$("#start_time_id").datepicker();
+		$("#end_time_id").datepicker();
+	});
+</script>
+<div class="main-div">
+    <form action="pay_consume.php?act=list_search" method="post" enctype="multipart/form-data" name="searchForm">
+        <table>
+             <tr>
+                <td width="60"> <div align="left"><strong>{$lang.label_time}</strong></div></td>
+                <td width="140"> <input type="text" name="start_time" maxlength="60" size="20" readonly="readonly" id="start_time_id" /> </td>
+                <td width="10"> ~ </td>
+                <td width="140"> <input type="text" name="end_time" maxlength="60" size="20" readonly="readonly" id="end_time_id" /> </td>
+                
+                <td>
+                    <input type="radio" value="1" name="search_range" checked='true'>{$lang.self_server}
+                    <input type="radio" value="0" name="search_range">{$lang.all_server}
+                </td>
+             <tr>
+                <td colspan="3">
+                        <input name="query" type="submit" class="button" id="query" value="{$lang.button_search}"/>
+                        <input name="reset" type="reset" class='button' value='{$lang.button_reset}' />
+                    
+                </td>
+             </tr>   
+        </table>
+    </form>
+</div>
+<div class="main-div">
+    <table cellpadding="3" cellspacing="1" width="">
+        <tr>
+            <td width="80"><strong>{$lang.yb_total}:</strong></td>
+            <td align="left" width="80">{$sumres.yb_sum}</td>
+            <td width="80"><strong>{$lang.rmb_total}:</strong></td>
+            <td align="left">{$sumres.rmb_sum}</td>
+        </tr>
+    </table>
+</div>

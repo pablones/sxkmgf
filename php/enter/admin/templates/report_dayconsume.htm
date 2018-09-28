@@ -1,0 +1,86 @@
+{include file="pay_header.htm"}
+<link type="text/css" href="./templates/js/jquery-ui-1.8.14.custom.css" rel="stylesheet" />	
+<script type="text/javascript" src="./templates/js/jquery.min.js"></script>
+<script type="text/javascript" src="./templates/js/jquery-ui-1.8.14.custom.min.js"></script>
+<script>
+	$(function() {
+		$("#start_time_id").datepicker();
+		$("#end_time_id").datepicker();
+	});
+</script>
+
+<div class="main-div">
+    <form action="report.php?act=dayconsume" method="post" enctype="multipart/form-data" name="searchForm">
+        <table>
+             <tr>
+                <td width="80"><div align="left"><strong>{$lang.create_stime}：</strong></div></td>
+                <td align="left" width="240">
+                    <input type="text" name="start_time" maxlength="60" size="20" readonly="readonly" id="start_time_id" />
+                </td>
+                <td  width="80"><div align="left"><strong>{$lang.create_etime}：</strong></div></td>
+               <td>
+                    <input type="text" name="end_time" maxlength="60" size="20" readonly="readonly" id="end_time_id" />
+                </td>
+              
+             <tr>
+                <td colspan="3">
+                        <input name="query" type="submit" class="button" id="query" value="{$lang.button_search}"/>
+                        <input name="reset" type="reset" class='button' value='{$lang.button_reset}' />
+                    
+                </td>
+             </tr>   
+        </table>
+    </form>
+</div>
+
+<div class="list-div">
+<table>
+    <tr>
+        <th align="left" width="150">{$lang.czday_date}</th>
+        <th align="left" width="100">{$lang.all_count}</th>
+        <th align="left" width="100">{$lang.all_yb}</th>
+        <th align="left" width="100">{$lang.ave_yb}</th>
+        <th align="left" width="100">{$lang.all_max}</th>
+        <th align="left">{$lang.all_min}</th>
+    </tr>
+    {foreach from=$info key=key item = result}
+    <tr>
+        <td>{$key}</td>
+		<td align="left">{$result.count_uselog}</td>
+		<td align="left">
+		{if $result.sum_uselog==0}
+		    0
+		{else}
+		    {$result.sum_uselog}
+		{/if}
+		</td>
+		<td align="left">
+		{if $result.sum_uselog==0}
+		    0
+		{else}
+		    {$result.avg_uselog}
+		{/if}
+		</td>
+		<td align="left">
+		{if $result.sum_uselog==0}
+		    0
+		{else}
+		    {$result.max_uselog}
+		{/if}		
+		</td>
+		<td align="left">
+		{if $result.sum_uselog==0}
+		    0
+		{else}
+		    {$result.min_uselog}
+		{/if}		
+		</td>
+    </tr>
+    {/foreach}
+</table>
+
+
+
+<!-- 分页 TOOD 未来处理 -->
+
+{include file="pagefooter.htm"}

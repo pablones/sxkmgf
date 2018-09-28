@@ -1,0 +1,44 @@
+{include file="pageheader.htm"}
+<table width="90%" id="mix-table"  align="center">
+    <form action="resource.php?act=card_query" method="post" enctype="multipart/form-data" name="searchForm">
+    <tr>
+        <td><strong>{$lang.cardtype}</strong></td>
+        <td>
+            <!-- TODO 后期抽离-->
+            <select name="cardtype" id="cardtype" >
+                <option value="1">新手卡</option>
+                <option value="2">媒体卡</option>
+                <option value="3">投票卡</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td width="80"><strong>{$lang.card_amount}</strong></td>
+        <td><input type ="text" name="card_amount" id="card_amount" /></td>
+    </tr>   
+    <tr>
+        <td colspan="2">
+            <input name="query" type="submit" class="button" id="query" value="{$lang.get_card}"/>
+            <input name="reset" type="reset" class='button' value='{$lang.button_reset}' />
+            <input name="" type="button" class="button" value='{$lang.button_output}' onclick="output();"/>
+         </td>
+    </tr>
+	<tr>
+    	<td colspan="3"><strong>{$lang.card_notic}</strong></td>
+    </tr>
+    </form>
+</table>
+<script>
+
+function output(){
+	var amount = document.getElementById('card_amount').value;
+	var cardtype = document.getElementById('cardtype').value;
+	if(amount != ''){
+		window.location.href = "resource.php?act=card_output&card_amount="+amount+"&cardtype="+cardtype;
+	}else{
+		alert("{$lang.notnum}");
+	}
+	
+}
+</script>
+{include file="pagefooter.htm"}

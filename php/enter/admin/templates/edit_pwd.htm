@@ -1,0 +1,30 @@
+{include file="pageheader.htm"}
+<div class="main-div">
+	<form action="edit_pwd.php?act=edit" method="post" enctype="multipart/form-data" name="searchForm">
+    	<table>
+    		<tr>
+    			<th width = "10%" align="left"><strong>{$lang.user_name}</strong></th>
+        		<td><input type="text" id="user_name" name="user_name" value="{$user_name}" readonly/></td>  
+    		</tr>   
+    		<tr>
+    			<th width = "10%" align="left"><strong>{$lang.old_pwd}</strong></th>
+    			<td><input type="password" id="old_pwd" name="old_pwd" value=""/></td>
+    		</tr>   
+    		<tr>
+    			<th width = "10%" align="left"><strong>{$lang.new_pwd}</strong></th>
+    			<td><input type="password" id="new_pwd" name="new_pwd" value=""/></td>
+    		</tr>  	    
+    		<tr>
+    			<th width = "10%" align="left"><strong>{$lang.sure_pwd}</strong></th>
+    			<td><input type = "password" id="sure_pwd" name = "sure_pwd" value=""/></td>
+    		</tr>
+    		<tr>
+    			<th colspan="2" align="left">
+    				<input type="submit" id="btn" name="btn" class="button" value="{$lang.btn}"/>
+    				<input type="reset" id= 'ret' name="ret" class="button" value="{$lang.ret}"/>
+    			</td>
+    		</tr>
+       	</table>
+	</form>
+</div>
+{include file="pagefooter.htm"}

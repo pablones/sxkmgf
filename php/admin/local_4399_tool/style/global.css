@@ -1,0 +1,117 @@
+body {
+  width: 960px;
+  margin:auto;
+  font-size: 13px;
+  padding-bottom: 10px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  padding-top: 50px;
+}
+
+a:link,a:visited { color:blue;}
+a:hover { }
+a img { border:none;outline:none;}
+
+.clear { clear:both;}
+.rt { text-align:right;}
+.lt { text-align:left;}
+.ct { text-align:center;}
+.hide { display:none;}
+.b { font-weight:bold;}
+a.green:link,a.green:visited { color:green;font-weight:bold;}
+a.red:link,a.red:visited { color:red;font-weight:bold;}
+textarea,input {	font-size: 13px;font-family: Verdana, Arial, Helvetica, sans-serif; }
+
+hr {color:#EEE;}
+td img { vertical-align:bottom;}
+td,th,textarea { font-size: 13px; vertical-align:middle;}
+
+#content { }
+#content h2 { font-size: 13px; border-bottom: solid 2px #EEE; padding-bottom: 5px;}
+#content th { background-color:#EEE; padding:3px;}
+#content td { padding: 3px;}
+#content tr.bg { background-color:#EEE;}
+
+.divbg { background-color:#F1F1F1;}
+.divpadding { padding: 5px;}
+
+.red { color:#FF0000;}
+
+table.tbBorder td , table.tbBorder th { border:solid 1px #EEE;}
+body#detail #content h1 { margin:0;padding:0; font-size: 19px;}
+body#detail #content th { width: 100px;}
+body#detail #content .date{
+	font-size: 80%;
+	color:#999999;
+	text-align: right;
+}
+body#detail #content table { margin-bottom: 10px;}
+body#detail #content table td ,body#detail #content table th { border:solid 1px #EEE;}
+
+
+.cntpart { margin-bottom: 13px; margin-left: 5px;}
+body#index .cntpart { float:left;width: 470px;  }
+body#index .cntpart li {
+	list-style-position: inside;
+	list-style-image: url(../images/li_black.gif);
+	font-size: 15px;
+	width: 420px;
+	margin: 3px;
+	font-family: "Courier New", Courier, monospace;
+	white-space: nowrap;
+	overflow: hidden;
+}
+body#index .cntpart li a:link,body#index .cntpart li a:visited{	color:#333; }
+body#index .cntpart li a:hover,
+body#index .cntpart li .curr:link,
+body#index .cntpart li .curr:hover,
+body#index .cntpart li .curr:visited{	color: #F00;	background-color: #ff0;  }
+
+form .tip {	color: #006699;	background-color: #FFFF33;	padding: 2px;}
+
+.searchbox { margin-bottom: 5px;}
+#header h1 { float:left; font-size: 21px;}
+#header .guard { margin-bottom: 10px; margin-left: 160px;}
+#header .guard ul {margin:0;padding:0;}
+#header .guard li { list-style-type:none; white-space:nowrap;line-height: 23px; clear:both;}
+#header .guard li strong {float:left; margin-right: 3px;}
+#header .guard li ul { margin:0;padding:0;line-height: 23px; float:left;}
+#header .guard li ul li { float:left;line-height: 23px;;clear:none; margin-left:3px; }
+
+#topnav { text-align:right; background-color:#EEE;}
+#topnav ul { margin:0;padding:0px;}
+#topnav li { list-style-type:none; display:inline; font-size: 15px;}
+
+
+
+
+
+
+/* fenye */
+.fenye { font-size: 12px;text-align:center; margin: 5px; padding: 10px; }
+.fenye ul ,.fenye li  {list-style-type:none; margin:0px; padding:0px;}
+.fenye li {display:inline;margin:2px;padding:0px;}
+.fenye a {	margin: 2px;border: 1px solid #FCFF7F;	text-decoration: none;	padding-top: 2px;	padding-right: 5px;	padding-bottom: 2px;	padding-left: 5px; font-weight:bold;}
+.fenye a:link, .fenye a:visited{	color: #666;  }
+.fenye a:hover,.fenye .curr:link,.fenye .curr:hover,.fenye .curr:visited{	color: #F00;	background-color: #ff0;  }
+
+
+#footer { padding-top: 15px; padding-top: 15px;font-size: 12px;text-align:center;}
+#footer a img { padding: 5px;}
+
+
+.yqlj {}
+.yqlj li { list-style-type:none; display:inline; margin: 3px;}
+
+
+.postdiv {
+	background-color: #F1F1F1;
+	border: 2px solid #FF9900;
+	padding: 10px;
+}
+.postdiv .author { font-weight: bold; }
+.postdiv img { margin: 5px; padding-bottom: 5px;}
+
+h1 {
+	font-size: 19px;
+	font-family: "新宋体";
+}

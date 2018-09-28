@@ -1,0 +1,35 @@
+{include file="pageheader.htm"}
+<div class="list-div">
+<table width="90%" id="mix-table"  align="center">    
+<form action="player.php?act=searchpwd_query" method="post" enctype="multipart/form-data" name="searchForm">
+    <tr>
+        <td width="5%"; align = "center"><strong>{$lang.account}:</strong></td>
+        <td>
+           <input type ="text" name = "account" id="account" value=""/>
+        </td>
+    </tr>
+    <tr>
+       
+    </tr>
+    <tr>
+        <td colspan="2">
+            <input name="query" type="submit" class="button" id="query" value="{$lang.button_search}"/>
+            <input name="reset" type="reset" class='button' value='{$lang.button_reset}' />
+        </td>
+    </tr>
+</from>
+</table>
+</div>
+{if $display eq 1}
+<div id = "pwd" class= "list-div";>
+<table width="90%" id="mix-table"  align="center"> 
+    <tr>
+       <td width="5%"; align = "center"><strong>{$lang.account}:</strong></td>
+       <td width = "10%" align ="center"><span>{$username}</span></td>
+       <td width="5%"; align = "center"><strong>{$lang.pwd}:</strong></td>
+       <td width = "15%"; align="center"><span>{$pwd}</span></td>
+    </tr>
+</table>
+</div>
+{/if}
+{include file="pagefooter.htm"}

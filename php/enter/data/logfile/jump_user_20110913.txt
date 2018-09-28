@@ -1,0 +1,9 @@
+2011-09-13 01:47:27[59.57.240.198]
+    username: 
+    userid  : 
+    4399uid : 
+    HTTP_COOKIE     :  TRACKID=c7ff666756dc55371c09af076e6d192b; PHPSESSID=v1ch9qse3ubjqj8tbbf8ganeg5
+    HTTP_HOST       :  yjjh1-s.fy5.com
+    HTTP_USER_AGENT :  Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)
+--------------------------------------------
+

@@ -1,0 +1,75 @@
+{include file="pageheader.htm"}
+<link type="text/css" href="./templates/js/jquery-ui-1.8.14.custom.css" rel="stylesheet" />	
+<script type="text/javascript" src="./templates/js/jquery.min.js"></script>
+<script type="text/javascript" src="./templates/js/jquery-ui-1.8.14.custom.min.js"></script>
+<script>
+	$(function() {
+		$("#start_time_id").datepicker();
+		$("#end_time_id").datepicker();
+	});
+</script>
+
+
+<div class="main-div">
+    <form action="tool.php?act=export_detail" method="post" enctype="multipart/form-data" name="searchForm">
+        <table>
+             <tr>
+                <td width="80"><div align="left"><strong>{$lang.create_stime}：</strong></div></td>
+                <td align="left" width="240">
+                    <input type="text" name="start_time" maxlength="60" size="20" readonly="readonly" id="start_time_id" />
+                </td>
+                <td  width="80"><div align="left"><strong>{$lang.create_etime}：</strong></div></td>
+               <td>
+                    <input type="text" name="end_time" maxlength="60" size="20" readonly="readonly" id="end_time_id" />
+                </td>
+           </tr>
+              
+        </table>
+    
+    
+       {foreach from=$info key =key item = result}
+       <p><input  id="{$key}" type="checkbox" value="s_{$key}[]" onClick="ChkAllClick('{$key}',this.form, this)" /><strong>{$key}</strong></p>
+       {foreach from=$result key =k item = r}
+       <input type="checkbox" name="s_{$key}[]" id="s_{$key}" value="{$r}" />{if $r<10}0{$r}{else}{$r}{/if}{$lang.select_sever} 
+       {if ($k+1)%20==0}
+       <p></p>
+       {/if}
+       {/foreach}
+       {/foreach}
+    
+       <table >
+             <tr>
+                <td colspan="3">
+                       <input type="checkbox" name="checkall" value="checkbox" onclick="checkAll(this.form, this);" class="checkbox" />{$lang.select_all}
+                        <input name="query" type="submit" class="button" id="query" value="{$lang.button_export}"/>
+                    
+                </td>
+             </tr>   
+        </table>
+    </form>
+</div>
+  
+{literal}
+<script language="javascript">
+//所有平台全选
+function checkAll(frm, checkbox){
+  for (i = 0; i < frm.elements.length; i++){
+      frm.elements[i].checked = checkbox.checked;
+  }
+}
+//单平台全选
+function ChkAllClick(type,frm, checkbox){
+	var name = document.getElementById(type).value;
+    for (i = 0; i < frm.elements.length; i++)
+    {
+      if (frm.elements[i].name ==name )
+      {
+        frm.elements[i].checked = checkbox.checked;
+      }
+    }
+}
+
+</script>
+{/literal}
+
+{include file="pagefooter.htm"}

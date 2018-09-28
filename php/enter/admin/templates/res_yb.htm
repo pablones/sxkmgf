@@ -1,0 +1,110 @@
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,selectzone.js,colorselector.js"}
+{insert_scripts files="../js/transport.js,common.js"}
+<link type="text/css" href="./templates/js/jquery-ui-1.8.14.custom.css" rel="stylesheet" />	
+<script type="text/javascript" src="./templates/js/jquery.min.js"></script>
+<script type="text/javascript" src="./templates/js/jquery-ui-1.8.14.custom.min.js"></script>
+{literal}
+<script>
+$(document).ready(function(){
+	$('.id2').hide();
+	$('#select1').change(function() {
+		if($('#select1  option:selected').val() == "{$lang.staff}"){
+			$('.id2').show();
+		}else{
+			$('.id2').hide();
+		}
+		//alert('#select1 option:selected').val());
+	});
+	$('#query').click(function(){
+		if($('#select1  option:selected').val() == "{$lang.staff}"){
+			if($('#action').val()==''||$('#request').val()==''){
+				alert('{$lang.user_null}');
+				return false;
+			}
+	    }
+	});
+});
+</script>
+{/literal}
+
+<div class="main-div">
+	<span>{$lang.notices}</span>
+</div> 
+<form action="resource.php?act=yb_query" method="post" enctype="multipart/form-data" name="searchForm">
+<table width="90%" id="mix-table"  align="center">
+	<tr>
+		<td>  
+           <a href="javascript:;" onclick="addImg(this)">[+]</a>
+           <strong>{$lang.platform_account}:&nbsp;</strong><input type="text" name="platform_account[]" id="platform_account" >
+           <strong>{$lang.yb_amount}:&nbsp;</strong><input type ="text" name="yb_amount[]" id="yb_amount" />
+        </td>
+	</tr>
+	<tr>
+		<td><strong>{$lang.input_account}:</strong><input type="file" name="input_account" id="input_account" /></td>
+    </tr>
+    <tr>
+        <td width="30%"> 
+            <strong>{$lang.add_type}:</strong> 
+            <select id="select1" name="add_type">
+                 <option value="{$lang.reward}">{$lang.reward}</option>
+                 <option value="{$lang.compensation}" selected="selected">{$lang.compensation}</option>
+                 <option value="{$lang.staff}">{$lang.staff}</option>
+             </select>
+         </td>
+    </tr>
+    <tr class="id2">
+        <td width="60"> 
+            <strong>{$lang.request}:</strong> 
+            <input type="text" name="request" id="request"  />
+            <strong>{$lang.act_man}:</strong>
+            <input type="text" name="action" id="action"  />
+        </td>
+    </tr>
+	<tr>
+		<td colspan='2'>
+			<input name="query" type="submit" class="button" id="query" value="{$lang.button_search}"/>
+			<input name="reset" type="reset" class='button' value='{$lang.button_reset}' />
+		</td>
+	</tr>
+	<tr>
+		<td colspan='2'>
+			<strong>{$lang.goods_notic}<br/>{$lang.yb_notic_1}<br/>{$lang.yb_notic_1}<br/>{$lang.yb_notic_2}<br/></strong>
+		</td>
+	</tr>
+</table>
+
+</form>
+
+
+<script language="JavaScript">
+ /**
+   * 新增一个充值工具
+   */
+  function addImg(obj)
+  {
+      var src  = obj.parentNode.parentNode;
+      var idx  = rowindex(src);
+      var tbl  = document.getElementById('mix-table');
+      //var tbl  = document.getElementById('test');
+      var row  = tbl.insertRow(idx + 1);
+      var cell = row.insertCell(-1);
+      cell.innerHTML = src.cells[0].innerHTML.replace(/(.*)(addImg)(.*)(\[)(\+)/i, "$1removeImg$3$4-");
+  }
+
+  /**
+   * 删除充值
+   */
+  function removeImg(obj)
+  {
+      var row = rowindex(obj.parentNode.parentNode);
+      var tbl = document.getElementById('mix-table');
+      //var tbl  = document.getElementById('test');
+
+      tbl.deleteRow(row);
+  }
+</script>
+{include file="pagefooter.htm"}
+
+
+ 

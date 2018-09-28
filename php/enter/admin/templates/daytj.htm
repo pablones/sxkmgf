@@ -1,0 +1,31 @@
+{include file="pageheader.htm"}
+
+<div class="list-div">
+<table>
+    <tr>
+        <th align="left" width="150">{$lang.create_time}</th>
+        <th align="left" width="150">{$lang.create_enter}</th>
+        <th align="left" width="150">{$lang.create_enterrole}</th>
+        <th align="left" width="150">{$lang.create_created}</th>
+        <th align="left" width="150">{$lang.create_enterplay}</th>
+        <th align="left" width="150">{$lang.create_regloss}</th>
+        <th align="left" width="150">{$lang.create_createloss}</th>
+        <th align="left">{$lang.create_allloss}</th>
+    </tr>
+    {foreach from=$row item =result}
+    <tr>
+        <td>{$result.time}</td>
+        <td>{$result.count1}</td>
+        <td>{$result.count2}</td>
+        <td>{$result.count3}</td>
+        <td>{$result.count4}</td>
+        <td>{$result.regloss}%</td>
+        <td>{$result.createloss}%</td>
+        <td>{$result.allloss}%</td>
+    </tr>
+    {/foreach}
+</table>
+<!-- 分页 TOOD 未来处理 -->
+
+</div>
+{include file="pagefooter.htm"}

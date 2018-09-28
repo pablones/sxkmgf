@@ -1,0 +1,71 @@
+{include file="pageheader.htm"}
+<link type="text/css" href="./templates/js/jquery-ui-1.8.14.custom.css" rel="stylesheet" />	
+<script type="text/javascript" src="./templates/js/jquery.min.js"></script>
+<script type="text/javascript" src="./templates/js/jquery-ui-1.8.14.custom.min.js"></script>
+<script>
+	$(function() {
+		$("#start_time_id").datepicker();
+		$("#end_time_id").datepicker();
+	});
+</script>
+
+<div class="main-div">
+    <form action="player.php?act=game_log" method="post" enctype="multipart/form-data" name="searchForm">
+        <table>
+             <tr>
+                <td  width="60" align="left"><strong>{$lang.log_time}：</strong></td>
+                <td align="left">
+                    <input type="text" name="time" maxlength="60" size="20" readonly="readonly" id="start_time_id" />
+                </td>
+            </tr>
+            <tr>
+                <td  width="60" align="left"><strong>{$lang.gamelog_role}：</strong></td>
+                <td  align="left">
+                    <input type="text" name="rolename" id="rolename" value=""  />
+                </td>
+             </tr>
+             <tr>
+                <td colspan="3">
+                        <input name="query" type="submit" class="button" id="query" value="{$lang.button_search}"/>
+                        <input name="reset" type="reset" class='button' value='{$lang.button_reset}' />
+                    
+                </td>
+             </tr>   
+        </table>
+    </form>
+</div>
+
+
+<div class="list-div">
+<table>
+    <tr>
+        <th width="65" align="left">{$lang.usOp}</th>
+        <th width="65" align="left">{$lang.usOpType}</th>
+        <th width="65" align="left">{$lang.usGetType}</th>
+        <th width="65" align="left">{$lang.usNum}</th>
+        <th width="65" align="left">{$lang.szTarget}</th>
+        <th width="65" align="left">{$lang.idTarget}</th>
+        <th width="65" align="left">{$lang.szOwner}</th>
+        <th width="65" align="left">{$lang.idOwner}</th>
+        <th width="120" align="left">{$lang.szTime}</th>
+        <th align="left">{$lang.szMsg}</th>
+    </tr>
+    {foreach from=$info key=key item = result}
+    <tr>
+        <td>{$lang.$result.usOp}</td>
+        <td>{$lang.$result.usOpType}</td>
+        <td>{$lang.$result.usGetType}</td>
+        <td>{$result.usNum}</td>
+        <td>{$result.szTarget}</td>
+        <td>{$result.idTarget}</td>
+        <td>{$result.szOwner}</td>
+        <td>{$result.idOwner}</td>
+        <td>{$result.szTime}</td>
+        <td>{$result.szMsg}</td>
+    </tr>
+    {/foreach}
+</table>
+</div>
+
+
+{include file="pagefooter.htm"}

@@ -1,0 +1,77 @@
+{include file="pageheader.htm"}
+
+<link type="text/css" href="../templates/js/jquery-ui-1.8.14.custom.css" rel="stylesheet" />	
+<script type="text/javascript" src="../templates/js/jquery.min.js"></script>
+<script type="text/javascript" src="../templates/js/jquery-ui-1.8.14.custom.min.js"></script>
+<script>
+	$(function() {
+		$("#start_time_id").datepicker();
+		$("#end_time_id").datepicker();
+	});
+</script>
+
+<div class="main-div">
+    <form action="player.php?act=equire" method="post" enctype="multipart/form-data" name="searchForm">
+        <table >
+             <tr>
+                <td  width="60"><div align="left"><strong>{$lang.username}：</strong></div></td>
+                <td width="60">
+                    <input type="text"   name="username" value=""  />
+                </td>
+                <td  width="60"><div align="left"><strong>{$lang.rolename}：</strong></div></td>
+                <td>
+                    <input type="text"  name="rolename" value="" />
+                </td>
+             </tr>
+             <tr>
+                <td colspan="3">
+                        <input name="query" type="submit" class="button" id="query" value="提交"/>
+                        <input name="reset" type="reset" class='button' value="重置" />
+                    
+                </td>
+             </tr>   
+        </table>
+    </form>
+</div>
+
+
+<div class="list-div">
+
+  <table>
+  	<tr>
+  	    <th>{$lang.account}</th>
+  	    <th>{$lang.rolename}</th>
+  	    <th>{$lang.level}</th>
+  	    <th>{$lang.item_name}</th>
+  	    <th>{$lang.item_addlev}</th>
+  	    <th>{$lang.item_star}</th>
+  	    <th>{$lang.item_amount}</th>
+  	    <th>{$lang.item_amountlimit}</th>
+  	    <th>{$lang.item_base}</th>
+  	    <th>{$lang.item_addition}</th>
+  	    <th>{$lang.item_gem}</th>
+  	</tr>
+
+{foreach from=$rs item = result}
+    <tr>
+       <td>{$row.username}</td>
+        <td>{$row.name}</td>
+        <td>{$row.level}</td>
+        <td>{$result.type}</td>
+        <td>{$result.addlev}</td>
+        <td>{$result.star}</td>
+        <td>{$result.amount}</td>
+        <td>{$result.amount_limit}</td>
+        <td>{$result.itemBase1}|{$result.itemBase2}</td>
+        <td>{$result.itemAddition1}|{$result.itemAddition2}|{$result.itemAddition3}|{$result.itemAddition4}|
+        {$result.itemAddition5}|{$result.itemAddition6}|{$result.itemAddition7}|{$result.itemAddition8}</td>
+        <td>{$result.itemGem1}|{$result.itemGem2}|{$result.itemGem3}</td>
+    </tr>
+    {/foreach}
+  </table>
+  
+<!-- 分页 TOOD 未来处理 -->  
+ 
+</div>
+
+{include file="pagefooter.htm"}

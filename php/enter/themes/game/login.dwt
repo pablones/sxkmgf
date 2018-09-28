@@ -1,0 +1,41 @@
+<script type="text/javascript" src="themes/game/js/jquery.min.js"/></script>
+<form id="frm_center" name="frm_center" method="get" action="ex_login.php">
+	<table align="center" style=" margin-top:100px;">
+        <tr>
+            <td>           
+                <label for="username">用户名</label>
+            </td>
+            <td>
+                <input type="text" class="txtan an1" id="username" name="username"/>
+            </td>
+        </tr>
+		<tr>
+	    	<td>
+				<label for="pwd">密码</label>
+	    	</td>
+	    	<td>
+				<input type="password" class="txtan an1" id="pwd" name="pwd"/>
+	    	</td>
+		</tr>
+		<tr>
+			<td><label for="adminname">测试员账号：</label></td>
+			<td><input type="adminname" class="txtan an1" id="adminname" name="adminname"/></td>
+		</tr>
+		<tr>
+			<td><label for="admin_pwd">测试员密码：</label></td>
+			<td><input type="password" class="admin_pwd" id= "admin_pwd" name="admin_pwd"></td>
+		</tr>
+        <tr>
+            <td align="center">
+			    <input type="hidden" value="yjjh" name="game_src"/>
+                <input type="hidden" value="{$f_id}" name="serverid"/>  
+                <input type="hidden" name="act"  value="deal"/>
+                <input type="submit" id="button" name="button" value="登陆" />
+            </td>
+        </tr>
+    </table>
+</form>
+
+
+
+

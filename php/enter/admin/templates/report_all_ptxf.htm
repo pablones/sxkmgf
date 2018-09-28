@@ -1,0 +1,88 @@
+{include file="pay_header.htm"}
+<link type="text/css" href="./templates/js/jquery-ui-1.8.14.custom.css" rel="stylesheet" />	
+<script type="text/javascript" src="./templates/js/jquery.min.js"></script>
+<script type="text/javascript" src="./templates/js/jquery-ui-1.8.14.custom.min.js"></script>
+<script>
+	$(function() {
+		$("#start_time_id").datepicker();
+		$("#end_time_id").datepicker();
+	});
+</script>
+
+<div class="main-div">
+    <form action="report.php?act=all_ptxf" method="post" enctype="multipart/form-data" name="searchForm">
+        <table>
+             <tr>
+                <td width="80"><div align="left"><strong>{$lang.create_stime}：</strong></div></td>
+                <td align="left" width="240">
+                    <input type="text" name="start_time" maxlength="60" size="20" readonly="readonly" id="start_time_id" />
+                </td>
+                <td  width="80"><div align="left"><strong>{$lang.create_etime}：</strong></div></td>
+               <td>
+                    <input type="text" name="end_time" maxlength="60" size="20" readonly="readonly" id="end_time_id" />
+                </td>
+              
+             <tr>
+                <td colspan="3">
+                        <input name="query" type="submit" class="button" id="query" value="{$lang.button_search}"/>
+                        <input name="reset" type="reset" class='button' value='{$lang.button_reset}' />
+                    
+                </td>
+             </tr>   
+        </table>
+    </form>
+</div>
+
+
+
+<div class="main-div">
+	<table>
+		<tr>
+			<td><strong>{$lang.err_server}</strong></td>
+		</tr>
+		{foreach from=$err key=key item = data}
+		<tr>
+			<td><strong>{$key}</strong></td>
+		</tr>
+		<tr>
+			<td>
+			{foreach from=$data  item = id}
+				<span>{$id},</span>
+		    {/foreach}
+			</td>
+		</tr>
+		{/foreach}
+	</table>
+</div>
+
+<div class="list-div">
+	<table>
+		<tr>
+		    <th align="left" width="140">日期</th>
+			{foreach from=$info key=key item = data}
+			<th align="left" width="80">{$key}消费元宝</th>
+			{/foreach}
+			<th align="left" >合计</th>
+		</tr>
+		{foreach from=$date item = date}
+		<tr>
+		    <td>{$date}</td>
+		{foreach from=$info item =rs}
+		    <td>{$rs.$date}</td>
+		{/foreach}
+		  <td>{$sum_day.$date}</td>
+		</tr>   
+		{/foreach}
+		<tr>
+		<td>合计</td>
+		{foreach from=$sum item = sum}
+		    <td>{$sum}</td>
+		{/foreach}
+		<td>{$sum_all}</td>
+		</tr>  
+	</table>
+	
+</div>
+
+
+{include file="pagefooter.htm"}

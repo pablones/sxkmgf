@@ -1,0 +1,84 @@
+
+{include file="pageheader.htm"}
+<link type="text/css" href="./templates/js/jquery-ui-1.8.14.custom.css" rel="stylesheet" />	
+<script type="text/javascript" src="./templates/js/jquery.min.js"></script>
+<script type="text/javascript" src="./templates/js/jquery-ui-1.8.14.custom.min.js"></script>
+<script>
+	$(function() {
+		$("#start_time_id").datepicker();
+		$("#end_time_id").datepicker();
+	});
+</script>
+
+<div class="main-div">
+    <form action="yb_log.php?act=ticketlog" method="post" enctype="multipart/form-data" name="searchForm">
+        <table>
+             <tr>
+                <td width="60"> <strong>{$lang.username}：</strong> </td>
+                <td> <input type="text" name="username" value="{$info.username}"  /> </td>
+                <td  width="60"> <div align="left"><strong>{$lang.rolename}：</strong></div> </td>
+                <td> <input type="text" name="rolename" value="{$info.rolename}" /></td>
+             </tr>
+             <tr>
+                <td width="60"> <div align="left"><strong>{$lang.sdate}:</strong></div></td>
+                <td width="60"> <input type="text" name="startdate" maxlength="60" size="20" readonly="readonly" id="start_time_id"  value="{$info.startdate}"/>  </td>
+                <td  width="60"> <div align="left"><strong>{$lang.edate}:</strong></div></td>
+                <td> <input type="text" name="enddate" maxlength="60" size="20" readonly="readonly" id="end_time_id"  value="{$info.enddate}"/> </td>
+             <tr>
+                <td colspan="3">
+                        <input name="query" type="submit" class="button" id="query" value="{$lang.button_search}"/>
+                        <input name="reset" type="button" class='button' value='{$lang.button_reset}' onclick="funClear()"/> 
+                        <input type="hidden" name="action" value="list">
+                    
+                </td>
+             </tr>   
+        </table>
+    </form>
+</div>
+
+
+
+<div class="list-div" >
+
+
+  
+  <table cellspacing='1' cellpadding='3'>
+  	<tr>
+  	  <th width="100" align="left">{$lang.username}</th>
+  	  <th width="100" align="left">{$lang.rolename}</th>
+  	  <th width="100" align="left">{$lang.Oper_Type}</th>
+  	  <th width="100" align="left">{$lang.ItemType_ID}</th>
+  	  <th width="100" align="left">{$lang.VAS_Point}</th>
+  	  <th align="left">{$lang.time}</th>
+  	</tr>
+ 
+{foreach from=$rs item = result}
+    <tr align="left">
+        <td>{$result.Account_Name}</td>
+        <td>{$result.role}</td>
+        <td>{$result.type}</td>
+        <td>{$result.ItemType_ID}</td>
+        <td>{$result.VAS_Point}</td>
+        <td>{$result.OccurDate}</td>
+    </tr>
+    {/foreach}
+
+  </table>
+
+
+
+{include file="pagefooter.htm"}
+</div>
+
+<script >
+  function funClear(){
+      var txts=document.getElementsByTagName("input");  
+      for(var i=0;i<txts.length;i++)  
+      {  
+        if(txts[i].type=="text")  
+        {  
+          txts[i].value ="";  
+        }  
+      }
+ }
+</script>

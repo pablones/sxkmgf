@@ -1,0 +1,7 @@
+// 2010-09-07 15:50:07 充值记录：
+[1]yujianjianghu01 --> 充入600元宝 --> 充值成功
+[2]yujianjianghu02 --> 充入600元宝 --> 充值成功
+[3]yujianjianghu03 --> 充入600元宝 --> 充值成功
+[4]yujianjianghu04 --> 充入600元宝 --> 充值成功
+[5]yujianjianghu05 --> 充入600元宝 --> 充值成功
+[6]yujianjianghu06 --> 充入600元宝 --> 充值成功

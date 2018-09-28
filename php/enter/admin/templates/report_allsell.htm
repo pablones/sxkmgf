@@ -1,0 +1,43 @@
+{include file="pay_header.htm"}
+<link type="text/css" href="./templates/js/jquery-ui-1.8.14.custom.css" rel="stylesheet" />	
+<script type="text/javascript" src="./templates/js/jquery.min.js"></script>
+<script type="text/javascript" src="./templates/js/jquery-ui-1.8.14.custom.min.js"></script>
+
+
+
+
+
+<div class="main-div">
+    <table cellpadding="3" cellspacing="1" width="">
+        <tr>
+            <td width="100"><strong>{$lang.all_gold_sum}:</strong></td>
+            <td align="left" width="80">{$sum}</td>
+            <td width="130"><strong>{$lang.all_rmb_sum}:</strong></td>
+            <td align="left">{$sumrmb}</td>
+        </tr>
+    </table>
+</div>
+
+   
+<div class="list-div">
+<table>
+    <tr>
+        <th width="100" align="left">{$lang.day_item}</th>
+        <th width="100" align="left">{$lang.day_price}</th>
+        <th width="100" align="left">{$lang.day_count}</th>
+        <th width="100" align="left">{$lang.day_gold}</th>
+        <th  align="left">{$lang.day_rmb}</th>
+    </tr>
+    {foreach from=$info item = result}
+    <tr>
+        <td>{$result.name}</td>       
+        <td>{$result.price}</td>        
+        <td>{$result.count}</td>
+        <td>{$result.yb}</td>
+        <td>{$result.rmb}</td>
+    </tr>
+    {/foreach}
+</table>
+<!-- 分页 TOOD 未来处理 -->
+
+{include file="pagefooter.htm"}

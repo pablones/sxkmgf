@@ -1,0 +1,45 @@
+<form id="paymodes" name="frm_center" method="post" action="ex_moac.php">
+	<table align="center" style=" margin-top:100px;">
+    		<tr>
+			<td align="center" colspan="2"><span>MoblieActivityTOOL</span></td>
+		</tr>
+		<tr>
+			<td><label for="PayNum">PayNum</label></td>
+        		<td><input type="text" id="PayNum" name="PayNum" value=""/></td>
+		</tr>
+		<tr>
+			<td><label for="Mode">Mode</label></td>
+			<td><input type="text" id="Mode" name="Mode" value="1"/></td>
+		</tr>
+		<tr>
+			<td><label for="PayToUser">PayToUser</label></td>
+			<td><input type="text" id="PayToUser" name="PayToUser" value=""/></td>
+		</tr>
+		<tr>
+			<td><label for="PayGold">actcode</label></td>
+			<td><input type="text" id="actcode" name="actcode" value=""/></td>
+		</tr>
+
+		<tr>
+			<td><label for = "PayTime">PayTime</lable></td>
+			<td><input type = "text" id ="PayTime" name = "PayTime" value =""/></td>
+		</tr>
+		<tr>
+			<td><label for = "PayTime">PayMoney</lable></td>
+			<td><input type = "text" id ="PayMoney" name = "PayMoney" value =""/></td>
+		</tr>
+		<tr>
+			<td><label for="ServerName">ServerName</label></td>
+			<td><input type="text" id="ServerName" name="ServerName" value=""/></td>
+		</tr>
+		<tr>
+			<td>
+				<input type="hidden" id="act" value="query" name="act"/>
+            			<input type="submit" id="button" name="button" value="提交" /> 
+			</td>
+		</tr>
+    </table>
+</form>
+{if $success eq 1}
+<span>success</span>
+{/if}

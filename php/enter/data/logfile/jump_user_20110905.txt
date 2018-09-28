@@ -1,0 +1,18 @@
+2011-09-05 01:27:48[59.57.240.198]
+    username: 
+    userid  : 
+    4399uid : 
+    HTTP_COOKIE     :  TRACKID=9e2e8622349364fadd15a689a7b8902c; PHPSESSID=oces3ljgql8bufkkihrg6suvf6
+    HTTP_HOST       :  yjjh1-s.fy5.com
+    HTTP_USER_AGENT :  Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)
+--------------------------------------------
+
+2011-09-05 09:06:52[59.57.240.198]
+    username: 
+    userid  : 
+    4399uid : 
+    HTTP_COOKIE     :  TRACKID=fde4bb02bcbeafcb615a7d748f5beede; PHPSESSID=m28poeqk1e2i9gtgspl30ljns5
+    HTTP_HOST       :  yjjh1-s.fy5.com
+    HTTP_USER_AGENT :  Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)
+--------------------------------------------
+

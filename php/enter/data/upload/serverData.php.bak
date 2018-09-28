@@ -1,0 +1,12 @@
+﻿<? 
+$serverArr = array(
+            'S1'=> array(
+                                        'id'          => 1,
+                                         'servername'  => '晴川阁',
+                                         'swfurl'      => 'http://127.0.0.1/resource/Gameloader.swf',
+					'SourceURL'   =>	'http://app100669006.imgcache.qzoneapp.com/app100669006/resource/resource/',
+					'AccSocketIP' =>	'127.0.0.1',
+					'AccSocketPort'=>  '8846',
+                                        ),             
+                        );
+?>

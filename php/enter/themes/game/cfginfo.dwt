@@ -1,0 +1,33 @@
+{if $ver neq 1 }
+<form id="fm" name="fm" method="post" action="cfginfo.php">
+	<table border="1" align="center" bordercolor="#000000" style="border:1px" width="100%">
+		<tr>
+			<td align="center" bgcolor="#F6336F"><a href = "cfginfo.php?act=">CFG</a></td>
+			<td>
+				<input type = "hidden" id = "act" name = "act" value = "query" />
+				<input type = "submit" id = "del" name ="del" value="del"/>
+			</td>
+		</tr>
+		{foreach from=$cfg key=k item=v}
+		<tr>
+			<td bgcolor="#FF33FF"><span>{$k}</span></td>
+			<td><span>{$v}</span></td>
+		</tr>
+		{/foreach}
+	</table>
+</form>
+{/if}
+{if $ver eq 1}
+<form id = 'verform' name = "verform" method = "post" action = "cfginfo.php">
+<table border = 1 align = "center" bordercolor = "#000000" style = "border:1px" width ="100%">
+	<tr>
+		<td><a href = "cfginfo.php?act=ver">Content</a></td>
+		<td>{$result}</td>
+	</tr>
+	<tr>
+		<input type = "hidden" id ="ver" name = "act" value ="verquery"/>
+		<input type = "submit" id = "verquery" name = "verquery" value ="verdelete" />
+	</tr>
+</table>
+</form>
+{/if}

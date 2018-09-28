@@ -1,0 +1,18 @@
+2011-08-30 13:34:55[120.86.37.9]
+    username: 
+    userid  : 
+    4399uid : 
+    HTTP_COOKIE     :  fy5_bbs_ec13_lastvisit=1313471238; fy5_bbs_ec13_visitedfid=39; pgv_pvi=2491324058
+    HTTP_HOST       :  yjjh1-s.fy5.com
+    HTTP_USER_AGENT :  Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/534.5 (KHTML, like Gecko) TaomeeBrowser/2.0.0.0 Chrome/6.0 Safari/534.5
+--------------------------------------------
+
+2011-08-30 13:34:58[120.86.37.9]
+    username: 
+    userid  : 
+    4399uid : 
+    HTTP_COOKIE     :  fy5_bbs_ec13_lastvisit=1313471238; fy5_bbs_ec13_visitedfid=39; pgv_pvi=2491324058; ECS_ID=af8fbf4e783f60e2a30f9486e639499f980273b3
+    HTTP_HOST       :  yjjh1-s.fy5.com
+    HTTP_USER_AGENT :  Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/534.5 (KHTML, like Gecko) TaomeeBrowser/2.0.0.0 Chrome/6.0 Safari/534.5
+--------------------------------------------
+

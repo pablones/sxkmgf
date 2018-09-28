@@ -1,0 +1,61 @@
+{include file="report_loss_count.htm"}
+<div class="tab-div">
+    <!-- tab bar -->
+    <div id="tabbar-div">
+      <p>
+        <span class="tab-front" id="general-tab">{$lang.tab_general}</span>
+        <span class="tab-back" id="area-tab">{$lang.losscount}</span>
+        <span class="tab-back" id="from-tab">{$lang.churn}</span>
+      </p>
+    </div>
+
+    <!-- tab body -->
+    <div class="tab-div">
+    <div class="list-div" id="listDiv">
+    <!-- 各等级流失统计表 -->
+        <table  id="general-table" >
+          <tr>
+             <th align="left" width="150">{$lang.loss_level}</th>
+             <th align="left" width="150">{$lang.loss_isloss}</th>
+             <th align="left" width="150">{$lang.loss_mayloss}</th>
+             <th align="left" width="150">{$lang.loss_noloss}</th>
+             <th align="left">{$lang.loss_churn}</th>
+           </tr>
+    {foreach from=$info key=key  item = result}
+           <tr>
+              <td>{$key}</td>
+              <td>{$result.isloss}</td>
+              <td>{$result.mayloss}</td>
+              <td>{$result.noloss}</td>
+              <td>{$result.churn}</td>
+            </tr>
+      {/foreach}
+         </table>
+</div>
+      <!-- 各等级流失人数统计图 -->
+            <table width="100%" id="area-table" style="display:none">
+              <tr>
+                  <td width="100%">
+                     <div id="lostcount" style="width: 1500px; height: 400px; margin: 0 auto"></div>
+
+                  </td>
+              </tr>
+             </table>
+          
+
+
+         <!-- 各等级流失率统计图 -->
+             <table width="100%" id="from-table" style="display:none">
+                <tr>
+                    <td width="100%" height="100%">
+                        <div id="churn" style="width: 1500px; height: 400px; margin: 0 auto"></div>
+                    </td>
+                </tr>
+             </table>
+   
+ </div>
+</div>
+
+{insert_scripts files="tab.js"}
+
+{include file="pagefooter.htm"}

@@ -1,0 +1,124 @@
+
+{include file="pay_header.htm"}
+<link type="text/css" href="./templates/js/jquery-ui-1.8.14.custom.css" rel="stylesheet" />	
+<script type="text/javascript" src="./templates/js/jquery.min.js"></script>
+<script type="text/javascript" src="./templates/js/jquery-ui-1.8.14.custom.min.js"></script>
+<script>
+	$(function() {
+		$("#start_time_id").datepicker();
+		$("#end_time_id").datepicker();
+	});
+</script>
+
+<div class="main-div">
+    <form action="player.php?act=list" method="post" enctype="multipart/form-data" name="searchForm">
+        <table>
+             <tr>
+                <td width="60"> <strong>{$lang.username}：</strong> </td>
+                <td> <input type="text" name="username" value="{$info.username}"  /> </td>
+                <td  width="60"> <div align="left"><strong>{$lang.rolename}：</strong></div> </td>
+                <td> <input type="text" name="rolename" value="{$info.rolename}" /></td>
+                <td  width="80"><div align="left"><strong>{$lang.list_slevel}：</strong></div></td>
+                <td> <input type="text" name="startlevel" value="{$info.startlevel}"  /> </td>
+                <td  width="80"><div align="left"><strong>{$lang.list_elevel}：</strong></div></td>
+                <td> <input type="text" name="endlevel" value="{$info.endlevel}" /> </td>
+             </tr>
+             <tr>
+                <td width="60"> <div align="left"><strong>{$lang.list_sdate}:</strong></div></td>
+                <td width="60"> <input type="text" name="startdate" maxlength="60" size="20" readonly="readonly" id="start_time_id"  value="{$info.startdate}"/>  </td>
+                <td  width="60"> <div align="left"><strong>{$lang.list_edate}:</strong></div></td>
+                <td> <input type="text" name="enddate" maxlength="60" size="20" readonly="readonly" id="end_time_id"  value="{$info.enddate}"/> </td>
+                <td  width="60"><div align="left"><strong>{$lang.list_regip}：</strong></div></td>
+                <td >
+                    <input type="text" name="regip" value="{$info.regip}" />
+                </td>
+             <tr>
+                <td colspan="3">
+                        <input name="query" type="submit" class="button" id="query" value="{$lang.button_search}"/>
+                        <input name="reset" type="button" class='button' value='{$lang.button_reset}' onclick="funClear()"/> 
+                        <input type="hidden" name="action" value="list">
+                    
+                </td>
+             </tr>   
+        </table>
+    </form>
+</div>
+
+
+
+<div class="list-div" >
+
+
+  
+  <table cellspacing='1' cellpadding='3'>
+  	<tr>
+  	  <th>{$lang.list_userid}</th>
+  	  <th>{$lang.rolename}ID</th>
+  	  <th>{$lang.list_username}</th>
+  	  <th>{$lang.list_role}</th>
+  	  <th>{$lang.list_level}</th>
+  	  <th>{$lang.list_regip}</th>
+  	  <th>{$lang.list_regtime}</th>
+  	  <th>{$lang.list_detail}</th>
+  	</tr>
+ 
+{foreach from=$rs item = result}
+    <tr align="center">
+        <td>{$result.id}</td>
+        <td>{$result.roleid}</td>
+        <td>{$result.name}</td>
+        <td>{$result.role}</td>
+        <td>{$result.level}</td>
+        <td>{$result.netbar_ip}</td>
+        <td>{$result.regdate}</td>
+        <td>
+            {if $result.id}
+                <a href="player.php?act=userdetail&userid={$result.id}">{$lang.list_detail}</a>
+            {/if}
+        </td>
+    </tr>
+    {/foreach}
+
+  </table>
+
+<table>
+    <tr>
+        <th>
+                      共{$num}页
+        <a href='player.php?act=list&page=1&{$post}'>首页&nbsp;&nbsp;</a>
+        {if $lastpage>=1}
+        <a href='player.php?act=list&page={$lastpage}&{$post}'>上一页&nbsp;&nbsp;</a>
+        {else}
+                      上一页&nbsp;&nbsp;
+        {/if}
+        {foreach from=$pagenum1 item = result}
+        <a href='player.php?act=list&page={$result}&{$post}'>{$result}&nbsp;</a>
+        {/foreach}
+        {if $nextpage<=$num}
+        <a href='player.php?act=list&page={$nextpage}&{$post}'>下一页&nbsp;&nbsp;</a>
+        {else}
+                       下一页&nbsp;&nbsp;
+        {/if}
+        <a href='player.php?act=list&page={$num}&{$post}'>末页</a>
+                    当前第{$page}页
+        </th>
+    </tr>
+
+</table>
+
+
+{include file="pagefooter.htm"}
+</div>
+
+<script >
+  function funClear(){
+      var txts=document.getElementsByTagName("input");  
+      for(var i=0;i<txts.length;i++)  
+      {  
+        if(txts[i].type=="text")  
+        {  
+          txts[i].value ="";  
+        }  
+      }
+ }
+</script>

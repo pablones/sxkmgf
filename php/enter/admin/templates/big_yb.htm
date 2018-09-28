@@ -1,0 +1,52 @@
+
+{include file="pageheader.htm"}
+<link type="text/css" href="./templates/js/jquery-ui-1.8.14.custom.css" rel="stylesheet" />	
+<script type="text/javascript" src="./templates/js/jquery.min.js"></script>
+<script type="text/javascript" src="./templates/js/jquery-ui-1.8.14.custom.min.js"></script>
+
+<div class="list-div" >
+
+
+  
+  <table cellspacing='1' cellpadding='3'>
+  	<tr>
+  	  <th width="120" align="left">{$lang.username}</th>
+  	  <th width="120" align="left">{$lang.rolename}</th>
+  	  <th width="80" align="left">{$lang.level}</th>
+  	  <th width="200" align="left">{$lang.sdate}</th>
+  	  <th width="200" align="left">{$lang.edate}</th>
+  	  <th width="100" align="left">{$lang.dianjuan}</th>
+  	  <th align="left">{$lang.yb}</th>
+  	</tr>
+ 
+{foreach from=$info item = result}
+    <tr align="left">
+        <td>{$result.username}</td>
+        <td>{$result.role}</td>
+        <td>{$result.level}</td>
+        <td>{$result.FirstConsumeDate}</td>
+        <td>{$result.LastConsumeDate }</td>
+        <td>{$result.VAS_Point_juan}</td>
+        <td>{$result.VAS_Point}</td>
+    </tr>
+    {/foreach}
+
+  </table>
+</div>
+
+<div class="main-div">
+    <form action="big_yb.php?act=output" method="post" enctype="multipart/form-data" name="searchForm">
+        <table>
+             <tr>
+                <td colspan="3">
+                        <input name="query" type="submit" class="button" id="query" value="{$lang.output}"/>
+                    
+                </td>
+             </tr>   
+        </table>
+    </form>
+</div>
+
+{include file="pagefooter.htm"}
+
+

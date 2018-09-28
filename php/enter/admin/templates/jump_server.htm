@@ -1,0 +1,43 @@
+{include file="pageheader.htm"}
+<script type="text/javascript" src="../templates/js/jquery.min.js"></script>
+<div class="list-div">
+	<table cellspacing='1' cellpadding='3'>
+		<tr>
+			<td width="10%"><strong>{$lang.servername}</strong></td>
+			<td width="15%">
+				{if $view_all_server eq 1}
+				<select name="pingtai" id="pingtai">
+					<option value="0">{$lang.please_select}</option>
+					{foreach from=$all_server item=server}
+				  	<option value="{$server}" {if $server eq $servers} selected="selected" {/if}>{$server}</option>
+				  	{/foreach}
+			 	</select>
+			 	{else}
+			 	<strong>{$all_server}</strong>
+			 	<input type="hidden" id = "pingtai" name ="pingtai" value="{$all_server}"/>
+			 	{/if}
+			</td>
+					
+			<td width="10%"><strong>{$lang.server}</strong></td>
+			<td width ="15%">
+				<input type ="text" id ="fuwuqi" name="fuwuqi"/>
+			</td>
+			<td>
+				<input type="button" id="jump" name="jump" class="button" value="{$lang.jump}" onclick="jumpto();"/>
+			</td>
+		</tr>
+	</table>
+</div>
+<script>	
+	function jumpto(){		
+		var servername = document.getElementById('pingtai').value;
+		var fuwuqi = document.getElementById('fuwuqi').value;
+		if(fuwuqi == ''){
+			alert("err_notic");
+			return false;
+		}
+		var url = "jump_server.php?act=jump_query&servername="+servername+"&fuwuqi="+fuwuqi;
+		window.location.href = url;
+	}
+</script>
+{include file="pagefooter.htm"}

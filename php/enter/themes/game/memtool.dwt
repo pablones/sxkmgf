@@ -1,0 +1,21 @@
+<a href="memtool.php?act=flush">MemcacheTool By King.L</a>&nbsp;&nbsp;&nbsp;<a href ="memtool.php?act=">凸..- -..凸</a>
+<form id="frm_center" name="frm_center" method="post" action="memtool.php">
+<table border="1" align="center" bordercolor="#000000" style="border:1px" width="100%">
+	{foreach from=$result key=k item=v}
+		<tr>
+			<td bgcolor="#FF33FF" colspan="2"><span>{$k}</span></td>
+			<td>
+				{foreach from=$v key = k1 item =v1}
+    				<tr>
+						<td bgcolor="#FFFFCC"><span>{$k1}</span></td>
+						<td>{$v1}</td>
+				</tr>
+				{/foreach}
+			</td>
+			<td colspan="2"> 
+				<a href="memtool.php?act=delete&key={$k}">o(╯□╰)o</a>
+			</td>
+		</tr>
+	{/foreach}
+</table>
+</form>

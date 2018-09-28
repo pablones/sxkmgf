@@ -1,0 +1,48 @@
+{include file="report_header.htm"}
+
+<div class="list-div">
+<table width="1200">
+    <tr>
+        <th align="left" width="150">{$lang.create_time}</th>
+        <th align="left" width="150">{$lang.create_enter}</th>
+        <th align="left" width="150">{$lang.create_enterrole}</th>
+        <th align="left" width="150">{$lang.create_created}</th>
+        <th align="left" width="150">{$lang.create_enterplay}</th>
+        <th align="left" width="150">{$lang.create_regloss}</th>
+        <th align="left" width="150">{$lang.create_createloss}</th>
+        <th align="left">{$lang.create_allloss}</th>
+    </tr>
+    {foreach from=$row item =result}
+    <tr>
+        <td>{$result.time}</td>
+        <td>{$result.sum1}</td>
+        <td>{$result.sum2}</td>
+        <td>{$result.sum3}</td>
+        <td>{$result.sum4}</td>
+        <td>
+            {if $result.sum1!=0}
+                {$result.regloss}%
+            {else}
+                --
+            {/if}
+        </td>
+        <td>
+            {if $result.sum2!=0}
+                {$result.createloss}%
+            {else}
+                --
+            {/if}       
+        </td>
+        <td>
+            {if $result.sum1!=0}
+                {$result.allloss}%
+            {else}
+                --
+            {/if}        
+        </td>
+    </tr>
+    {/foreach}
+</table>
+<!-- 分页 TOOD 未来处理 -->
+</div>
+{include file="pagefooter.htm"}

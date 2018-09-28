@@ -1,0 +1,65 @@
+{include file="pageheader.htm"}
+
+<div class="main-div">
+    <form action="player.php?act=skill" method="post" enctype="multipart/form-data" name="searchForm">
+        <table >
+             <tr>
+                <td  width="60"><div align="left"><strong>{$lang.username}：</strong></div></td>
+                <td  width="60">
+                    <input type="text" name="username" value=""  />
+                </td>
+                <td  width="60"><div align="left"><strong>{$lang.rolename}：</strong></div></td>
+                <td>
+                    <input type="text" name="rolename" value="" />
+                </td>
+             </tr>
+             <tr>
+                <td colspan="3">
+                        <input name="query" type="submit" class="button" id="query" value="提交"/>
+                        <input name="reset" type="reset" class='button' value="重置" />
+                    
+                </td>
+             </tr>   
+        </table>
+    </form>
+</div>
+
+
+<div class="list-div">
+
+  <table>
+  	<tr>
+  	   <th>{$lang.account}</th>
+  	   <th>{$lang.rolename}</th>
+  	   <th>{$lang.level}</th>
+  	   <th>{$lang.firstp}</th>
+  	   <th>{$lang.flevel}</th>
+  	   <th>{$lang.secondp}</th>
+  	   <th>{$lang.slevel}</th>
+  	   <th>{$lang.sk_name}</th>
+  	   <th>{$lang.sk_level}</th>
+  	   <th>{$lang.sk_exp}</th>
+  	</tr>
+ 
+
+{foreach from=$rs item = result}
+     <tr>
+       <td>{$row.username}</td>
+        <td>{$row.name}</td>
+        <td>{$row.level}</td>
+        <td>{$mp.$row.Fir_Job}</td>
+        <td>{$row.Fir_JobLv}</td>
+        <td>{$mp.$row.Sec_Job}</td>
+        <td>{$row.Sec_JobLv}</td>
+        <td>{$result.type}</td>
+        <td>{$result.level}</td>
+        <td>{$result.exp}</td>
+     </tr>
+    {/foreach}
+
+  </table>
+<!-- 分页 TOOD 未来处理 -->  
+
+</div>
+
+{include file="pagefooter.htm"}

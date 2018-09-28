@@ -1,0 +1,55 @@
+<form id="fm" name="fm" method="post" action="sqltool.php">
+<table border="1" align="center" bordercolor="#000000" style="border:1px" width="100%">
+	<tr>
+		<td colspan = "2" align="center"><span>凸.- -.凸</span></td>
+	</tr>
+	<tr>
+		<td width="5%"><span>King.L</span></td>
+		<td><textarea name="sql" cols="100" rows="10"></textarea></td>
+	</tr>
+	<tr>
+		<td width="5%"><span>Operate</span></td>
+		<td>
+			<input name ="query" type="radio" value="s">S &nbsp;
+			<input name = "query" type ="radio" value="m">M &nbsp;
+			
+ 		</td>
+	</tr>
+	<tr>
+		<td width = "5%"><span>DB</span></td>
+		<td>
+			<input name = "db" type = "radio" value = "a">A &nbsp;
+			<input name = "db" type = "radio" value = "w" >W &nbsp;
+			<input name = "db" type = "radio" value = "y" >Y &nbsp;
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<input name ="act" type ="hidden" id ="act" value="query"/>
+			<input name = "btn" type ="submit" id="btn" value="Commit"/>
+		</td>
+	</tr>
+</table>
+</form>
+{if $view eq 1}
+<table border = "1" align="center" bordercolor ="#000000" style ="border:1px" width="100%">
+	{foreach from=$result key=k item=v}
+		<tr>
+			<td bgcolor="#FF33FF" colspan="2"><span>{$k}</span></td>
+			<td>
+				{foreach from=$v key = k1 item =v1}
+					<tr>
+						<td bgcolor="#FFFFCC"><span>{$k1}</span></td>
+						<td>{$v1}</td>
+					</tr>
+				{/foreach}
+			</td>
+		</tr>
+	{/foreach}
+</table>
+{/if}
+{if $view eq 2}
+	<table style = "border:1px;">
+		<tr><td><span>success</span></td></tr>
+	</table>
+{/if}

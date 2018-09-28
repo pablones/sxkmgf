@@ -1,0 +1,65 @@
+{include file="pageheader.htm"}
+<div class="main-div">
+    <form action="player.php?act=first_pay" method="post" enctype="multipart/form-data" name="searchForm">
+        <table >
+             <tr>
+                <td  width="60"><div align="left"><strong>{$lang.username}：</strong></div></td>
+                <td width="60">
+                    <input type="text" name="username" value="{$name}"  />
+                </td>
+                <td  width="60"><div align="left"><strong>{$lang.rolename}：</strong></div></td>
+                <td>
+                    <input type="text" name="rolename" value="{$role}" />
+                </td>
+             </tr>
+             <tr>
+              <td colspan="3">
+                  <input name="query" type="submit" class="button" id="query" value="{$lang.button_search}"/>
+                 <input name="reset" type="button" class='button' value='{$lang.button_reset}' onclick="funClear()"/>  
+               </td> 
+             </tr>   
+        </table>
+    </form>
+</div>
+
+
+<div class="list-div">
+  <table>
+  	<tr>
+  	   <th width="100" align="left">ID</th>
+  	   <th width="100" align="left">{$lang.username}</th>
+  	   <th width="100" align="left">{$lang.rolename}</th>
+  	   <th width="100" align="left">{$lang.get_zb}</th>
+  	   <th width="100" align="left">generalize_id</th>
+  	   <th align="left">type</th>
+  	</tr>
+{foreach from=$info item = result}
+    <tr>
+       <td>{$result.id}</td>
+       <td>{$result.name}</td>
+       <td>{$result.role}</td>
+       <td>{$result.state}</td>
+       <td>{$result.generalize_id}</td>
+       <td>{$result.type}</td>
+    </tr>
+    {/foreach}
+
+  </table>
+
+
+<!-- 分页 TOOD 未来处理 -->  
+
+</div>
+<script >
+  function funClear(){
+      var txts=document.getElementsByTagName("input");  
+      for(var i=0;i<txts.length;i++)  
+      {  
+        if(txts[i].type=="text")  
+        {  
+          txts[i].value ="";  
+        }  
+      }
+ }
+</script>
+{include file="pagefooter.htm"}

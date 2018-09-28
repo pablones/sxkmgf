@@ -1,0 +1,98 @@
+<?php
+
+$_LANG = array(
+    'app_name' => '御剑江湖',
+    'cp_home' =>  '御剑江湖管理中心',
+    'copyright' => '版权所有 &copy; 2005-2010 广州御剑网络科技有限公司，并保留所有权利。',
+    'button_search' =>"确定",
+    'button_reset' =>"重置",
+  
+
+    'ur_last' => '→ 补偿仓库',
+    'compensation_other' => ' → 其他',
+    'compensation_item' => ' → 道具补偿',
+    'compensation_pet' => ' → 宠物补偿',
+
+    'is_username' => '补偿角色名称',
+    'item_id' => '补偿道具ID',
+    'pet_id' => '补偿宠物ID',
+    'compensation_amount' => '补偿数量',
+    'compensation_type' => '补偿类型',
+    'compensation_success' => '补偿成功!',
+    'is_binding' => '是否绑定',
+    'bin' => '绑定',
+    'notbin' => '不绑定',
+    'quality' => '品质',
+    'star' => '星级',
+    'addlev' => '强化等级',
+    'itemAddition'=>'附加属性',
+    'itembase' => '基本属性',
+    'itemGem' => '宝石',
+
+
+    'boy' => '男',
+    'girl' => '女',
+    'jingyan' => '经验',
+    'sex' => '性别',
+    'child_type' => '二代类型',
+    'understand' => '悟性',
+    'habit' => '性格',
+    'gift' => '根骨',
+    'borntime' => '生育次数',        
+    'grow' => '成长 ',
+    'strchg' => '力量资质',
+    'intchg' => '灵力资质',
+    'stachg' => '体力资质',
+    'spichg' => '定力资质',
+    'agichg' => '身法资质 ',
+    'skill' => '技能',
+
+
+    'level' => '等级',
+    'other3' => '银两',
+    'other4' => '碎银',
+    'other5' => '珠宝',
+    'other6' => '元宝',
+    'other7' => '荣誉',
+    'other8' => '帮贡',
+    'other9' => '经验',
+    'compensate' => '补偿',
+    'item' => '物品',
+    'pet' => '宠物',
+
+    'success' => '操作成功',
+    'fail' => '补偿失败',
+    'back' => '返回补偿仓库',
+    'whether' => '是否进行补偿',
+    'add_type'=>'发放类型',
+    'reward'=>'活动奖励',
+    'compensation'=>'补偿',
+    'staff'=>'内部人员',
+    'request'=>'申请人',
+    'act_man'=>'账号使用人',
+    'user_null'=>'申请人及账号使用人不能为空!',
+    'additem'=>'添加道具 ',
+    'regdate'=>'注册时间 ',
+    'lastlogin'=>'最后登录时间 ',
+    'level'=>'等级 ',
+    's_id'=>'服务器ID ',
+    'count'=>'数量 ',
+    'admin_account'=>'管理员账号 ',
+    'add_yb'=>'添加 元宝',
+    'add_zb'=>'添加 珠宝',
+    'user_empty'=>'用户名或充值数量为空',
+    'username'=>'账号 ',
+    'role'=>'角色名 ',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+
+)
+
+
+
+
+?>

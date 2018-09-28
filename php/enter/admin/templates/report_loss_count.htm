@@ -1,0 +1,140 @@
+<link href="styles/general.css" rel="stylesheet" type="text/css" />
+<link href="styles/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="./templates/js/jquery.min.js"></script>
+<script type="text/javascript" src="./templates/js/highcharts.js"></script>
+<script type="text/javascript" src="./templates/js/modules/exporting.js"></script>
+
+{literal}
+
+		<script type="text/javascript">
+		
+			var lostcount;
+			$(document).ready(function() {
+				lostcount = new Highcharts.Chart({
+					chart: {
+						renderTo: 'lostcount',
+						defaultSeriesType: 'line',
+						marginRight: 130,
+						marginBottom: 25
+					},
+					title: {
+						text: '{$lang.losscount}',
+						x: -20 //center
+					},
+					
+					xAxis: {
+						
+						max :100,
+						categories: [],
+					    min:1
+					},
+					yAxis: {
+						min:0,
+						title: {
+							text: '{$lang.count}'
+						},
+						plotLines: [{
+							value: 0,
+							width: 1,
+							color: '#808080'
+						}]
+					},
+					tooltip: {
+						formatter: function() {
+			                return '<b>'+ this.series.name +'</b><br/>'+
+							this.x +'{$lang.lv}: '+ this.y +'{$lang.count1}';
+					    }
+					},
+					legend: {
+						layout: 'vertical',
+						align: 'right',
+						verticalAlign: 'top',
+						x: -10,
+						y: 100,
+						borderWidth: 0
+					},
+					series: [{
+						name: '{$lang.loss_noloss}',
+						data: {$ynoloss}
+						},{
+						name: '{$lang.loss_isloss}',
+						data: {$yisloss}
+						},{
+						name: '{$lang.loss_mayloss}',
+						data: {$ymayloss}	
+						}]
+				});
+				
+				
+			});
+				
+		
+			var churn;
+			$(document).ready(function() {
+				churn = new Highcharts.Chart({
+					chart: {
+						renderTo: 'churn',
+						defaultSeriesType: 'line',
+						marginRight: 130,
+						marginBottom: 25
+					},
+					title: {
+						text: '{$lang.churn}',
+						x: -20 //center
+					},
+					
+					xAxis: {
+						max :100,
+						min:1,
+						categories:[]
+					},
+					yAxis: {
+						min:0,
+						title: {
+							text: '{$lang.loss_churn}'
+						},
+						plotLines: [{
+							value: 0,
+							width: 1,
+							color: '#808080'
+						}]
+					},
+					tooltip: {
+						formatter: function() {
+			                return '<b>'+ this.series.name +'</b><br/>'+
+							this.x +'{$lang.lv}: '+'{$lang.loss_churn}'+ this.y +'%';
+					    }
+					},
+					legend: {
+						layout: 'vertical',
+						align: 'right',
+						verticalAlign: 'top',
+						x: -10,
+						y: 100,
+						borderWidth: 0
+					},
+					series: [{
+						name: '{$lang.churn}',
+						data: {$ychurn}
+						}]
+				});
+				
+				
+			});
+				
+		</script>
+
+{/literal}
+
+
+
+
+
+
+
+<h1>
+<span class="action-span1"><a href="index.php?act=main">{$lang.cp_home}</a> </span>
+<span class="action-span1">&nbsp;→&nbsp;{$lang.ur_last}&nbsp;→&nbsp;</span>
+<span class="action-span1">{$here}</span>
+<div style="clear:both"></div>
+</h1>

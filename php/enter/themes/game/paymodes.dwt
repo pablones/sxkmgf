@@ -1,0 +1,42 @@
+<form id="paymodes" name="frm_center" method="post" action="ex_paymodes.php">
+	<table align="center" style=" margin-top:100px;">
+    	<tr>
+			<td align="center"><span>充值接口测试工具</span></td>
+		</tr>
+		<tr>
+			<td><label for="PayNum">PayNum</label></td>
+        		<td><input type="text" id="PayNum" name="PayNum" value=""/></td>
+		</tr>
+		<tr>
+			<td><label for="Mode">Mode</label></td>
+			<td><input type="text" id="Mode" name="Mode" value="1"/></td>
+		</tr>
+		<tr>
+			<td><label for="PayToUser">PayToUser</label></td>
+			<td><input type="text" id="PayToUser" name="PayToUser" value=""/></td>
+		</tr>
+		<tr>
+			<td><label for="PayGold">PayGold</label></td>
+			<td><input type="text" id="PayGold" name="PayGold" value=""/></td>
+		</tr>
+		<tr>
+			<td><label for ="PayMoney">PayMoney</label></td>
+			<td><input type = "text" id="PayMoney" name="PayMoney" value=""/></td>
+		</tr>
+		<tr>
+			<td><label for = "PayTime">PayTime</lable></td>
+			<td><input type = "text" id ="PayTime" name = "PayTime" value =""/></td>
+		</tr>
+		<tr>
+			<td><label for="ServerName">ServerName</label></td>
+			<td><input type="text" id="ServerName" name="ServerName" value=""/></td>
+		</tr>
+		<tr>
+			<td>
+				<input type="hidden" id="act" value="query" name="act"/>
+            			<input type="submit" id="button" name="button" value="提交" /> 
+			</td>
+		</tr>
+    </table>
+</form>
+

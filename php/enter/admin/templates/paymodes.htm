@@ -1,0 +1,35 @@
+{include file="pageheader.htm"}
+<link type="text/css" href="./templates/js/jquery-ui-1.8.14.custom.css" rel="stylesheet" />	
+<script type="text/javascript" src="./templates/js/jquery.min.js"></script>
+<script type="text/javascript" src="./templates/js/jquery-ui-1.8.14.custom.min.js"></script>
+
+<div class="main-div">
+ <form id="paymodes" name="frm_center" method="post" action="ex_paymodes.php">
+ 	<input type="hidden" id="Mode" name="Mode" value="1"/>
+	<input type="hidden" id="act" value="query" name="act"/>
+	<table>
+		<tr>
+			<td width="100" align="left"><strong>{$lang.paynum}</strong></td>
+        	<td><input type="text" id="PayNum" name="PayNum" value=""/></td>
+		</tr>
+		<tr>
+			<td><strong>{$lang.username}</strong></td>
+			<td><input type="text" id="PayToUser" name="PayToUser" value=""/></td>
+		</tr>
+		<tr>
+			<td><strong>{$lang.PayGold}</strong></td>
+			<td><input type="text" id="PayGold" name="PayGold" value=""/></td>
+		</tr>
+		<tr>
+			<td><strong>{$lang.PayMoney}</strong></td>
+			<td><input type = "text" id="PayMoney" name="PayMoney" value=""/></td>
+		</tr>
+		<tr>
+			<td> <input type="submit" class='button' id="button" name="button" value="{$lang.button_set}" /> </td> 
+            <td> <input name="reset" type="reset" class='button' value="{$lang.button_reset}" /> </td>
+		</tr>
+    </table>
+</form>
+</div>
+
+{include file="pagefooter.htm"}

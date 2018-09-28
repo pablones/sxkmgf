@@ -1,0 +1,55 @@
+{include file="pageheader.htm"}
+<ul style="padding:0; margin: 0; list-style-type:none; color: #CC0000;">
+
+</ul>
+<!-- directory install end -->
+
+<div class="list-div">
+<table cellspacing='1' cellpadding='3'>
+  <tr>
+    <th colspan="4" class="group-title">{$lang.system_info}</th>
+  </tr>
+  <tr>
+    <td width="10%">{$lang.all_pay_amount}</td>
+    <td  colspan="3">{$rs.count_paylog}</td>
+  </tr>
+  <tr>
+    <td width="10%">{$lang.all_pay_rmb}</td>
+    <td width="20%">{$rs.sum_paymoney}</td>
+    <td width="10%">{$lang.all_pay_yb}</td>
+    <td width="20%">{$rs.sum_paygold}</td>
+  </tr>
+  <tr>
+    <td>{$lang.each_pay_rmb}</td>
+    <td>{$rs.avg_paymoney}</td>
+    <td>{$lang.each_pay_yb}</td>
+    <td>{$rs.avg_paygold}</td>
+  </tr>
+  <tr>
+    <td>{$lang.max_pay_rmb}</td>
+    <td>{$rs.max_paymoney}</td>
+    <td>{$lang.max_pay_yb}</td>
+    <td>{$rs.max_paygold}</td>
+  </tr>
+  <tr>
+    <td>{$lang.min_pay_rmb}</td>
+    <td>{$rs.min_paymoney}</td>
+    <td>{$lang.min_pay_yb}</td>
+    <td>{$rs.min_paygold}</td>
+  </tr>
+  <tr>
+    <td>{$lang.all_consume_yb}</td>
+    <td>{$res.count_uselog}</td>
+    <td>{$lang.each_consume_yb}</td>
+    <td>{$res.avg_uselog}</td>
+  </tr>
+  <tr>
+    <td>{$lang.max_consume_yb}</td>
+    <td>{$res.max_uselog}</td>
+    <td>{$lang.min_consume_yb}</td>
+    <td>{$res.min_uselog}</td>
+  </tr>
+</table>
+</div>
+
+{include file="pagefooter.htm"}

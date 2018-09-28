@@ -1,0 +1,66 @@
+{include file="pageheader.htm"}
+{insert_scripts files="./templates/js/utils.js,selectzone.js,colorselector.js"}
+{insert_scripts files="./templates/js/transport.js,common.js"}
+
+<script language="JavaScript">
+ /**
+   * 新增一个充值工具
+   */
+  function addImg(obj)
+  {
+      var src  = obj.parentNode.parentNode;
+      var idx  = rowindex(src);
+      var tbl  = document.getElementById('mix-table');
+      //var tbl  = document.getElementById('test');
+      var row  = tbl.insertRow(idx + 1);
+      var cell = row.insertCell(-1);
+      cell.innerHTML = src.cells[0].innerHTML.replace(/(.*)(addImg)(.*)(\[)(\+)/i, "$1removeImg$3$4-");
+  }
+
+  /**
+   * 删除充值
+   */
+  function removeImg(obj)
+  {
+      var row = rowindex(obj.parentNode.parentNode);
+      var tbl = document.getElementById('mix-table');
+      //var tbl  = document.getElementById('test');
+
+      tbl.deleteRow(row);
+  }
+</script>
+
+
+
+<div class="main-div">
+	<span>{$lang.notices}</span> 
+<form action="player.php?act=setitempwd" method="post" enctype="multipart/form-data" name="searchForm">
+<table width="90%" id="mix-table"  align="center">
+
+    <tr>
+		<td>  
+           <a href="javascript:;" onclick="addImg(this)">[+]</a>
+           {$lang.rolename}:<input type="text" name="rolename[]" id="rolename" >
+        </td>
+    </tr>
+    <tr>
+		<td>{$lang.input_rolename}:<input type="file" name="input_rolename" id="input_rolename" /></td>
+    </tr>
+	<tr>
+		<td colspan='2'>
+			<input name="query" type="submit" class="button" id="query" value="{$lang.button_set}"/>
+			<input name="reset" type="reset" class='button' value='{$lang.button_reset}' />
+		</td>
+	</tr>
+</table>
+
+</form>
+</div>
+{foreach from=$str item = result}
+
+<strong>{$result}</strong><br />
+
+{/foreach}
+
+
+{include file="pagefooter.htm"}

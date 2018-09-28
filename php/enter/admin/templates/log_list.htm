@@ -1,0 +1,74 @@
+
+{include file="pageheader.htm"}
+<link type="text/css" href="./templates/js/jquery-ui-1.8.14.custom.css" rel="stylesheet" />	
+<script type="text/javascript" src="./templates/js/jquery.min.js"></script>
+<script type="text/javascript" src="./templates/js/jquery-ui-1.8.14.custom.min.js"></script>
+<script>
+	$(function() {
+		$("#start_time_id").datepicker();
+		$("#end_time_id").datepicker();
+	});
+</script>
+
+<div class="main-div">
+    <form action="log_search.php?act=list" method="post" enctype="multipart/form-data" name="searchForm">
+        <table>
+             <tr>
+                <td width="100" align="left"> <strong>{$lang.admin}：</strong> </td>
+                <td align="left"> <input type="text" name="admin" value="{$info.admin}"  /> </td>
+                <td  width="80" align="center"> <div align="left"><strong>IP：</strong></div> </td>
+                <td align="left"> <input type="text" name="ip" value="{$info.ip}" /></td>
+             </tr>
+             <tr>
+                <td width="60"> <div align="left"><strong>{$lang.sdate}:</strong></div></td>
+                <td width="60"> <input type="text" name="sdate" maxlength="60" size="20" readonly="readonly" id="start_time_id"  value="{$info.sdate}"/>  </td>
+                <td  width="60"> <div align="left"><strong>{$lang.edate}:</strong></div></td>
+                <td> <input type="text" name="edate" maxlength="60" size="20" readonly="readonly" id="end_time_id"  value="{$info.edate}"/> </td>
+             <tr>
+             <tr>
+                <td colspan="3">
+                        <input name="query" type="submit" class="button" id="query" value="{$lang.button_search}"/>
+                        <input name="reset" type="button" class='button' value='{$lang.button_reset}' onclick="funClear()"/> 
+                    
+                </td>
+             </tr>   
+        </table>
+    </form>
+</div>
+
+
+
+<div class="list-div" >
+  <table cellspacing='1' cellpadding='3'>
+  	<tr>
+  	  <th width="150" align="left">{$lang.act_time}</th>
+  	  <th width="150" align="left">{$lang.admin}</th>
+  	  <th width="150" align="left">{$lang.act_ip}</th>
+  	  <th align="left">{$lang.act_content}</th>
+  	</tr>
+ 
+{foreach from=$rs item = result}
+    <tr>
+        <td>{$result.log_time}</td>
+        <td>{$result.user_name}</td>
+        <td>{$result.ip_address}</td>
+        <td>{$result.log_info}</td>
+    </tr>
+    {/foreach}
+
+  </table>
+{include file="pagefooter.htm"}
+</div>
+
+<script >
+  function funClear(){
+      var txts=document.getElementsByTagName("input");  
+      for(var i=0;i<txts.length;i++)  
+      {  
+        if(txts[i].type=="text")  
+        {  
+          txts[i].value ="";  
+        }  
+      }
+ }
+</script>

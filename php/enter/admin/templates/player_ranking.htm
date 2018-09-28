@@ -1,0 +1,60 @@
+{if $full_page}
+{include file="pageheader.htm"}
+<link type="text/css" href="../templates/js/jquery-ui-1.8.14.custom.css" rel="stylesheet" />	
+<script type="text/javascript" src="../templates/js/jquery.min.js"></script>
+<script type="text/javascript" src="../templates/js/jquery-ui-1.8.14.custom.min.js"></script>
+<script>
+	$(function() {
+		$("#start_time_id").datepicker();
+		$("#end_time_id").datepicker();
+	});
+</script>
+
+{/if}
+
+
+<div class="list-div" id="listDiv">
+  <table cellspacing='1' cellpadding='3'>
+  	<tr>
+  	  <th width="80" align="left">{$lang.ranking_pm}</th>
+  	  <th width="100" align="left">{$lang.ranking_username}</th>
+  	  <th width="100" align="left">{$lang.ranking_role}</th>
+  	  <th width="80" align="left">{$lang.ranking_lv}</th>
+  	  <th width="80" align="left">{$lang.ranking_pay_yb}</th>
+  	  <th align="left">{$lang.ranking_pay_rmb}</th>
+  	</tr>
+ 
+{foreach from=$info item = result name=rank}
+    <tr>
+        <td width="80" align="left">{$smarty.foreach.rank.iteration} </td>
+        <td width="100" align="left">{$result.name}</td>
+        <td width="100" align="left">{$result.rolename}</td>
+        <td width="80" align="left">{$result.level}</td>
+        <td width="80" align="left">{$result.pay_yb}</td>
+        <td align="left">{$result.pay_rmb}</td>
+    </tr>
+    {/foreach}
+
+  </table>
+  <!-- 分页 -->
+<table id="page-table" cellspacing="0">
+    <tr>
+        <td align="center" nowrap="true">
+			<div id="turn-page">
+				{$lang.total_records} <span id="totalRecords">{$record_count}</span>
+				{$lang.total_pages} <span id="totalPages">{$page_count}</span>
+				{$lang.page_current} <span id="pageCurrent">{$filter.page}</span>
+			<span id="page-link">
+				<a href="player.php?act=ranking&pages=first">{$lang.page_first}</a>
+				<a href="player.php?act=ranking&pages={$prev}">{$lang.page_prev}</a>
+				<a href="player.php?act=ranking&pages={$next}">{$lang.page_next}</a>
+				<a href="player.php?act=ranking&pages=last">{$lang.page_last}</a>
+
+			</span>   
+		</div>
+		</td>
+    </tr>
+</table>
+  
+  
+</div>  

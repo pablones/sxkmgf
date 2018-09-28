@@ -1,0 +1,76 @@
+<!-- $Id: start.htm 17110 2010-04-15 07:47:51Z sxc_shop $ -->
+{include file="pageheader.htm"}
+
+
+{if $admin_msg}
+<div class="list-div" style="border: 1px solid #CC0000">
+  <table cellspacing='1' cellpadding='3'>
+    <tr>
+      <th>{$lang.pm_title}</th>
+      <th>{$lang.pm_username}</th>
+      <th>{$lang.pm_time}</th>
+    </tr>
+    {foreach from=$admin_msg item=msg}
+      <tr align="center">
+        <td align="left"><a href="message.php?act=view&id={$msg.message_id}">{$msg.title|truncate:60:"..."}</a></td>
+        <td>{$msg.user_name}</td>
+        <td>{$msg.send_date}</td>
+      </tr>
+    {/foreach}
+  </table>
+  </div>
+<br />
+{/if}
+
+<div class="list-div">
+<table cellspacing='1' cellpadding='3'>
+  <tr>
+    <th colspan="4" class="group-title">{$lang.system_info}</th>
+  </tr>
+  <tr>
+    <td width="20%">{$lang.os}</td>
+    <td width="30%">{$sys_info.os} ({$sys_info.ip})</td>
+    <td width="20%">{$lang.web_server}</td>
+    <td width="30%">{$sys_info.web_server}</td>
+  </tr>
+  <tr>
+    <td>{$lang.php_version}</td>
+    <td>{$sys_info.php_ver}</td>
+    <td>{$lang.mysql_version}</td>
+    <td>{$sys_info.mysql_ver}</td>
+  </tr>
+  <tr>
+    <td>{$lang.safe_mode}</td>
+    <td>{$sys_info.safe_mode}</td>
+    <td>{$lang.safe_mode_gid}</td>
+    <td>{$sys_info.safe_mode_gid}</td>
+  </tr>
+  <tr>
+    <td>{$lang.socket}</td>
+    <td>{$sys_info.socket}</td>
+    <td>{$lang.timezone}</td>
+    <td>{$sys_info.timezone}</td>
+  </tr>
+  <tr>
+    <td>{$lang.gd_version}</td>
+    <td>{$sys_info.gd}</td>
+    <td>{$lang.zlib}</td>
+    <td>{$sys_info.zlib}</td>
+  </tr>
+  <tr>
+    <td>{$lang.ip_version}</td>
+    <td>{$sys_info.ip_version}</td>
+    <td>{$lang.max_filesize}</td>
+    <td>{$sys_info.max_filesize}</td>
+  </tr>
+
+  <tr>
+    <td>{$lang.ec_charset}</td>
+    <td>{$ecs_charset}</td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+</div>
+
+{include file="pagefooter.htm"}

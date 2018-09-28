@@ -1,0 +1,116 @@
+{include file="pay_header.htm"}
+<link type="text/css" href="./templates/js/jquery-ui-1.8.14.custom.css" rel="stylesheet" />	
+<script type="text/javascript" src="./templates/js/jquery.min.js"></script>
+<script type="text/javascript" src="./templates/js/jquery-ui-1.8.14.custom.min.js"></script>
+<script>
+	$(function() {
+		$("#start_time_id").datepicker();
+		$("#end_time_id").datepicker();
+	});
+</script>
+
+<div class="main-div">
+    <form action="pay_consume.php?act=ybsearch&{$post}" method="post" enctype="multipart/form-data" name="searchForm">
+       <table>
+          <tr>
+             <td width="80"> <strong>{$lang.platform_account}</strong> </td>
+             <td width="326"><input type="text" name="username" id="username" value="{$info.username}"></td>
+             <td width="324" align="left">
+	             <strong>{$lang.player_name}</strong>  
+                 <input type="text" name="rolename" id="rolename" value="{$info.rolename}">
+              </td>
+              <td width="324" align="left">
+	             <strong>{$lang.paynum}</strong>  
+                 <input type="text" name="paynum" id="paynum" value="{$info.paynum}">
+              </td>
+          </tr>
+          <tr>
+              <td width="80"> <div align="left"><strong>{$lang.label_time}</strong></div> </td>
+              <td width="326">
+	             <input type="text" name="start_time" maxlength="60" size="20" readonly="readonly" id="start_time_id"  value="{$info.start_time}"/> ~
+                 <input type="text" name="end_time" maxlength="60" size="20" readonly="readonly" id="end_time_id"  value="{$info.end_time}" />
+	          </td>
+              <td width="324">  
+                 <input type="radio" value="1" name="search_range" checked='true'>{$lang.self_server}
+                 <input type="radio" value="0" name="search_range">{$lang.all_server}
+	          </td>
+           </tr>
+           <tr>
+              <td colspan="3">
+                  <input name="query" type="submit" class="button" id="query" value="{$lang.button_search}"/>
+                 <input name="reset" type="button" class='button' value='{$lang.button_reset}' onclick="funClear()"/>  
+               </td>
+           </tr>              
+       </table>
+     </form>
+</div>
+<div class="list-div">
+{if $count.yb>0}
+	<h1>{$lang.all_pay_yb}：{$count.yb}&nbsp;&nbsp;{$lang.rmb_total}：￥{$count.rmb}</h1>
+{/if}
+<table cellspacing='1' cellpadding='3'>
+    <tr>
+        <th>{$lang.platform_account}</th>
+        <th>{$lang.player_name}</th>
+        <th>{$lang.game_server}</th>
+        <th>{$lang.pay_gold}</th>
+        <th>{$lang.pay_money}</th>
+        <th>{$lang.pay_time}</th>
+        <th>{$lang.pay_ip}</th>
+        <th>{$lang.paynum}</th>
+    </tr>
+    {foreach from=$res item = result}
+    <tr>
+    
+        <td>{$result.username}</td>
+        <td>{$result.rolename}</td>
+        <td>{$result.serverid}</td>
+        <td>{$result.paygold}</td>
+        <td>{$result.paymoney}</td>
+        <td>{$result.logdate}</td>
+        <td>{$result.ip}</td>
+        <td>{$result.paynum}</td>
+    </tr>
+    {/foreach}
+</table>
+<table>
+    <tr>
+        <th>
+                      共{$num}页
+        <a href='pay_consume.php?act=ybsearch&page=1&{$post}'>首页&nbsp;&nbsp;</a>
+        {if $lastpage>=1}
+        <a href='pay_consume.php?act=ybsearch&page={$lastpage}&{$post}'>上一页&nbsp;&nbsp;</a>
+        {else}
+                      上一页&nbsp;&nbsp;
+        {/if}
+        {foreach from=$pagenum1 item = result}
+        <a href='pay_consume.php?act=ybsearch&page={$result}&{$post}'>{$result}&nbsp;</a>
+        {/foreach}
+        {if $nextpage<=$num}
+        <a href='pay_consume.php?act=ybsearch&page={$nextpage}&{$post}'>下一页&nbsp;&nbsp;</a>
+        {else}
+                       下一页&nbsp;&nbsp;
+        {/if}
+        <a href='pay_consume.php?act=ybsearch&page={$num}&{$post}'>末页</a>
+                    当前第{$page}页
+        </th>
+    </tr>
+
+</table>
+    
+</div>    
+
+<script >
+  function funClear(){
+      var txts=document.getElementsByTagName("input");  
+      for(var i=0;i<txts.length;i++)  
+      {  
+        if(txts[i].type=="text")  
+        {  
+          txts[i].value ="";  
+        }  
+      }
+ }
+</script>
+  
+{include file="pagefooter.htm"}

@@ -1,0 +1,66 @@
+{include file="pay_header.htm"}
+<link type="text/css" href="./templates/js/jquery-ui-1.8.14.custom.css" rel="stylesheet" />	
+<script type="text/javascript" src="./templates/js/jquery.min.js"></script>
+<script type="text/javascript" src="./templates/js/jquery-ui-1.8.14.custom.min.js"></script>
+<script>
+	$(function() {
+		$("#start_time_id").datepicker();
+		$("#end_time_id").datepicker();
+	});
+</script>
+
+
+<div class="main-div">
+    <form action="report.php?act=daysell" method="post" enctype="multipart/form-data" name="searchForm">
+        <table>
+             <tr>
+                <td  width="40" align="left"><strong>{$lang.online_date}：</strong></td>
+                <td>
+                    <input type="text" name="time" maxlength="60" size="20" readonly="readonly" id="start_time_id" />
+                </td>
+             <tr>
+                <td colspan="3">
+                        <input name="query" type="submit" class="button" id="query" value="{$lang.button_search}"/>
+                        <input name="reset" type="reset" class='button' value='{$lang.button_reset}' />
+                    
+                </td>
+             </tr>   
+        </table>
+    </form>   
+</div>
+
+
+<div class="main-div">
+    <table cellpadding="3" cellspacing="1" width="">
+        <tr>
+            <td width="130"><strong>{$lang.day_gold_sum}:</strong></td>
+            <td align="left" width="80">{$sum}</td>
+            <td width="180" align="left"><strong>{$lang.day_rmb_sum}:</strong></td>
+            <td align="left">{$sumrmb}</td>
+        </tr>
+    </table>
+</div>
+
+
+<div class="list-div">
+<table>
+    <tr>
+        <th width="100" align="left">{$lang.day_item}</th>
+        <th width="100" align="left">{$lang.day_price}</th>
+        <th width="100" align="left">{$lang.day_count}</th>
+        <th width="100" align="left">{$lang.day_gold}</th>
+        <th  align="left">{$lang.day_rmb}</th>
+    </tr>
+    {foreach from=$info item = result}
+    <tr>
+        <td>{$result.name}</td>       
+        <td>{$result.price}</td>        
+        <td>{$result.count}</td>
+        <td>{$result.yb}</td>
+        <td>￥{$result.rmb}</td>
+    </tr>
+    {/foreach}
+</table>
+<!-- 分页 TOOD 未来处理 -->
+
+{include file="pagefooter.htm"}

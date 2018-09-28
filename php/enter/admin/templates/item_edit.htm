@@ -1,0 +1,94 @@
+{include file="pageheader.htm"}
+<form action="item.php?act=edit_query" method="post" enctype="multipart/form-data" name="searchForm">
+<table width="90%" id="mix-table"  align="center">
+    <tr>
+        <td width="10%"><strong>{$lang.item_name}:</strong></td>
+        <td align = "left"><strong>{$result.item_name}</strong></td>
+    </tr>
+    <tr>
+        <td width="10%"><strong>{$lang.item_star}</strong></td>
+        <td align="left" width ="30%"><input type ="text" name="star" id="star" value ="{$result.star}"/></td>
+        <td align = "left"><strong>{$lang.item_ostar}:{$result.star}</strong></td>
+    </tr>
+    <tr>
+    	<td width="10%"><strong>{$lang.item_addlevel}</strong></strong></td>
+    	<td align="left" width ="30%"><input type = "text" name = "strong" id = "strong" value ="{$result.addlev}"/></td>
+    	<td align="left"><strong>{$lang.item_oaddlevel}:{$result.addlev}</strong></td>
+    </tr>
+    <tr>
+    	<td width = "10%"><strong>{$lang.kidnap}</strong></td>
+    	<td>
+    		<input type="radio" value="2" name="kidnap" id = "kidnap" {if $result.kidnap eq 2}checked{/if}>{$lang.en_kidnap}
+			<input type="radio" value="0" name="kidnap" id = "kidnap" {if $result.kidnap eq 0}checked{/if}>{$lang.un_kidnap}
+    	</td>
+    </tr>
+    <tr>
+    	<td width ="10%"><strong>{$lang.gemstate}</strong></td>
+    	<td align ="left" width="30%">
+    		{foreach from=$gem key=k item=res name = foo}
+    			<input type = "checkbox" name = "gem[]" id = "gem{$smarty.foreach.foo.iteration}" values = "{$res}" {if $res eq '99999'}{else}checked="checked"{/if} onchange="SelectOne('{$smarty.foreach.foo.iteration}','{$res}');"/>{$lang.gem}{$smarty.foreach.foo.iteration}
+    		{/foreach}
+    	</td>
+    	<td align="left">
+    		<strong>{$lang.gem_notice}</strong>
+    	</td>
+    </tr>
+    <tr>
+    	<td width="10%"><strong>{$lang.baoshi_state}</strong></td>
+		<td colspan="2"><span>{$lang.baoshi_notice}</span></td>
+    </tr>
+    {foreach from=$gem key = k1 item = r1 name = foo}
+	<tr {if $r1 eq '99999'}style="display:none;"{/if} id = "gem_id{$smarty.foreach.foo.iteration}">		
+			<td width = "10%" >{$lang.gem}{$smarty.foreach.foo.iteration}</td>
+			<td><input type ="text" name ="baoshi{$smarty.foreach.foo.iteration}" {if $r1 eq '88888'}value=""{else}value="{$r1}"{/if}/></td>		
+	</tr>
+	{/foreach}
+	<tr>
+		<td width ="10%"><strong>{$lang.soulstate}</strong></td>
+		<td colspan ="2">
+			{$lang.soulatt}
+			<select name = "soulatt">
+				<option value = "" selected="selected">{$lang.please_select}</option>
+				<option value = "9">{$lang.power}</option>
+				<option value = "10">{$lang.spiritual}</option>
+				<option value = "11">{$lang.physical}</option>
+				<option value ="12">{$lang.dpower}</option>
+				<option value = "13">{$lang.body}</option>
+				<option value = "20">{$lang.ice}</option>
+				<option value = "21" >{$lang.fire}</option>
+				<option value = "22">{$lang.ire}</option>
+				<option value = "23">{$lang.spi}</option>
+			</select>
+			{$lang.soullevel}
+			<input type ="text" name = "soullevel" id ="soullevel" value =""/>
+			{$lang.soulexp}
+			<input type = "text" name = "soulexp" id = "soulexp" value = ""/>
+		</td>
+	</tr>
+    <tr>
+        <td colspan="3">
+        	<input type = "hidden" id = "oldstar" name ="oldstar" value ="{$result.star}"/>
+        	<input type = "hidden" id = "oldaddlev" name = "oldaddlev" value="{$result.addlev}"/>
+        	<input type = "hidden" id = "typeid" name = "typeid" value = "{$result.TYPE}"/>
+        	<input type = "hidden" id = "owner_id" name = "owner_id" value = "{$result.owner_id}"/>
+        	<input type = "hidden" id = "id" name = "id" value= "{$result.id}"/>
+            <input name="query" type="submit" class="button" id="query" value="{$lang.edit}"/>
+            <input name="reset" type="reset" class='button' value='{$lang.button_reset}' />
+        </td>
+    </tr>
+</table>
+</form>
+<script>
+	function SelectOne(gem_id,gem_value){
+		var appear_id = "gem_id" + gem_id;
+		var gem_check = "gem" + gem_id;
+		var g_c = document.getElementById(gem_check).checked;
+		if(g_c){					
+			document.getElementById(appear_id).style.display = "block";
+		}else{
+			document.getElementById(appear_id).style.display = "none";
+		}
+		
+	}
+</script>
+{include file="pagefooter.htm"}

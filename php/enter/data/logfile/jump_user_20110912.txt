@@ -1,0 +1,36 @@
+2011-09-12 16:11:37[120.85.216.231]
+    username: 
+    userid  : 17038
+    4399uid : 123456
+    HTTP_COOKIE     :  timestamp=1315843897; userid=17038; fromlogin=yes; 4399uid=64baMTgci%2BFbkm5WhBJZckmAk8byDVxWQ79lmZ%2BhOl8c0h4; ECS_ID=2a70cb0db137a58be41d2883f145913aa388142b
+    HTTP_HOST       :  yjjh1-s.fy5.com
+    HTTP_USER_AGENT :  Mozilla/5.0 (Windows NT 5.1; rv:6.0.2) Gecko/20100101 Firefox/6.0.2
+--------------------------------------------
+
+2011-09-12 16:11:47[120.85.216.231]
+    username: 
+    userid  : 17038
+    4399uid : 123456
+    HTTP_COOKIE     :  timestamp=1315843897; userid=17038; fromlogin=yes; 4399uid=64baMTgci%2BFbkm5WhBJZckmAk8byDVxWQ79lmZ%2BhOl8c0h4; ECS_ID=2a70cb0db137a58be41d2883f145913aa388142b
+    HTTP_HOST       :  yjjh1-s.fy5.com
+    HTTP_USER_AGENT :  Mozilla/5.0 (Windows NT 5.1; rv:6.0.2) Gecko/20100101 Firefox/6.0.2
+--------------------------------------------
+
+2011-09-12 16:11:48[120.85.216.231]
+    username: 
+    userid  : 17038
+    4399uid : 123456
+    HTTP_COOKIE     :  timestamp=1315843897; userid=17038; fromlogin=yes; 4399uid=64baMTgci%2BFbkm5WhBJZckmAk8byDVxWQ79lmZ%2BhOl8c0h4; ECS_ID=2a70cb0db137a58be41d2883f145913aa388142b
+    HTTP_HOST       :  yjjh1-s.fy5.com
+    HTTP_USER_AGENT :  Mozilla/5.0 (Windows NT 5.1; rv:6.0.2) Gecko/20100101 Firefox/6.0.2
+--------------------------------------------
+
+2011-09-12 16:11:54[120.85.216.231]
+    username: 
+    userid  : 17038
+    4399uid : 123456
+    HTTP_COOKIE     :  timestamp=1315843897; userid=17038; fromlogin=yes; 4399uid=64baMTgci%2BFbkm5WhBJZckmAk8byDVxWQ79lmZ%2BhOl8c0h4; ECS_ID=2a70cb0db137a58be41d2883f145913aa388142b
+    HTTP_HOST       :  yjjh1-s.fy5.com
+    HTTP_USER_AGENT :  Mozilla/5.0 (Windows NT 5.1; rv:6.0.2) Gecko/20100101 Firefox/6.0.2
+--------------------------------------------
+

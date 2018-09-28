@@ -1,0 +1,38 @@
+<div id="contentwrap" class="play_header">
+            <a href="../御剑江湖.url">
+                    <span>
+                      &nbsp;{$lang.play_save}{$lang.play_msg8} | <!-- 保存到桌面 -->
+                    </span>
+             </a>
+           
+            <a href="{$serverpaypage}" target="_blank">
+                    <span>
+                        &nbsp;{$lang.play_pay} | <!-- 充值-->
+                    </span>
+            </a>
+           
+            <a href="{$servernewcard}" target="_blank">
+                    <span>
+                        &nbsp;{$lang.new_card} | <!-- 新手卡-->
+                    </span>
+            </a>
+
+
+
+            <a href="{$serverbbs}" target="_blank">
+                    <span>
+                        &nbsp;{$lang.bbs} | <!-- 论坛-->
+                    </span>
+            </a>
+
+
+
+            <a href="{$serveract}" target="_blank">
+                    <span>
+                        &nbsp;{$lang.new_activity}  <!-- 最新活动-->
+                    </span>
+            </a>
+
+
+
+</div>

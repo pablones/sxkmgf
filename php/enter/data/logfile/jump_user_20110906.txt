@@ -1,0 +1,162 @@
+2011-09-06 01:55:00[59.57.240.198]
+    username: 
+    userid  : 
+    4399uid : 
+    HTTP_COOKIE     :  fy5_bbs_ec13_lastvisit=1314679916; fy5_bbs_ec13_auth=21b3oN3gtIXgfQCyLRiQLtnPYDS11Xhw3Nswx0EpL0SdlJXIQAKFOj7T5hflBGAwqfboMLs0WH9%2B4O6JGArJy%2B3RbAU
+    HTTP_HOST       :  yjjh1-s.fy5.com
+    HTTP_USER_AGENT :  Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; SE 2.X MetaSr 1.0)
+--------------------------------------------
+
+2011-09-06 06:27:02[123.233.112.98]
+    username: 
+    userid  : 
+    4399uid : 
+    HTTP_COOKIE     :  fy5_bbs_ec13_auth=8229B9phRzY2WTUnpJRbV9%2Fq%2FWjMskreYUZN%2BSftlN2k42hQdiWrCDxFyJpeUJImJByZamDtiRudc4qGmfrX; fy5_bbs_ec13_lastvisit=1315269179; fy5_bbs_ec13_sid=eI56dg; fy5_bbs_ec13_lastact=1315289814%09uc.php%09
+    HTTP_HOST       :  yjjh1-s.fy5.com
+    HTTP_USER_AGENT :  Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2; .NET4.0C)
+--------------------------------------------
+
+2011-09-06 06:27:56[123.233.112.98]
+    username: 
+    userid  : 
+    4399uid : 
+    HTTP_COOKIE     :  fy5_bbs_ec13_auth=8229B9phRzY2WTUnpJRbV9%2Fq%2FWjMskreYUZN%2BSftlN2k42hQdiWrCDxFyJpeUJImJByZamDtiRudc4qGmfrX; fy5_bbs_ec13_lastvisit=1315269179; fy5_bbs_ec13_sid=eI56dg; fy5_bbs_ec13_lastact=1315289814%09uc.php%09
+    HTTP_HOST       :  yjjh1-s.fy5.com
+    HTTP_USER_AGENT :  Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2; .NET4.0C)
+--------------------------------------------
+
+2011-09-06 06:28:45[123.233.112.98]
+    username: 
+    userid  : 
+    4399uid : 
+    HTTP_COOKIE     :  fy5_bbs_ec13_auth=8229B9phRzY2WTUnpJRbV9%2Fq%2FWjMskreYUZN%2BSftlN2k42hQdiWrCDxFyJpeUJImJByZamDtiRudc4qGmfrX; fy5_bbs_ec13_lastvisit=1315269179; fy5_bbs_ec13_sid=eI56dg; fy5_bbs_ec13_lastact=1315289814%09uc.php%09
+    HTTP_HOST       :  yjjh1-s.fy5.com
+    HTTP_USER_AGENT :  Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2; .NET4.0C)
+--------------------------------------------
+
+2011-09-06 06:29:12[123.233.112.98]
+    username: 
+    userid  : 
+    4399uid : 
+    HTTP_COOKIE     :  fy5_bbs_ec13_auth=8229B9phRzY2WTUnpJRbV9%2Fq%2FWjMskreYUZN%2BSftlN2k42hQdiWrCDxFyJpeUJImJByZamDtiRudc4qGmfrX; fy5_bbs_ec13_lastvisit=1315269179; fy5_bbs_ec13_sid=eI56dg; fy5_bbs_ec13_lastact=1315289814%09uc.php%09
+    HTTP_HOST       :  yjjh1-s.fy5.com
+    HTTP_USER_AGENT :  Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2; .NET4.0C)
+--------------------------------------------
+
+2011-09-06 06:31:51[123.233.112.98]
+    username: 
+    userid  : 
+    4399uid : 
+    HTTP_COOKIE     :  fy5_bbs_ec13_auth=8229B9phRzY2WTUnpJRbV9%2Fq%2FWjMskreYUZN%2BSftlN2k42hQdiWrCDxFyJpeUJImJByZamDtiRudc4qGmfrX; fy5_bbs_ec13_lastvisit=1315269179; fy5_bbs_ec13_sid=eI56dg; fy5_bbs_ec13_lastact=1315289814%09uc.php%09
+    HTTP_HOST       :  yjjh1-s.fy5.com
+    HTTP_USER_AGENT :  Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2; .NET4.0C)
+--------------------------------------------
+
+2011-09-06 06:33:13[123.233.112.98]
+    username: 
+    userid  : 
+    4399uid : 
+    HTTP_COOKIE     :  fy5_bbs_ec13_auth=8229B9phRzY2WTUnpJRbV9%2Fq%2FWjMskreYUZN%2BSftlN2k42hQdiWrCDxFyJpeUJImJByZamDtiRudc4qGmfrX; fy5_bbs_ec13_lastvisit=1315269179; fy5_bbs_ec13_sid=eI56dg; fy5_bbs_ec13_lastact=1315289814%09uc.php%09
+    HTTP_HOST       :  yjjh1-s.fy5.com
+    HTTP_USER_AGENT :  Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2; .NET4.0C)
+--------------------------------------------
+
+2011-09-06 06:33:19[123.233.112.98]
+    username: 
+    userid  : 
+    4399uid : 
+    HTTP_COOKIE     :  fy5_bbs_ec13_auth=8229B9phRzY2WTUnpJRbV9%2Fq%2FWjMskreYUZN%2BSftlN2k42hQdiWrCDxFyJpeUJImJByZamDtiRudc4qGmfrX; fy5_bbs_ec13_lastvisit=1315269179; fy5_bbs_ec13_sid=eI56dg; fy5_bbs_ec13_lastact=1315289814%09uc.php%09
+    HTTP_HOST       :  yjjh1-s.fy5.com
+    HTTP_USER_AGENT :  Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2; .NET4.0C)
+--------------------------------------------
+
+2011-09-06 06:33:58[123.233.112.98]
+    username: 
+    userid  : 
+    4399uid : 
+    HTTP_COOKIE     :  fy5_bbs_ec13_auth=8229B9phRzY2WTUnpJRbV9%2Fq%2FWjMskreYUZN%2BSftlN2k42hQdiWrCDxFyJpeUJImJByZamDtiRudc4qGmfrX; fy5_bbs_ec13_lastvisit=1315269179; fy5_bbs_ec13_sid=eI56dg; fy5_bbs_ec13_lastact=1315289814%09uc.php%09
+    HTTP_HOST       :  yjjh1-s.fy5.com
+    HTTP_USER_AGENT :  Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2; .NET4.0C)
+--------------------------------------------
+
+2011-09-06 06:34:30[123.233.112.98]
+    username: 
+    userid  : 
+    4399uid : 
+    HTTP_COOKIE     :  fy5_bbs_ec13_auth=8229B9phRzY2WTUnpJRbV9%2Fq%2FWjMskreYUZN%2BSftlN2k42hQdiWrCDxFyJpeUJImJByZamDtiRudc4qGmfrX; fy5_bbs_ec13_lastvisit=1315269179; fy5_bbs_ec13_sid=eI56dg; fy5_bbs_ec13_lastact=1315289814%09uc.php%09
+    HTTP_HOST       :  yjjh1-s.fy5.com
+    HTTP_USER_AGENT :  Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2; .NET4.0C)
+--------------------------------------------
+
+2011-09-06 06:34:50[123.233.112.98]
+    username: 
+    userid  : 
+    4399uid : 
+    HTTP_COOKIE     :  fy5_bbs_ec13_auth=8229B9phRzY2WTUnpJRbV9%2Fq%2FWjMskreYUZN%2BSftlN2k42hQdiWrCDxFyJpeUJImJByZamDtiRudc4qGmfrX; fy5_bbs_ec13_lastvisit=1315269179; fy5_bbs_ec13_sid=eI56dg; fy5_bbs_ec13_lastact=1315289814%09uc.php%09
+    HTTP_HOST       :  yjjh1-s.fy5.com
+    HTTP_USER_AGENT :  Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2; .NET4.0C)
+--------------------------------------------
+
+2011-09-06 06:36:06[123.233.112.98]
+    username: 
+    userid  : 
+    4399uid : 
+    HTTP_COOKIE     :  fy5_bbs_ec13_auth=8229B9phRzY2WTUnpJRbV9%2Fq%2FWjMskreYUZN%2BSftlN2k42hQdiWrCDxFyJpeUJImJByZamDtiRudc4qGmfrX; fy5_bbs_ec13_lastvisit=1315269179; fy5_bbs_ec13_sid=eI56dg; fy5_bbs_ec13_lastact=1315289814%09uc.php%09
+    HTTP_HOST       :  yjjh1-s.fy5.com
+    HTTP_USER_AGENT :  Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2; .NET4.0C)
+--------------------------------------------
+
+2011-09-06 06:36:34[123.233.112.98]
+    username: 
+    userid  : 
+    4399uid : 
+    HTTP_COOKIE     :  fy5_bbs_ec13_auth=8229B9phRzY2WTUnpJRbV9%2Fq%2FWjMskreYUZN%2BSftlN2k42hQdiWrCDxFyJpeUJImJByZamDtiRudc4qGmfrX; fy5_bbs_ec13_lastvisit=1315269179; fy5_bbs_ec13_sid=eI56dg; fy5_bbs_ec13_lastact=1315289814%09uc.php%09
+    HTTP_HOST       :  yjjh1-s.fy5.com
+    HTTP_USER_AGENT :  Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2; .NET4.0C)
+--------------------------------------------
+
+2011-09-06 06:38:44[123.233.112.98]
+    username: 
+    userid  : 
+    4399uid : 
+    HTTP_COOKIE     :  fy5_bbs_ec13_auth=8229B9phRzY2WTUnpJRbV9%2Fq%2FWjMskreYUZN%2BSftlN2k42hQdiWrCDxFyJpeUJImJByZamDtiRudc4qGmfrX; fy5_bbs_ec13_lastvisit=1315269179; fy5_bbs_ec13_sid=eI56dg; fy5_bbs_ec13_lastact=1315289814%09uc.php%09
+    HTTP_HOST       :  yjjh1-s.fy5.com
+    HTTP_USER_AGENT :  Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2; .NET4.0C)
+--------------------------------------------
+
+2011-09-06 06:39:28[123.233.112.98]
+    username: 
+    userid  : 
+    4399uid : 
+    HTTP_COOKIE     :  fy5_bbs_ec13_auth=8229B9phRzY2WTUnpJRbV9%2Fq%2FWjMskreYUZN%2BSftlN2k42hQdiWrCDxFyJpeUJImJByZamDtiRudc4qGmfrX; fy5_bbs_ec13_lastvisit=1315269179; fy5_bbs_ec13_sid=eI56dg; fy5_bbs_ec13_lastact=1315289814%09uc.php%09
+    HTTP_HOST       :  yjjh1-s.fy5.com
+    HTTP_USER_AGENT :  Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2; .NET4.0C)
+--------------------------------------------
+
+2011-09-06 06:40:38[123.233.112.98]
+    username: 
+    userid  : 
+    4399uid : 
+    HTTP_COOKIE     :  fy5_bbs_ec13_auth=8229B9phRzY2WTUnpJRbV9%2Fq%2FWjMskreYUZN%2BSftlN2k42hQdiWrCDxFyJpeUJImJByZamDtiRudc4qGmfrX; fy5_bbs_ec13_lastvisit=1315269179; fy5_bbs_ec13_sid=eI56dg; fy5_bbs_ec13_lastact=1315289814%09uc.php%09
+    HTTP_HOST       :  yjjh1-s.fy5.com
+    HTTP_USER_AGENT :  Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2; .NET4.0C)
+--------------------------------------------
+
+2011-09-06 06:41:44[123.233.112.98]
+    username: 
+    userid  : 
+    4399uid : 
+    HTTP_COOKIE     :  fy5_bbs_ec13_auth=8229B9phRzY2WTUnpJRbV9%2Fq%2FWjMskreYUZN%2BSftlN2k42hQdiWrCDxFyJpeUJImJByZamDtiRudc4qGmfrX; fy5_bbs_ec13_lastvisit=1315269179; fy5_bbs_ec13_sid=eI56dg; fy5_bbs_ec13_lastact=1315289814%09uc.php%09
+    HTTP_HOST       :  yjjh1-s.fy5.com
+    HTTP_USER_AGENT :  Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2; .NET4.0C)
+--------------------------------------------
+
+2011-09-06 06:42:16[123.233.112.98]
+    username: 
+    userid  : 
+    4399uid : 
+    HTTP_COOKIE     :  fy5_bbs_ec13_auth=8229B9phRzY2WTUnpJRbV9%2Fq%2FWjMskreYUZN%2BSftlN2k42hQdiWrCDxFyJpeUJImJByZamDtiRudc4qGmfrX; fy5_bbs_ec13_lastvisit=1315269179; fy5_bbs_ec13_sid=eI56dg; fy5_bbs_ec13_lastact=1315289814%09uc.php%09
+    HTTP_HOST       :  yjjh1-s.fy5.com
+    HTTP_USER_AGENT :  Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2; .NET4.0C)
+--------------------------------------------
+
