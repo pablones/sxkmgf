@@ -1,0 +1,177 @@
+// SocketThread.cpp: implementation of the CSocketThread class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+#include "I_Shell.h"
+#include "SocketThread.h"
+#include "MessagePort.h"
+#include "MsgServer.h"
+#include "protocol.h"
+#include "IniFile.h"
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+CSocketThread::CSocketThread(IMessagePort* pPort)
+{
+	ASSERT(pPort);
+	m_pMsgPort		= pPort;
+	m_pServerSocket	= NULL;
+	m_tNextClock	= 0;
+	m_hMutexThread	= NULL;
+}
+
+CSocketThread::~CSocketThread()
+{
+}
+
+//////////////////////////////////////////////////////////////////////
+// overload
+//////////////////////////////////////////////////////////////////////
+bool CSocketThread::CreateThread(bool bRun /*= true*/)
+{
+#ifdef	DEBUG_MULTITHREAD
+	m_hMutexThread    =::CreateMutex(NULL, false, "FW_DEBUG_MULTITHREAD");
+	if(!m_hMutexThread)
+	{
+		LOGERROR("创建mutex句柄失败!");
+		return false;
+	}
+#endif
+
+	if(!CThreadBase::CreateThread(bRun))
+		return false;
+
+	m_pServerSocket	= ISocketKernel::CreateNew();
+	return m_pServerSocket->Create(m_pMsgPort);
+}
+
+//////////////////////////////////////////////////////////////////////
+void CSocketThread::OnDestroy()
+{
+	if(m_pServerSocket)
+		m_pServerSocket->Release();
+	m_pServerSocket = NULL;
+
+#ifdef	DEBUG_MULTITHREAD
+	if(m_hMutexThread)
+	{
+		::CloseHandle(m_hMutexThread);
+		m_hMutexThread = NULL;
+	}
+#endif
+}
+
+//////////////////////////////////////////////////////////////////////
+void CSocketThread::OnInit()	
+{ 
+	m_tNextClock = clock() + CLOCKS_PER_SEC; 
+	char	szText[1024];
+	sprintf(szText, "#%u: Socket kernel thread running.", m_pMsgPort->GetID());
+	m_pMsgPort->Send(MSGPORT_SHELL, SHELL_PRINTTEXT, STRING_TYPE(szText), szText);
+}
+
+//////////////////////////////////////////////////////////////////////
+bool CSocketThread::OnProcess()
+{
+#ifdef	DEBUG_MULTITHREAD
+	if(::WaitForSingleObject(m_hMutexThread, INFINITE) == WAIT_ABANDONED)
+		return false;
+#endif
+	char	buf[MAX_MESSAGESIZE];
+	CMessageStatus	cStatus;
+	clock_t	clkStart = clock();
+	extern struct STAT_STRUCT	g_stat;
+
+	/////////////////////////////////////////////////////////////////////	
+	// 内部消息处理
+	int nMsgSize = m_pMsgPort->GetMsgSize();
+	//状态信息
+	{
+		if(nMsgSize > g_stat.nMaxSocketSize)
+			InterlockedExchange(&g_stat.nMaxSocketSize, nMsgSize);	
+	}
+
+	int nProcessMsgNeed = max(1000,nMsgSize/4);		//取1/4消息进行处理
+	int nprocessmsgcnt = 0;
+
+	try
+	{
+		while(m_pMsgPort->Recv(PORT_ANY, PACKET_ANY, STRUCT_TYPE(buf), buf, &cStatus))
+		{
+			clock_t	clkDebugWhile = clock();
+			if(!m_pServerSocket->ProcessMsg(cStatus.m_nPacket, buf, cStatus.m_nVarType, cStatus.m_nPortFrom))
+			{
+				LOGERROR("CSocketThread内部消息出错");
+			}
+
+			//状态信息
+			{
+				++nprocessmsgcnt;
+				if(nprocessmsgcnt > g_stat.nMaxSocketProcessSize)
+					InterlockedExchange(&g_stat.nMaxSocketProcessSize, nprocessmsgcnt);
+			}
+			
+			
+			if(nprocessmsgcnt >= nProcessMsgNeed)
+				break;
+		}
+	}
+	catch(...)
+	{
+		LOGERROR("CSocketThread::OnProcess crash! nPacket:%d,nVarType:%d,nPortFrom:%d",cStatus.m_nPacket,cStatus.m_nVarType,cStatus.m_nPortFrom);
+	}
+
+	// 时钟处理
+	clock_t	tCurr = clock();
+	if(tCurr >= m_tNextClock)
+	{
+		m_tNextClock	+= SOCKETKERNEL_ONTIMER_MS;
+		// 自动修正
+		{
+			int nOffset	= (tCurr - m_tNextClock) / CLOCKS_PER_SEC;
+			if(abs(nOffset) > TIMER_OFFSET_LIMIT)
+			{
+				m_tNextClock = tCurr + SOCKETKERNEL_ONTIMER_MS;
+				LOGWARNING("CSocketThread::OnProcess() 时钟偏移%d秒，已自动修正。", nOffset);
+			}
+		}
+
+		DEBUG_TRY
+		m_pServerSocket->OnTimer(tCurr);
+		DEBUG_CATCH("m_pServerSocket->OnTimer()")
+	}
+
+
+	//放到外面处理
+	DEBUG_TRY
+	if(!m_pServerSocket->ProcessSocket())
+	{
+		LOGERROR("CSocketThread的SOCKET处理出错");
+	}
+	DEBUG_CATCH("CMapGroupThread::OnProcess(socket)")	// AAAAAAAAAAA
+
+#ifdef	DEBUG_MULTITHREAD
+	::ReleaseMutex(m_hMutexThread);
+#endif
+
+
+	{	// stat
+		clock_t	 clkUsed	= clock() - clkStart;
+		extern struct STAT_STRUCT	g_stat;
+		InterlockedExchangeAdd(&g_stat.nAllSocketMS, clkUsed);
+		if(g_stat.nMaxSocketMS < clkUsed)
+		{
+			InterlockedExchange(&g_stat.nMaxSocketMS, clkUsed);
+		}
+	}
+
+	Sleep(1);
+	return true;
+}
+
+
+
+

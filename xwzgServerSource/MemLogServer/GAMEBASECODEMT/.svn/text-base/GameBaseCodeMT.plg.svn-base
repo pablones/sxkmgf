@@ -1,0 +1,44 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: GameBaseCodeMT - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP755.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /I "..\common" /I "..\DDServer\share" /I "." /D "MULTITHREAD_SAFE" /D "NO_MUTEX" /D "USE_NEW" /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /Fr"..\..\..\..\Bin\Debug\GameBaseCodeMT/" /Fp"..\..\..\..\Bin\Debug\GameBaseCodeMT/GameBaseCodeMT.pch" /YX /Fo"..\..\..\..\Bin\Debug\GameBaseCodeMT/" /Fd"..\..\..\..\Bin\Debug\GameBaseCodeMT/" /FD /GZ /c 
+"F:\天晴数码\Projects\圣战（魔域）\source\server\GameBaseCodeMT\source\MyConstRecord.cpp"
+"F:\天晴数码\Projects\圣战（魔域）\source\server\GameBaseCodeMT\source\mydatabase.cpp"
+"F:\天晴数码\Projects\圣战（魔域）\source\server\GameBaseCodeMT\source\MyField.cpp"
+"F:\天晴数码\Projects\圣战（魔域）\source\server\GameBaseCodeMT\source\MyRecord.cpp"
+"F:\天晴数码\Projects\圣战（魔域）\source\server\GameBaseCodeMT\source\myrecordset.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP755.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP756.tmp" with contents
+[
+/nologo /out:"..\..\..\Bin\Lib\server\GameBaseCodeMT.lib" 
+"\天晴数码\Projects\Bin\Debug\GameBaseCodeMT\MyConstRecord.obj"
+"\天晴数码\Projects\Bin\Debug\GameBaseCodeMT\mydatabase.obj"
+"\天晴数码\Projects\Bin\Debug\GameBaseCodeMT\MyField.obj"
+"\天晴数码\Projects\Bin\Debug\GameBaseCodeMT\MyRecord.obj"
+"\天晴数码\Projects\Bin\Debug\GameBaseCodeMT\myrecordset.obj"
+]
+Creating command line "link.exe -lib @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP756.tmp"
+<h3>Output Window</h3>
+Compiling...
+MyConstRecord.cpp
+mydatabase.cpp
+MyField.cpp
+MyRecord.cpp
+myrecordset.cpp
+Creating library...
+
+
+
+<h3>Results</h3>
+GameBaseCodeMT.lib - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

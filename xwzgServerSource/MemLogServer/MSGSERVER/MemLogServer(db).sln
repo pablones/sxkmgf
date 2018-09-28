@@ -1,0 +1,60 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Comm", "..\comm\Comm.vcproj", "{DA937418-B0CA-487F-A32D-DBDB2D93F95B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Common", "..\COMMON\Common.vcproj", "{2464590F-9F75-4534-9D99-B38FF533C5AE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameBaseCodeMT", "..\GAMEBASECODEMT\GameBaseCodeMT.vcproj", "{23176037-7086-4093-82F7-D698F3F29A3D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MsgServer", "MsgServer.vcproj", "{94AC392A-F827-46B1-9C37-656334822E72}"
+	ProjectSection(ProjectDependencies) = postProject
+		{14A5B049-4C90-4A7D-ACCF-E3A7B853E313} = {14A5B049-4C90-4A7D-ACCF-E3A7B853E313}
+		{23176037-7086-4093-82F7-D698F3F29A3D} = {23176037-7086-4093-82F7-D698F3F29A3D}
+		{2464590F-9F75-4534-9D99-B38FF533C5AE} = {2464590F-9F75-4534-9D99-B38FF533C5AE}
+		{DA937418-B0CA-487F-A32D-DBDB2D93F95B} = {DA937418-B0CA-487F-A32D-DBDB2D93F95B}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WorldKernel", "WORLDKERNEL\WorldKernel.vcproj", "{14A5B049-4C90-4A7D-ACCF-E3A7B853E313}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		AshRelease|Win32 = AshRelease|Win32
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA937418-B0CA-487F-A32D-DBDB2D93F95B}.AshRelease|Win32.ActiveCfg = AshRelease|Win32
+		{DA937418-B0CA-487F-A32D-DBDB2D93F95B}.AshRelease|Win32.Build.0 = AshRelease|Win32
+		{DA937418-B0CA-487F-A32D-DBDB2D93F95B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DA937418-B0CA-487F-A32D-DBDB2D93F95B}.Debug|Win32.Build.0 = Debug|Win32
+		{DA937418-B0CA-487F-A32D-DBDB2D93F95B}.Release|Win32.ActiveCfg = Release|Win32
+		{DA937418-B0CA-487F-A32D-DBDB2D93F95B}.Release|Win32.Build.0 = Release|Win32
+		{2464590F-9F75-4534-9D99-B38FF533C5AE}.AshRelease|Win32.ActiveCfg = AshRelease|Win32
+		{2464590F-9F75-4534-9D99-B38FF533C5AE}.AshRelease|Win32.Build.0 = AshRelease|Win32
+		{2464590F-9F75-4534-9D99-B38FF533C5AE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2464590F-9F75-4534-9D99-B38FF533C5AE}.Debug|Win32.Build.0 = Debug|Win32
+		{2464590F-9F75-4534-9D99-B38FF533C5AE}.Release|Win32.ActiveCfg = Release|Win32
+		{2464590F-9F75-4534-9D99-B38FF533C5AE}.Release|Win32.Build.0 = Release|Win32
+		{23176037-7086-4093-82F7-D698F3F29A3D}.AshRelease|Win32.ActiveCfg = AshRelease|Win32
+		{23176037-7086-4093-82F7-D698F3F29A3D}.AshRelease|Win32.Build.0 = AshRelease|Win32
+		{23176037-7086-4093-82F7-D698F3F29A3D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{23176037-7086-4093-82F7-D698F3F29A3D}.Debug|Win32.Build.0 = Debug|Win32
+		{23176037-7086-4093-82F7-D698F3F29A3D}.Release|Win32.ActiveCfg = Release|Win32
+		{23176037-7086-4093-82F7-D698F3F29A3D}.Release|Win32.Build.0 = Release|Win32
+		{94AC392A-F827-46B1-9C37-656334822E72}.AshRelease|Win32.ActiveCfg = AshRelease|Win32
+		{94AC392A-F827-46B1-9C37-656334822E72}.AshRelease|Win32.Build.0 = AshRelease|Win32
+		{94AC392A-F827-46B1-9C37-656334822E72}.Debug|Win32.ActiveCfg = Debug|Win32
+		{94AC392A-F827-46B1-9C37-656334822E72}.Debug|Win32.Build.0 = Debug|Win32
+		{94AC392A-F827-46B1-9C37-656334822E72}.Release|Win32.ActiveCfg = Release|Win32
+		{94AC392A-F827-46B1-9C37-656334822E72}.Release|Win32.Build.0 = Release|Win32
+		{14A5B049-4C90-4A7D-ACCF-E3A7B853E313}.AshRelease|Win32.ActiveCfg = AshRelease|Win32
+		{14A5B049-4C90-4A7D-ACCF-E3A7B853E313}.AshRelease|Win32.Build.0 = AshRelease|Win32
+		{14A5B049-4C90-4A7D-ACCF-E3A7B853E313}.Debug|Win32.ActiveCfg = Debug|Win32
+		{14A5B049-4C90-4A7D-ACCF-E3A7B853E313}.Debug|Win32.Build.0 = Debug|Win32
+		{14A5B049-4C90-4A7D-ACCF-E3A7B853E313}.Release|Win32.ActiveCfg = Release|Win32
+		{14A5B049-4C90-4A7D-ACCF-E3A7B853E313}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

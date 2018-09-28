@@ -1,0 +1,74 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Common - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPB310.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /I "..\GameBaseCodeMT" /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /FR"..\..\..\..\..\Bin\Debug\Common/" /Fp"..\..\..\..\..\Bin\Debug\Common/Common.pch" /YX /Fo"..\..\..\..\..\Bin\Debug\Common/" /Fd"..\..\..\..\..\Bin\Debug\Common/" /FD /GZ /c 
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\MsgServer_Npc_new\COMMON\DMEngine.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPB310.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPB311.tmp" with contents
+[
+/nologo /out:"..\..\..\..\..\Bin\Debuglib\server\Common_d.lib" 
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\Common\BaseFunc.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\Common\common.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\Common\Console.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\Common\DMEngine.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\Common\IniFile.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\Common\logfile.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\Common\MyCriticalSection.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\Common\MyHeap.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\Common\NetStringPacker.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\Common\StackWalker.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\Common\ThreadBase.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\Common\TimeOut.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\Common\VarType.obj"
+]
+Creating command line "link.exe -lib @C:\Users\ADMINI~1\AppData\Local\Temp\RSPB311.tmp"
+<h3>Output Window</h3>
+Compiling...
+DMEngine.cpp
+Creating library...
+<h3>
+--------------------Configuration: MsgServer - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPB67B.tmp" with contents
+[
+ws2_32.lib libmysql.lib winmm.lib nafxcwd.lib libcmtd.lib /nologo /subsystem:windows /incremental:yes /pdb:"D:\work\msgServer_t\msg_line1\MsgServer_d.pdb" /debug /machine:I386 /out:"F:\StyleDev\Óù½£½­ºþ\ServerRelease\msg_line1\MsgServer_d.exe" /pdbtype:sept /libpath:"..\..\..\..\mysql\lib\debug" /libpath:"..\..\..\..\luaplus5\lib" 
+"\StyleDev\Óù½£½­ºþ\all\Bin\Debug\MsgServer\DlgConfig.obj"
+"\StyleDev\Óù½£½­ºþ\all\Bin\Debug\MsgServer\Magic_Process.obj"
+"\StyleDev\Óù½£½­ºþ\all\Bin\Debug\MsgServer\MapGroupThread.obj"
+"\StyleDev\Óù½£½­ºþ\all\Bin\Debug\MsgServer\MsgServer.obj"
+"\StyleDev\Óù½£½­ºþ\all\Bin\Debug\MsgServer\MsgServerDlg.obj"
+"\StyleDev\Óù½£½­ºþ\all\Bin\Debug\MsgServer\Package.obj"
+"\StyleDev\Óù½£½­ºþ\all\Bin\Debug\MsgServer\SocketThread.obj"
+"\StyleDev\Óù½£½­ºþ\all\Bin\Debug\MsgServer\StdAfx.obj"
+"\StyleDev\Óù½£½­ºþ\all\Bin\Debug\MsgServer\User.obj"
+"\StyleDev\Óù½£½­ºþ\all\Bin\Debug\MsgServer\User_Item.obj"
+"\StyleDev\Óù½£½­ºþ\all\Bin\Debug\MsgServer\WorldThread.obj"
+"\StyleDev\Óù½£½­ºþ\all\Bin\Debug\MsgServer\MsgServer.res"
+"\StyleDev\Óù½£½­ºþ\Bin\Debuglib\server\Comm_d.lib"
+"\StyleDev\Óù½£½­ºþ\Bin\Debuglib\server\Common_d.lib"
+"\StyleDev\Óù½£½­ºþ\Bin\Debuglib\server\GameBaseCodeMT_d.lib"
+"\StyleDev\Óù½£½­ºþ\Bin\Debuglib\server\MapData_d.lib"
+"\StyleDev\Óù½£½­ºþ\all\Bin\Debuglib\server\MapGroupKernel_d.lib"
+"\StyleDev\Óù½£½­ºþ\all\Bin\Debuglib\server\ServerSocket_d.lib"
+"\StyleDev\Óù½£½­ºþ\all\Bin\Debuglib\server\WorldKernel_d.lib"
+]
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPB67B.tmp"
+<h3>Output Window</h3>
+Linking...
+
+
+
+<h3>Results</h3>
+MsgServer_d.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

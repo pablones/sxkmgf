@@ -1,0 +1,157 @@
+// ClientThread.cpp: implementation of the CClientThread class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+#include "I_Shell.h"
+#include "ClientThread.h"
+#include "MessagePort.h"
+#include "MsgServer.h"
+#include "protocol.h"
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+CClientThread::CClientThread(IMessagePort* pPort)
+{
+	ASSERT(pPort);
+	m_pMsgPort		= pPort;
+	m_pClientSocket	= NULL;
+	m_tNextClock	= 0;
+	m_hMutexThread	= NULL;
+}
+
+CClientThread::~CClientThread()
+{
+
+}
+
+bool CClientThread::CreateThread(bool bRun)
+{
+#ifdef	DEBUG_MULTITHREAD
+	m_hMutexThread    =::CreateMutex(NULL, false, "FW_DEBUG_MULTITHREAD");
+	if(!m_hMutexThread)
+	{
+		LOGERROR("创建mutex句柄失败!");
+		return false;
+	}
+#endif
+	if(!CThreadBase::CreateThread(bRun))
+		return false;
+
+ 	m_pClientSocket	= IClientKernel::CreateNew();
+ 	return m_pClientSocket->Create(m_pMsgPort);
+}
+
+//////////////////////////////////////////////////////////////////////
+void CClientThread::OnDestroy()
+{
+	if(m_pClientSocket)
+		m_pClientSocket->Release();
+	m_pClientSocket = NULL;
+
+#ifdef	DEBUG_MULTITHREAD
+	if(m_hMutexThread)
+	{
+		::CloseHandle(m_hMutexThread);
+		m_hMutexThread = NULL;
+	}
+#endif
+}
+
+//////////////////////////////////////////////////////////////////////
+void CClientThread::OnInit()	
+{ 
+	m_tNextClock = clock() + CLOCKS_PER_SEC; 
+	char	szText[1024];
+	sprintf(szText, "#%u: client kernel thread running.", m_pMsgPort->GetID());
+	m_pMsgPort->Send(MSGPORT_SHELL, SHELL_PRINTTEXT, STRING_TYPE(szText), szText);
+}
+
+//////////////////////////////////////////////////////////////////////
+bool CClientThread::OnProcess()
+{
+#ifdef	DEBUG_MULTITHREAD
+	if(::WaitForSingleObject(m_hMutexThread, INFINITE) == WAIT_ABANDONED)
+		return false;
+#endif
+	char	buf[MAX_MESSAGESIZE];
+	CMessageStatus	cStatus;
+	clock_t	clkStart = clock();		// debug
+	extern struct STAT_STRUCT	g_stat;
+	
+	/////////////////////////////////////////////////////////////////////	
+	// 内部消息处理
+	int nMsgSize = m_pMsgPort->GetMsgSize();
+	//状态信息
+	{
+		if(nMsgSize > g_stat.nMaxClientSize)
+			InterlockedExchange(&g_stat.nMaxClientSize, nMsgSize);	
+	}
+	
+	int nProcessMsgNeed = max(1000,nMsgSize/4);		//取1/4消息进行处理
+	int nprocessmsgcnt = 0;
+
+	try
+	{
+		while(m_pMsgPort->Recv(PORT_ANY, PACKET_ANY, STRUCT_TYPE(buf), buf, &cStatus))
+		{
+			clock_t	clkDebugWhile = clock();
+			if(!m_pClientSocket->ProcessMsg(cStatus.m_nPacket, buf, cStatus.m_nVarType, cStatus.m_nPortFrom))
+			{
+				LOGERROR("CClientThread内部消息出错");
+			}
+			
+			//状态信息
+			{
+				++nprocessmsgcnt;
+				if(nprocessmsgcnt > g_stat.nMaxClientProcessSize)
+					InterlockedExchange(&g_stat.nMaxClientProcessSize, nprocessmsgcnt);
+			}
+			
+			
+			if(nprocessmsgcnt >= nProcessMsgNeed)
+				break;
+		}
+	}
+	catch(...)
+	{
+		LOGERROR("CClientThread::OnProcess crash! nPacket:%d,nVarType:%d,nPortFrom:%d",cStatus.m_nPacket,cStatus.m_nVarType,cStatus.m_nPortFrom);
+	}
+
+	// 时钟处理
+	clock_t	tCurr = clock();
+	if(tCurr >= m_tNextClock)
+	{
+		m_tNextClock	+= CLIENTKERNEL_ONTIMER_MS;
+
+		//自动修正		
+		int nOffset	= (tCurr - m_tNextClock) / CLOCKS_PER_SEC;
+		if(abs(nOffset) > TIMER_OFFSET_LIMIT)
+		{
+			m_tNextClock = tCurr + CLIENTKERNEL_ONTIMER_MS;
+			LOGWARNING("CClientThread::OnProcess() 时钟偏移%d秒，已自动修正。", nOffset);
+		}
+
+		DEBUG_TRY
+		m_pClientSocket->OnTimer(tCurr);
+		DEBUG_CATCH("m_pClientSocket->OnTimer()")
+	}
+
+
+#ifdef	DEBUG_MULTITHREAD
+	::ReleaseMutex(m_hMutexThread);
+#endif
+	{	// stat
+		clock_t	 clkUsed	= clock() - clkStart;
+		extern struct STAT_STRUCT	g_stat;
+		InterlockedExchangeAdd(&g_stat.nAllClientMS, clkUsed);
+		if(g_stat.nMaxClientMS < clkUsed)
+		{
+			InterlockedExchange(&g_stat.nMaxClientMS, clkUsed);
+		}
+	}
+	
+	Sleep(1);
+	return true;
+}

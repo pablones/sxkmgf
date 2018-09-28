@@ -1,0 +1,32 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AccountServer", "AccountServer.vcproj", "{31F379DC-0437-4E3C-995C-7202D9B2518E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F874C640-93C7-4CA0-91DD-D80C720A7BF0} = {F874C640-93C7-4CA0-91DD-D80C720A7BF0}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameBaseCode", "GameBaseCode\GameBaseCode.vcproj", "{F874C640-93C7-4CA0-91DD-D80C720A7BF0}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{31F379DC-0437-4E3C-995C-7202D9B2518E}.Debug.ActiveCfg = Debug|Win32
+		{31F379DC-0437-4E3C-995C-7202D9B2518E}.Debug.Build.0 = Debug|Win32
+		{31F379DC-0437-4E3C-995C-7202D9B2518E}.Release.ActiveCfg = Release|Win32
+		{31F379DC-0437-4E3C-995C-7202D9B2518E}.Release.Build.0 = Release|Win32
+		{F874C640-93C7-4CA0-91DD-D80C720A7BF0}.Debug.ActiveCfg = Debug|Win32
+		{F874C640-93C7-4CA0-91DD-D80C720A7BF0}.Debug.Build.0 = Debug|Win32
+		{F874C640-93C7-4CA0-91DD-D80C720A7BF0}.Release.ActiveCfg = Release|Win32
+		{F874C640-93C7-4CA0-91DD-D80C720A7BF0}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

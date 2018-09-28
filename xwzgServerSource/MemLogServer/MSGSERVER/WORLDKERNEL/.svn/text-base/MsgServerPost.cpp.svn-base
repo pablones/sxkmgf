@@ -1,0 +1,65 @@
+// MsgServerPost.cpp: implementation of the CMsgServerPost class.
+//
+//////////////////////////////////////////////////////////////////////
+#include "AllMsg.h"
+#include "logfile.h"
+using namespace world_kernel;
+#include "WorldKernel.h"
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+CMsgServerPost::CMsgServerPost()
+{
+	Init();
+	m_pInfo	=(MSG_Info *)m_bufMsg;
+
+	m_StrPacker.SetBuf(m_pInfo->szbuf, _MAX_MSGSIZE-sizeof(MSG_Info)+1);
+}
+
+CMsgServerPost::~CMsgServerPost()
+{
+
+}
+
+BOOL CMsgServerPost::Create(char* pbufMsg, DWORD dwMsgSize)
+{
+	if (!CNetMsg::Create(pbufMsg, dwMsgSize))
+		return false;
+	
+	if(_MSG_SERVER_POST != this->GetType())
+		return false;
+	
+	return true;
+}
+
+BOOL CMsgServerPost::Create(int nToIndex,int nMsg,int nLen,char* szMsg)
+{
+	this->Init();
+	CHECKF(nLen < MAX_PACKETSIZE - 12);
+	
+	// fill	
+	m_pInfo->nMsg			= nMsg;
+	m_pInfo->nLen			= nLen;
+	m_pInfo->nIndexTO		= nToIndex;
+
+	m_StrPacker.AddString(szMsg);
+
+	m_unMsgType		= _MSG_SERVER_POST;
+	m_unMsgSize	=sizeof(MSG_Info)-1+m_StrPacker.GetSize();
+	return TRUE;
+}
+
+//////////////////////////////////////////////////////////////////////
+void CMsgServerPost::Process(void* pSocket)
+{
+// 	char szMsg[MAX_PACKETSIZE];
+// 	m_StrPacker.GetString(0, szMsg, sizeof(szMsg));
+// 	if(GameWorld()->QueryServerInfo()->QueryServerStatus(m_pInfo->nIndexTO) == 1)
+// 	{
+// 		CNetMsg* pMsg	=CNetMsg::CreateClientMsg(0, 0, m_pInfo->nMsg, szMsg, m_pInfo->nLen);
+// 		GameWorld()->SendClientMsg(GameWorld()->QueryServerInfo()->QueryServerSocket(m_pInfo->nIndexTO),pMsg);
+// 	}
+}
+

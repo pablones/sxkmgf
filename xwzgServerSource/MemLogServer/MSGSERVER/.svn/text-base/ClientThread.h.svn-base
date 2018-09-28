@@ -1,0 +1,43 @@
+// ClientThread.h: interface for the CClientThread class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#if !defined(AFX_CLIENTTHREAD_H__39FB096D_E4F6_4A52_80B8_5E8700CEB332__INCLUDED_)
+#define AFX_CLIENTTHREAD_H__39FB096D_E4F6_4A52_80B8_5E8700CEB332__INCLUDED_
+
+#if _MSC_VER > 1000
+#pragma once
+#endif // _MSC_VER > 1000
+#include "ThreadBase.h"
+#include "TimeOut.h"
+
+class CClientThread : public CThreadBase  
+{
+public:
+	CClientThread(IMessagePort* pPort);
+	virtual ~CClientThread();
+
+public: // overload
+	virtual	bool	CreateThread(bool bRun = true);		// false: 暂不运行，用 ResumeThread() 运行
+	
+	/////////////////////////////////////////////////////////////////////
+protected:	// 派生用
+	//overrideable
+	virtual	void	OnInit();
+	virtual bool	OnProcess();		// 不需要返回DWORD
+	virtual void	OnDestroy();
+	
+protected: // 核心对象及接口
+	CTimeOutMS		m_tProcessSocket;
+	CTimeOutMS		m_tCnt;
+	
+	clock_t m_tNextClock;
+	IClientKernel*	m_pClientSocket;
+	IMessagePort*	m_pMsgPort;
+	
+protected: // ctrl
+	HANDLE	m_hMutexThread;
+
+};
+
+#endif // !defined(AFX_CLIENTTHREAD_H__39FB096D_E4F6_4A52_80B8_5E8700CEB332__INCLUDED_)

@@ -1,0 +1,4 @@
+// Microsoft Developer Studio generated Help ID include file.
+// Used by AccountServer.rc
+//
+#define HIDC_STATIC                     0x8066ffff    // IDD_ACCOUNTSERVER_DIALOG

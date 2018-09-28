@@ -1,0 +1,35 @@
+// MsgServerConnect.h: interface for the CMsgServerConnect class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#if !defined(AFX_MSGSERVERCONNECT_H__C37181B8_547C_4437_9B18_A4F6B0A1825A__INCLUDED_)
+#define AFX_MSGSERVERCONNECT_H__C37181B8_547C_4437_9B18_A4F6B0A1825A__INCLUDED_
+
+#if _MSC_VER > 1000
+#pragma once
+#endif // _MSC_VER > 1000
+
+#include "NetMsg.h"
+
+class CMsgServerConnect : public CNetMsg  
+{
+public:
+	CMsgServerConnect();
+	virtual ~CMsgServerConnect();
+
+public:	
+	BOOL			Create		(char* pMsgBuf, DWORD dwSize);
+	BOOL			Create		(int nKey);
+	void			Process		(void* pSocket);
+	
+protected:
+	typedef struct {
+		MSGHEAD_DEFINE
+		OBJID idKey;
+	}MSG_Info;
+	
+	MSG_Info*	m_pInfo;
+
+};
+
+#endif // !defined(AFX_MSGSERVERCONNECT_H__C37181B8_547C_4437_9B18_A4F6B0A1825A__INCLUDED_)

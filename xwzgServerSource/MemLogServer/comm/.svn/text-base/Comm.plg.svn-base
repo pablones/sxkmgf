@@ -1,0 +1,31 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Comm - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP55.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /I "..\common" /I "." /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /FR"..\..\..\..\Bin\Debug\Comm/" /Fp"..\..\..\..\Bin\Debug\Comm/Comm.pch" /YX /Fo"..\..\..\..\Bin\Debug\Comm/" /Fd"..\..\..\..\Bin\Debug\Comm/" /FD /GZ /c 
+"E:\公司\天晴数码\Projects\Jehad\source\server\Comm\source\InternetPort.cpp"
+"E:\公司\天晴数码\Projects\Jehad\source\server\Comm\source\messageport.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP55.tmp" 
+Creating command line "link.exe -lib /nologo /out:"..\..\..\Bin\Lib\server\Comm.lib"  "\公司\天晴数码\Projects\Bin\Debug\Comm\InternetPort.obj" "\公司\天晴数码\Projects\Bin\Debug\Comm\messageport.obj" "
+<h3>Output Window</h3>
+Compiling...
+InternetPort.cpp
+messageport.cpp
+Creating library...
+LINK : fatal error LNK1104: cannot open file "..\..\..\Bin\Lib\server\Comm.lib"
+Error executing link.exe.
+
+
+
+<h3>Results</h3>
+Comm.lib - 1 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

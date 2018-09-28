@@ -1,0 +1,265 @@
+"" 499, 4387
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// SynAttr.h: interface for the CSynAttr class.
+
+//
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+#if !defined(AFX_SYNATTR_H__7205A42E_F451_4A87_9BBD_37397D6578E2__INCLUDED_)
+
+#define AFX_SYNATTR_H__7205A42E_F451_4A87_9BBD_37397D6578E2__INCLUDED_
+
+
+
+#if _MSC_VER > 1000
+
+#pragma once
+
+#endif // _MSC_VER > 1000
+
+
+
+#include "define.h"
+
+#include "GameData.h"
+
+#include "GameObj.h"
+
+#include "user.h"
+
+#include "Myheap.h"
+
+#include "AutoLink.h"
+
+#include "Syndicate.h"
+
+
+
+#define	DEFAULT_TENET				""
+
+#define	DEFAULT_LEADERTITLE			STR_SYNDICATE_LEADER
+
+#define	DEFAULT_MEMBERTITLE			STR_SYNDICATE_MEMBER
+
+
+
+//////////////////////////////////////////////////////////////////////
+
+const int	DEFAULT_PROFFER			= 0;				// 新人的贡献
+
+const int	CHANGELEADER_DAYS		= 30;				// 帮主30天不上线，可能被替换
+
+const int	CHANGELEADER_MONEY		= 100000;			// 替换帮主要捐多少钱。
+
+const int	SYNMONEY_LIMIT			= 2000000000;		// 基金的限制额
+
+const int	SYNPROFFER_LIMIT		= 1000000000;		// 贡献的限制额
+
+const int	MAX_ASSISTANTSIZE		= 5;				// 最多有多少个副帮主，暂定
+
+const int	SYN_MEMBER_LIMIT		= 800;				// 限制最多招收多少个帮众
+
+
+
+const int	MONEY_PER_MEMBER		= 10000;			// 招人增加的基金
+
+const int	MONEY_KICKOUT			= 30000;			// 开除人员扣除的基金
+
+const int	REPUTE_PER_MEMBER		= 10000;			// 招人增加的声望
+
+const int	REPUTE_KICKOUT			= 30000;			// 开除人员扣除的基金
+
+
+
+//////////////////////////////////////////////////////////////////////
+
+struct SynAttrInfoStruct
+
+{
+
+	OBJID		id;
+
+	OBJID		idSyn;
+
+	USHORT		usMantle;
+
+	UCHAR		ucRank;
+
+	UCHAR		ucRankShow;
+
+	int 		nProffer;
+
+	int			nTitle;
+
+};
+
+
+
+//////////////////////////////////////////////////////////////////////
+
+enum SYNATTRDATA
+
+{
+
+	SYNATTRDATA_ID=0,		     // 用于INSERT
+
+	SYNATTRDATA_SYNID=1,
+
+	SYNATTRDATA_RANK,
+
+	SYNATTRDATA_PROFFER,
+
+	SYNATTRDATA_TITLE,				// 军衔
+
+};
+
+char	szSynAttrTable[];
+
+typedef	CGameData<SYNATTRDATA, szSynAttrTable, szID>		CSynAttrData;
+
+
+
+//////////////////////////////////////////////////////////////////////
+
+class CSynAttr  
+
+{
+
+protected:
+
+	CSynAttr();
+
+	virtual ~CSynAttr();
+
+
+
+public:
+
+	static CSynAttr* CreateNew(PROCESS_ID idProcess, CUser* pUser);
+
+	ULONG	ReleaseByOwner()						{ delete this; return 0; }
+
+//	void	OnTimer(DWORD tCurr);
+
+
+
+public: // login
+
+	bool	Create();
+
+	bool	SendInfoToClient();
+
+
+
+public: // MapGroup
+
+	bool	SaveInfo();
+
+	bool	GetInfo(SynAttrInfoStruct* pInfo);
+
+	bool	AppendSynAttr(SynAttrInfoStruct* pInfo);
+
+
+
+public: // const
+
+	OBJID	GetSynID()								{ if(m_pData) return m_pData->GetInt(SYNATTRDATA_SYNID); return ID_NONE; }
+
+	int		GetInt(SYNATTRDATA idx)					{ CHECKF(m_pData); ASSERT(idx!=SYNATTRDATA_SYNID); return m_pData->GetInt(idx); }
+
+	int		GetAssistantCount();
+
+	DWORD	GetSynRankShow		();
+
+	OBJID	GetMasterSynID();
+
+	LPCTSTR	GetRankTitle();
+
+	int		SumSynMember();
+
+	int		GetSynProffer(void)	const				{ if(m_pData) return m_pData->GetInt(SYNATTRDATA_PROFFER); return 0; }
+
+	
+
+public: // modify
+
+	bool	CreateSyndicate(LPCTSTR szName, int nLevel, int nMoney, int nMoneyLeave);
+
+	bool	CreateSubSyn(LPCTSTR szName, int nLevel, int nMoney, int nMoneyLeave);
+
+	bool	DestroySyndicate();
+
+	bool	JoinSyn(OBJID idSyn, int nRank=RANK_NEWBIE, int nProffer=0);
+
+	bool	AddMemberList(OBJID idSyn, LPCTSTR szName, int nLevel);
+
+	bool	LeaveSyn(bool bDeleteRecord=true, bool bSynchro=true);
+
+	bool	DelMemberList(OBJID idOldSyn, LPCTSTR szName);
+
+	bool	DonateMoney(int nMoney);
+
+	bool	SetRank(int nRank, bool bLeader = false);
+
+	bool	ChangeLeader(LPCTSTR szSyn, int nLevel);
+
+	bool	SetIdRank(OBJID idSyn, int nRank, bool bSynchro=true);
+
+	bool	AddProffer(int nData);
+
+	bool	DecProffer(int nData);
+
+	void	UpLevel(int nLevel);			// synchro world kernel member list
+
+	void	SetSynProffer(int nProffer)				{ if(m_pData) m_pData->SetInt(SYNATTRDATA_PROFFER, nProffer); }
+
+
+
+public:
+
+	void	SynchroInfo(BOOL bAnnounce=false);				// 修改后，广播自己的属性
+
+protected:
+
+	bool	ChangeLeader();				// 检查是否换帮主
+
+public: // static
+
+	CSyndicate* QuerySyndicate();
+
+	bool ChangeSyn(CSyndicate* pSyn, CSyndicate* pTarget);
+
+	bool	KickoutMember(LPCTSTR szTarget);
+
+
+
+protected: // data
+
+	CSynAttrData*	m_pData;			//? 可能为0
+
+
+
+protected: // ctrl
+
+	PROCESS_ID		m_idProcess;
+
+	CUser*			m_pUser;
+
+	CAutoLink<CSyndicate>	m_linkSyn;
+
+
+
+protected: // ctrl
+
+	MYHEAP_DECLARATION(s_heap)
+
+};
+
+
+
+#endif // !defined(AFX_SYNATTR_H__7205A42E_F451_4A87_9BBD_37397D6578E2__INCLUDED_)
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -1,0 +1,401 @@
+// WorldKernel.cpp: implementation of the CWorldKernel class.
+//
+//////////////////////////////////////////////////////////////////////
+#define	_WINSOCKAPI_		// 阻止加载winsock.h
+#include "inifile.h"
+#include "protocol.h"
+#include "windows.h"
+#include "Winuser.h"
+#include "BaseFunc.h"
+#include "I_MessagePort.h"
+#include "AllMsg.h"
+#include "NetMsg.h"
+#include "WorldKernel.h"
+//#include "ClientSocket.h"
+#include "AutoPtr.h"
+#include "StrRes.h"
+
+using namespace world_kernel;
+CWorldKernel*	CWorldKernel::m_pWorld = NULL;
+
+// interface
+//////////////////////////////////////////////////////////////////////
+bool CWorldKernel::Create(IMessagePort* pPort)
+{
+	m_pMsgPort		= pPort;
+	m_idProcess		= m_pMsgPort->GetID();		// process id == msg_port_id
+	m_pMsgPort->Open();
+	ASSERT(m_idProcess == MSGPORT_WORLD);
+	
+	m_pDb	= ::CreateDatabase();
+	if(!m_pDb)
+	{
+		LOGERROR("数据库连接失败!");
+		return false;
+	}
+	::GetLocalTime(&m_stLastDatabaseReconnectTime);
+
+
+// 	m_pAccManage = CAccountManage::CreateNew();
+// 	if(!m_pAccManage)
+// 		return false;
+// 	m_pAccManage->Create(GetSocketInterface(),m_pDb);
+// 
+// 	m_pGateWayInfo = CGatewayInfo::CreateNew();
+// 	if(!m_pGateWayInfo)
+// 		return false;
+
+	m_pWorld	= this;
+	m_WorldTime	= ::GetTickCount();
+	return true;	
+}
+
+//////////////////////////////////////////////////////////////////////
+
+bool CWorldKernel::ProcessMsg(OBJID idPacket, void* buf, int nType, int nFrom)
+{
+	switch(idPacket)
+	{
+	case	WORLD_CLIENTKERMSG:
+		{
+			CLIENTTOWORLDMSG_PACKET0*	pMsg = (CLIENTTOWORLDMSG_PACKET0*)buf;
+			OBJID	idMsg	= pMsg->idPacket;
+			char*	pBuf	= pMsg->buf;
+			int		nMsgLen	= pMsg->nSize;
+			CLIENTTOWORLDMSG_ACTION* pActionData = (CLIENTTOWORLDMSG_ACTION*)pMsg->buf;
+			ProcessClientKerAction( pActionData->nAction);
+		}
+ 		break;
+	case	WORLD_SERVERMSG:
+		{
+			CLIENTTOWORLDMSG_PACKET0*	pMsg	= (CLIENTTOWORLDMSG_PACKET0*)buf;
+			OBJID	idMsg	= pMsg->idPacket;
+			char*	pBuf	= pMsg->buf;
+			int		nMsgLen	= pMsg->nSize;
+			ProcessClientMsg(idMsg,pBuf,nMsgLen);
+		}
+		break;
+	case	WORLD_SOCKETMSG:
+		{
+			SOCKETTOWORLDMSG_PACKET0*	pMsg	= (SOCKETTOWORLDMSG_PACKET0*)buf;
+			OBJID	idMsg	= pMsg->idPacket;
+			char*	pBuf	= pMsg->buf;
+			int		nMsgLen	= pMsg->nSize;
+			SOCKETTOWORLDMSG_ACTION* pActionData = (SOCKETTOWORLDMSG_ACTION*)pMsg->buf;
+			ProcessSocketKerAction( pActionData->nSocket,pActionData->nAction);
+		}
+		break;
+	case	WORLD_CLIENTMSG:
+		{
+			SOCKETTOWORLDMSG_PACKET0*	pMsg	= (SOCKETTOWORLDMSG_PACKET0*)buf;
+			OBJID	idSocket = pMsg->idSocket;
+			OBJID	idMsg	= pMsg->idPacket;
+			char*	pBuf	= pMsg->buf;
+			int		nMsgLen	= pMsg->nSize;
+			ProcessSocketMsg(idSocket,idMsg,pBuf,nMsgLen);
+		}
+		break;
+	default:
+		ASSERT(!"CWorldKernel::ProcessMsg()");
+	}
+
+	return true;		// return false : 消息处理异常，程序关闭。
+}
+
+
+bool CWorldKernel::OnTimer(time_t tCurr)
+{
+	DEBUG_TRY
+	ReconnectDB();
+	DEBUG_CATCH("CWorldKernel::OnTimer::ReconnectDB");
+
+	return true;		// return false : 消息处理异常，程序关闭。
+}
+
+//////////////////////////////////////////////////////////////////////
+bool CWorldKernel::Release()
+{
+// 	SAFE_RELEASE (m_pAccManage);
+// 	SAFE_RELEASE (m_pGateWayInfo);
+
+	m_pMsgPort->Close();
+	SAFE_RELEASE (m_pDb);
+	delete this;
+	return true;		// return false : 无意义。
+}
+
+bool CWorldKernel::ProcessClientKerAction(const int nAction)
+{
+	switch(nAction)
+	{
+	case CLIENTTOWORLDACTION_CREATEOK:
+		CIniFile	ini( CONFIG_FILENAME,"GatewayServer" );
+		int	nKey	= ini.GetInt("KEY");
+		CMsgServerConnect msg;
+		msg.Create(nKey);
+		return SendServerMsg(&msg);
+		break;
+	}
+	return true;
+}
+
+bool CWorldKernel::SendClientKerAction(const int nAction)
+{
+	MESSAGESTR	bufAction;
+	WORLDTOCLIENTMSG_ACTION* pActionData = (WORLDTOCLIENTMSG_ACTION*)bufAction;
+	pActionData->nAction = nAction;
+	return SendClientKerMsg(CLIENT_WORLDMSG,bufAction,sizeof(CLIENTTOWORLDMSG_ACTION));
+}
+
+bool CWorldKernel::SendClientKerMsg(OBJID idMsg, const char *pBuf, int nMsgLen)
+{
+	if (!pBuf)
+	{
+		::LogSave("Error: null msg point found in SendWorldMsg::SendMsg.");
+		return false;
+	}
+	
+	if (idMsg <= CLIENT_BASE || idMsg >= ALL_END)
+	{
+		::LogSave("Error: invalid msg type in SendWorldMsg::SendMsg().");
+		return false;
+	}
+	
+	MESSAGESTR	bufPacket;
+	WORLDTOCLIENTMSG_PACKET0* pPacket = (WORLDTOCLIENTMSG_PACKET0*)bufPacket;
+	pPacket->idPacket	= idMsg;
+	pPacket->nSize		= nMsgLen;
+	memcpy(pPacket->buf, pBuf, nMsgLen);
+	m_pMsgPort->Send(MSGPORT_CLIENT, idMsg, STRUCT_TYPE(bufPacket), &bufPacket);
+	return true;
+}
+
+//////////////////////////////////////////////////////////////////////
+bool CWorldKernel::ProcessClientMsg(OBJID idMsg, const char *pbufMsg, int nSize)
+{
+	if(idMsg == _MSG_NONE || !pbufMsg || nSize <= 0 || nSize >_MAX_MSGSIZE)
+        return false;
+
+	CNetMsg* pMsg	=CNetMsg::CreateClientMsg(m_idProcess, 0, idMsg, pbufMsg, nSize);
+	if(pMsg)
+	{
+		DEBUG_TRY
+		pMsg->Process(this);
+		DEBUG_CATCH("exception catch at CWorldKernel::ProcessClientMsg!")
+		delete pMsg;
+	}
+	return true;
+}
+
+bool CWorldKernel::ProcessSocketKerAction(SOCKET_ID nSocket,const int nAction)
+{
+	switch(nAction)
+	{
+	case SOCKETTOWORLDACTION_CLOSE:
+// 		OBJID idAccount = QueryAccManage()->QueryAccountBySocket(nSocket);
+// 		if(idAccount != 0)
+// 			QueryAccManage()->LeaveGame(idAccount);
+		
+// 		else if(nSocket > 10000 && nSocket < 20000)
+// 		{
+// 			int nIndex = QueryGatewayInfo()->QueryServerBuySocket(nSocket);
+// 			if(nIndex != -1)
+// 				QueryGatewayInfo()->LogoutServer(nIndex);
+// 		}
+
+		SendSocketKerAction(nSocket,WORLDTOSOCKETACTION_CLOSED);
+		break;
+	}
+	return true;
+}
+
+bool CWorldKernel::SendSocketKerAction(SOCKET_ID nSocket,const int nAction)
+{
+	MESSAGESTR	bufAction;
+	WORLDTOSOCKETMSG_ACTION* pActionData = (WORLDTOSOCKETMSG_ACTION*)bufAction;
+	pActionData->nAction = nAction;
+	return SendSocketKerMsg(SOCKET_SOCKETWORLDACTION,bufAction,sizeof(WORLDTOSOCKETMSG_ACTION),nSocket);
+}
+
+bool CWorldKernel::SendSocketKerMsg(OBJID idMsg, const char *pBuf, int nMsgLen ,SOCKET_ID nSocket)
+{
+// 	if (!pBuf)
+// 	{
+// 		::LogSave("Error: null msg point found in SendWorldMsg::SendMsg.");
+// 	 	return false;
+//  	}
+// 	 	
+//  	if (idMsg <= SOCKET_BASE || idMsg >= SHELL_BASE)
+//  	{
+//  		::LogSave("Error: invalid msg type in SendWorldMsg::SendMsg().");
+//  		return false;
+//  	}
+//  	
+//  	MESSAGESTR	bufPacket;
+//  	WORLDTOSOCKETMSG_PACKET0* pPacket = (WORLDTOSOCKETMSG_PACKET0*)bufPacket;
+// 	pPacket->idSocket	= nSocket;
+//  	pPacket->idPacket	= idMsg;
+//  	pPacket->nSize		= nMsgLen;
+//  	memcpy(pPacket->buf, pBuf, nMsgLen);
+//  	m_pMsgPort->Send(MSGPORT_SOCKET, idMsg, STRUCT_TYPE(bufPacket), &bufPacket);
+ 	return true;
+}
+
+//////////////////////////////////////////////////////////////////////
+bool CWorldKernel::ProcessSocketMsg(SOCKET_ID idSocket, OBJID idMsg, const char *pbufMsg, int nSize)
+{
+	if(idMsg == _MSG_NONE || !pbufMsg || nSize <= 0 || nSize >_MAX_MSGSIZE)
+        return false;
+	
+	CNetMsg* pMsg	=CNetMsg::CreateSocketMsg(m_idProcess, idSocket, idMsg, pbufMsg, nSize);
+	if(pMsg)
+	{
+		DEBUG_TRY
+		pMsg->Process(this);
+		DEBUG_CATCH("exception catch at CWorldKernel::ProcessSocketMsg!")
+		delete pMsg;
+	}
+	return true;
+}
+
+//////////////////////////////////////////////////////////////////////
+bool CWorldKernel::SendClientMsg(SOCKET_ID idSocket,CNetMsg* pNetMsg)
+{
+	ASSERT(pNetMsg);
+	if(!pNetMsg)
+		return false;
+
+	pNetMsg->AppendInfo(idSocket);
+	
+	return SendClientMsg(idSocket, pNetMsg->GetType(), pNetMsg->GetBuf(), pNetMsg->GetSize());
+}
+
+
+//////////////////////////////////////////////////////////////////////
+bool CWorldKernel::SendClientMsg(SOCKET_ID idSocket, OBJID idMsg, const char *pBuf, int nMsgLen)
+{
+	// TODO: 请在此添加NPC服务器下传消息的代码
+// 	if (!pBuf)
+// 	{
+// 		::LogSave("Error: null msg point found in CGameSocket::SendMsg.");
+// 		return false;
+// 	}
+// 
+// 	if (_MSG_NONE == idMsg)
+// 	{
+// 		::LogSave("Error: invalid msg type in CGameSocket::SendMsg().");
+// 		return false;
+// 	}
+// 
+// 	DEBUG_TRY
+// 	MESSAGESTR	bufPacket;
+// 	WORLDTOSOCKETMSG_PACKET0* pPacket = (WORLDTOSOCKETMSG_PACKET0*)bufPacket;
+// 	pPacket->idSocket	= idSocket % 10000;
+// 	pPacket->idPacket	= idMsg;
+// 	pPacket->nSize		= nMsgLen;
+// 	memcpy(pPacket->buf, pBuf, nMsgLen);
+// 
+// 	m_pMsgPort->Send(MSGPORT_SOCKET, SOCKET_SENDCLIENTMSG, STRUCT_TYPE(bufPacket), &bufPacket);
+// 	DEBUG_CATCHF("Error: exception catched in CGameSocket::SendMsg().")
+		
+	return true;
+}
+
+//////////////////////////////////////////////////////////////////////
+bool CWorldKernel::SendServerMsg(CNetMsg* pNetMsg)
+{
+	ASSERT(pNetMsg);
+	if(!pNetMsg)
+		return false;
+	
+	return SendServerMsg( pNetMsg->GetType(), pNetMsg->GetBuf(), pNetMsg->GetSize());
+}
+
+
+//////////////////////////////////////////////////////////////////////
+bool CWorldKernel::SendServerMsg( OBJID idMsg, const char *pBuf, int nMsgLen)
+{
+	// TODO: 请在此添加NPC服务器下传消息的代码
+	if (!pBuf)
+	{
+		::LogSave("Error: null msg point found in CGameSocket::SendMsg.");
+		return false;
+	}
+	
+	if (_MSG_NONE == idMsg)
+	{
+		::LogSave("Error: invalid msg type in CGameSocket::SendMsg().");
+		return false;
+	}
+	
+	DEBUG_TRY
+	MESSAGESTR	bufPacket;
+	WORLDTOCLIENTMSG_PACKET0* pPacket = (WORLDTOCLIENTMSG_PACKET0*)bufPacket;
+	pPacket->idPacket	= idMsg;
+	pPacket->nSize		= nMsgLen;
+	memcpy(pPacket->buf, pBuf, nMsgLen);
+	
+	m_pMsgPort->Send(MSGPORT_CLIENT, CLIENT_SENDSERVERMSG, STRUCT_TYPE(bufPacket), &bufPacket);
+	DEBUG_CATCHF("Error: exception catched in CGameSocket::SendMsg().")
+		
+	return true;
+}
+
+//////////////////////////////////////////////////////////////////////
+bool CWorldKernel::PrintText			(LPCTSTR szText)
+{
+	return m_pMsgPort->Send(MSGPORT_SHELL, SHELL_PRINTTEXT, STRING_TYPE(szText), szText);
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////
+// global entry
+///////////////////////////////////////////////////////////////////////////////////////
+IWorld* IWorld::CreateNew()
+{
+	return new CWorldKernel;
+}
+
+bool CWorldKernel::ReconnectDB()
+{
+	SYSTEMTIME curTime;
+	::GetLocalTime( &curTime );
+	if( curTime.wDay != m_stLastDatabaseReconnectTime.wDay 
+		&& curTime.wHour == 5)
+	{
+		BOOL bSuccess	= ::ReconnectDatabase(m_pDb);
+		
+		
+		if(!bSuccess)
+		{
+			LOGERROR("数据库重新连接失败!, m_idProcess = %d", m_idProcess);
+			return false;
+		}
+		
+		LOGMSG("数据库连接成功, m_idProcess = %d", m_idProcess);
+
+		::GetLocalTime(&m_stLastDatabaseReconnectTime);
+	}
+
+	return true;
+}
+
+void CWorldKernel::KickOutSocket(OBJID idAccount)
+{
+// 	stAccData* pData = QueryAccManage()->QueryAcc(idAccount);
+// 	if(pData && (pData->nStatus != 0))
+// 	{
+// 		SendSocketKerAction(pData->idSocket,WORLDTOSOCKETACTION_CLICK);
+// 	}
+}
+
+void CWorldKernel::KickOutAll()
+{
+	SendSocketKerAction(0,WORLDTOSOCKETACTION_ALL);
+}
+
+void CWorldKernel::SetServerConnect()
+{
+	SendClientKerAction(WORLDTOCLIENTACTION_CONNECT);
+}

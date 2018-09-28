@@ -1,0 +1,62 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Common - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\user\LOCALS~1\Temp\RSP132.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /FR"..\..\..\Bin\Debug\Common/" /Fp"..\..\..\Bin\Debug\Common/Common.pch" /YX /Fo"..\..\..\Bin\Debug\Common/" /Fd"..\..\..\Bin\Debug\Common/" /FD /GZ /c 
+"D:\work\shikong\source\all\server\Common\BaseFunc.cpp"
+"D:\work\shikong\source\all\server\Common\common.cpp"
+"D:\work\shikong\source\all\server\Common\Console.cpp"
+"D:\work\shikong\source\all\server\Common\IniFile.cpp"
+"D:\work\shikong\source\all\server\Common\logfile.cpp"
+"D:\work\shikong\source\all\server\Common\MyCriticalSection.cpp"
+"D:\work\shikong\source\all\server\Common\MyHeap.cpp"
+"D:\work\shikong\source\all\server\Common\NetStringPacker.cpp"
+"D:\work\shikong\source\all\server\Common\ThreadBase.cpp"
+"D:\work\shikong\source\all\server\Common\TimeOut.cpp"
+"D:\work\shikong\source\all\server\Common\VarType.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\user\LOCALS~1\Temp\RSP132.tmp" 
+Creating temporary file "C:\DOCUME~1\user\LOCALS~1\Temp\RSP133.tmp" with contents
+[
+/nologo /out:"..\..\..\Bin\Lib\server\Common.lib" 
+\work\shikong\source\Bin\Debug\Common\BaseFunc.obj
+\work\shikong\source\Bin\Debug\Common\common.obj
+\work\shikong\source\Bin\Debug\Common\Console.obj
+\work\shikong\source\Bin\Debug\Common\IniFile.obj
+\work\shikong\source\Bin\Debug\Common\logfile.obj
+\work\shikong\source\Bin\Debug\Common\MyCriticalSection.obj
+\work\shikong\source\Bin\Debug\Common\MyHeap.obj
+\work\shikong\source\Bin\Debug\Common\NetStringPacker.obj
+\work\shikong\source\Bin\Debug\Common\ThreadBase.obj
+\work\shikong\source\Bin\Debug\Common\TimeOut.obj
+\work\shikong\source\Bin\Debug\Common\VarType.obj
+]
+Creating command line "link.exe -lib @C:\DOCUME~1\user\LOCALS~1\Temp\RSP133.tmp"
+<h3>Output Window</h3>
+Compiling...
+BaseFunc.cpp
+common.cpp
+Console.cpp
+IniFile.cpp
+logfile.cpp
+MyCriticalSection.cpp
+MyHeap.cpp
+NetStringPacker.cpp
+ThreadBase.cpp
+TimeOut.cpp
+VarType.cpp
+Creating library...
+
+
+
+<h3>Results</h3>
+Common.lib - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,59 @@
+// MsgConnect.h: interface for the CMsgConnect class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#if !defined(AFX_MSGCONNECT_H__F6692EA5_5D32_4E87_AA3C_4B37A6BE6695__INCLUDED_)
+#define AFX_MSGCONNECT_H__F6692EA5_5D32_4E87_AA3C_4B37A6BE6695__INCLUDED_
+
+#if _MSC_VER > 1000
+#pragma once
+#endif // _MSC_VER > 1000
+
+#include "NetMsg.h"
+
+class CMsgConnect : public CNetMsg  
+{
+public:
+	CMsgConnect();
+	virtual ~CMsgConnect();
+
+	BOOL	Create	(OBJID idAccount, DWORD dwData, char* pszInfo,bool bYouke = false);
+
+public:	
+	BOOL			Create		(char* pMsgBuf, DWORD dwSize);
+//	void			Process		(CGameSocket* pSocket);
+
+	struct UserSnapInfo
+	{
+		DWORD				userid;
+		USHORT				Lev;
+		USHORT				PhotoIndex;
+		USHORT				firJob;				
+		USHORT				firLev;				
+		USHORT				secJob;					
+		USHORT				secLev;				
+		DWORD               firCoat; 
+		DWORD				firWapon;				
+		DWORD				firMount;				
+		DWORD				secCoat;					
+		DWORD				secWapon;				
+		DWORD               secMount; 
+		char			    szName[_MAX_NAMESIZE];
+	};
+
+//protected:
+	typedef struct {
+		unsigned short	unMsgSize;
+		unsigned short	unMsgType;
+		OBJID			idAccount;
+		DWORD			dwData;
+		UINT            nServerIndex;
+		char			szInfo[64*5];
+		int				nRoleCount;
+		UserSnapInfo    snapInfo[1];
+	}MSG_Info;
+
+	MSG_Info*	m_pInfo;
+};
+
+#endif // !defined(AFX_MSGCONNECT_H__F6692EA5_5D32_4E87_AA3C_4B37A6BE6695__INCLUDED_)

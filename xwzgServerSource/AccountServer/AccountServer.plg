@@ -1,0 +1,58 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: AccountServer - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP58.tmp" with contents
+[
+/nologo /o"./bin/Debug/AccountServer/AccountServer.bsc" 
+.\bin\Debug\AccountServer\AccountManager.sbr
+.\bin\Debug\AccountServer\AccountServer.sbr
+.\bin\Debug\AccountServer\AccountServerDlg.sbr
+.\bin\Debug\AccountServer\DataInspectManage.sbr
+.\bin\Debug\AccountServer\FatiGueManager.sbr
+.\bin\Debug\AccountServer\Global.sbr
+.\bin\Debug\AccountServer\IniFile.sbr
+.\bin\Debug\AccountServer\ListenSocket.sbr
+.\bin\Debug\AccountServer\logfile.sbr
+.\bin\Debug\AccountServer\LoginThread.sbr
+.\bin\Debug\AccountServer\MsgAward.sbr
+.\bin\Debug\AccountServer\MsgBarAccount.sbr
+.\bin\Debug\AccountServer\MsgFatigue.sbr
+.\bin\Debug\AccountServer\MsgFee.sbr
+.\bin\Debug\AccountServer\MsgNewCard.sbr
+.\bin\Debug\AccountServer\MsgNewPlayerExam.sbr
+.\bin\Debug\AccountServer\MsgQueryFee.sbr
+.\bin\Debug\AccountServer\MsgStopAccount.sbr
+.\bin\Debug\AccountServer\MsgVAS.sbr
+.\bin\Debug\AccountServer\MsgVasLv.sbr
+.\bin\Debug\AccountServer\MyHeap.sbr
+.\bin\Debug\AccountServer\OnlineTable.sbr
+.\bin\Debug\AccountServer\PointThread.sbr
+.\bin\Debug\AccountServer\RC5_321216.sbr
+.\bin\Debug\AccountServer\StdAfx.sbr
+.\bin\Debug\AccountServer\SupplyVASService.sbr
+.\bin\Debug\AccountServer\ThreadBase.sbr
+.\bin\Debug\AccountServer\typedef.sbr
+.\bin\Debug\AccountServer\VASDBManager.sbr
+.\bin\Debug\AccountServer\VASSocket.sbr
+.\bin\Debug\AccountServer\VASStringPacket.sbr
+.\bin\Debug\AccountServer\Account.sbr
+.\bin\Debug\AccountServer\MsgAccount.sbr
+.\bin\Debug\AccountServer\MsgConnect.sbr
+.\bin\Debug\AccountServer\MsgLogin.sbr
+.\bin\Debug\AccountServer\NetMsg.sbr]
+Creating command line "bscmake.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP58.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+AccountServer_d.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

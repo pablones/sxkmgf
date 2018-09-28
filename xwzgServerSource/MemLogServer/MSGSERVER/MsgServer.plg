@@ -1,0 +1,182 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Comm - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\ADMINI~1.RTG\AppData\Local\Temp\RSP6B0F.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /I "." /I "..\common" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /Fp"..\..\..\..\..\MyBin\Release\NewDataServer\Comm/Comm.pch" /YX /Fo"..\..\..\..\..\MyBin\Release\NewDataServer\Comm/" /Fd"..\..\..\..\..\MyBin\Release\NewDataServer\Comm/" /FD /c 
+"F:\StyleDev\Óù½£½­ºþ\Server\MemLogServer(db)\MemLogServer(db)\comm\source\messageport.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1.RTG\AppData\Local\Temp\RSP6B0F.tmp" 
+Creating command line "link.exe -lib /nologo /out:"..\..\..\..\..\MyBin\Releaselib\server\NewDataServer\Comm\Comm.lib"  "\StyleDev\MyBin\Release\NewDataServer\Comm\messageport.obj" "
+<h3>Output Window</h3>
+Compiling...
+messageport.cpp
+Creating library...
+<h3>
+--------------------Configuration: Common - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\ADMINI~1.RTG\AppData\Local\Temp\RSPAF6F.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /I "." /I "..\GameBaseCodeMT" /I "..\share" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /Fp"..\..\..\..\..\MyBin\Release\NewDataServer\Common/Common.pch" /YX /Fo"..\..\..\..\..\MyBin\Release\NewDataServer\Common/" /Fd"..\..\..\..\..\MyBin\Release\NewDataServer\Common/" /FD /c 
+"F:\StyleDev\Óù½£½­ºþ\Server\MemLogServer(db)\MemLogServer(db)\COMMON\BaseFunc.cpp"
+"F:\StyleDev\Óù½£½­ºþ\Server\MemLogServer(db)\MemLogServer(db)\COMMON\common.cpp"
+"F:\StyleDev\Óù½£½­ºþ\Server\MemLogServer(db)\MemLogServer(db)\COMMON\Console.cpp"
+"F:\StyleDev\Óù½£½­ºþ\Server\MemLogServer(db)\MemLogServer(db)\COMMON\IniFile.cpp"
+"F:\StyleDev\Óù½£½­ºþ\Server\MemLogServer(db)\MemLogServer(db)\COMMON\logfile.cpp"
+"F:\StyleDev\Óù½£½­ºþ\Server\MemLogServer(db)\MemLogServer(db)\COMMON\MyCriticalSection.cpp"
+"F:\StyleDev\Óù½£½­ºþ\Server\MemLogServer(db)\MemLogServer(db)\COMMON\MyHeap.cpp"
+"F:\StyleDev\Óù½£½­ºþ\Server\MemLogServer(db)\MemLogServer(db)\COMMON\NetStringPacker.cpp"
+"F:\StyleDev\Óù½£½­ºþ\Server\MemLogServer(db)\MemLogServer(db)\COMMON\StackWalker.cpp"
+"F:\StyleDev\Óù½£½­ºþ\Server\MemLogServer(db)\MemLogServer(db)\COMMON\ThreadBase.cpp"
+"F:\StyleDev\Óù½£½­ºþ\Server\MemLogServer(db)\MemLogServer(db)\COMMON\TimeOut.cpp"
+"F:\StyleDev\Óù½£½­ºþ\Server\MemLogServer(db)\MemLogServer(db)\COMMON\VarType.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1.RTG\AppData\Local\Temp\RSPAF6F.tmp" 
+Creating temporary file "C:\Users\ADMINI~1.RTG\AppData\Local\Temp\RSPAF70.tmp" with contents
+[
+/nologo /out:"..\..\..\..\..\MyBin\Releaselib\server\NewDataServer\Common\Common.lib" 
+"\StyleDev\MyBin\Release\NewDataServer\Common\BaseFunc.obj"
+"\StyleDev\MyBin\Release\NewDataServer\Common\common.obj"
+"\StyleDev\MyBin\Release\NewDataServer\Common\Console.obj"
+"\StyleDev\MyBin\Release\NewDataServer\Common\IniFile.obj"
+"\StyleDev\MyBin\Release\NewDataServer\Common\logfile.obj"
+"\StyleDev\MyBin\Release\NewDataServer\Common\MyCriticalSection.obj"
+"\StyleDev\MyBin\Release\NewDataServer\Common\MyHeap.obj"
+"\StyleDev\MyBin\Release\NewDataServer\Common\NetStringPacker.obj"
+"\StyleDev\MyBin\Release\NewDataServer\Common\StackWalker.obj"
+"\StyleDev\MyBin\Release\NewDataServer\Common\ThreadBase.obj"
+"\StyleDev\MyBin\Release\NewDataServer\Common\TimeOut.obj"
+"\StyleDev\MyBin\Release\NewDataServer\Common\VarType.obj"
+]
+Creating command line "link.exe -lib @C:\Users\ADMINI~1.RTG\AppData\Local\Temp\RSPAF70.tmp"
+<h3>Output Window</h3>
+Compiling...
+BaseFunc.cpp
+common.cpp
+Console.cpp
+IniFile.cpp
+logfile.cpp
+MyCriticalSection.cpp
+MyHeap.cpp
+NetStringPacker.cpp
+StackWalker.cpp
+ThreadBase.cpp
+TimeOut.cpp
+VarType.cpp
+Creating library...
+<h3>
+--------------------Configuration: GameBaseCodeMT - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\ADMINI~1.RTG\AppData\Local\Temp\RSPEED1.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /I "." /I "..\common" /I "..\share" /D "MULTITHREAD_SAFE" /D "NO_MUTEX" /D "USE_NEW" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /Fp"..\..\..\..\..\MyBin\Release\NewDataServer\GameBaseCodeMT/GameBaseCodeMT.pch" /YX /Fo"..\..\..\..\..\MyBin\Release\NewDataServer\GameBaseCodeMT/" /Fd"..\..\..\..\..\MyBin\Release\NewDataServer\GameBaseCodeMT/" /FD /c 
+"F:\StyleDev\Óù½£½­ºþ\Server\MemLogServer(db)\MemLogServer(db)\GAMEBASECODEMT\source\mydatabase.cpp"
+"F:\StyleDev\Óù½£½­ºþ\Server\MemLogServer(db)\MemLogServer(db)\GAMEBASECODEMT\source\MyField.cpp"
+"F:\StyleDev\Óù½£½­ºþ\Server\MemLogServer(db)\MemLogServer(db)\GAMEBASECODEMT\source\MyRecord.cpp"
+"F:\StyleDev\Óù½£½­ºþ\Server\MemLogServer(db)\MemLogServer(db)\GAMEBASECODEMT\source\myrecordset.cpp"
+"F:\StyleDev\Óù½£½­ºþ\Server\MemLogServer(db)\MemLogServer(db)\GAMEBASECODEMT\StrRes.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1.RTG\AppData\Local\Temp\RSPEED1.tmp" 
+Creating temporary file "C:\Users\ADMINI~1.RTG\AppData\Local\Temp\RSPEEE2.tmp" with contents
+[
+/nologo /out:"..\..\..\..\..\MyBin\Releaselib\server\NewDataServer\GameBaseCodeMT.lib" 
+"\StyleDev\MyBin\Release\NewDataServer\GameBaseCodeMT\mydatabase.obj"
+"\StyleDev\MyBin\Release\NewDataServer\GameBaseCodeMT\MyField.obj"
+"\StyleDev\MyBin\Release\NewDataServer\GameBaseCodeMT\MyRecord.obj"
+"\StyleDev\MyBin\Release\NewDataServer\GameBaseCodeMT\myrecordset.obj"
+"\StyleDev\MyBin\Release\NewDataServer\GameBaseCodeMT\StrRes.obj"
+]
+Creating command line "link.exe -lib @C:\Users\ADMINI~1.RTG\AppData\Local\Temp\RSPEEE2.tmp"
+<h3>Output Window</h3>
+Compiling...
+mydatabase.cpp
+MyField.cpp
+MyRecord.cpp
+myrecordset.cpp
+StrRes.cpp
+Creating library...
+<h3>
+--------------------Configuration: WorldKernel - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\ADMINI~1.RTG\AppData\Local\Temp\RSPFE6D.tmp" with contents
+[
+/nologo /G6 /MT /W3 /GX /O2 /I "." /I ".\NetWork2" /I "..\..\common" /I "..\..\comm" /I "..\..\GameBaseCodeMT" /I "..\..\share" /D "ACCOUNT_ENABLE" /D "WORLD_KERNEL" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /Fp"..\..\..\..\..\MyBin\Release\NewDataServer\WorldKernel/WorldKernel.pch" /YX /Fo"..\..\..\..\..\MyBin\Release\NewDataServer\WorldKernel/" /Fd"..\..\..\..\..\MyBin\Release\NewDataServer\WorldKernel/" /FD /c 
+"F:\StyleDev\Óù½£½­ºþ\Server\MemLogServer(db)\MemLogServer(db)\MSGSERVER\WORLDKERNEL\WorldKernel.cpp"
+"F:\StyleDev\Óù½£½­ºþ\Server\MemLogServer(db)\MemLogServer(db)\MSGSERVER\WORLDKERNEL\NETWORK2\NetMsg.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1.RTG\AppData\Local\Temp\RSPFE6D.tmp" 
+Creating temporary file "C:\Users\ADMINI~1.RTG\AppData\Local\Temp\RSPFE6E.tmp" with contents
+[
+/nologo /out:"..\..\..\..\..\MyBin\Releaselib\server\NewDataServer\WorldKernel\WorldKernel.lib" 
+"\StyleDev\Óù½£½­ºþ\MyBin\Release\NewDataServer\WorldKernel\WorldKernel.obj"
+"\StyleDev\Óù½£½­ºþ\MyBin\Release\NewDataServer\WorldKernel\NetMsg.obj"
+]
+Creating command line "link.exe -lib @C:\Users\ADMINI~1.RTG\AppData\Local\Temp\RSPFE6E.tmp"
+<h3>Output Window</h3>
+Compiling...
+WorldKernel.cpp
+NetMsg.cpp
+F:\StyleDev\Óù½£½­ºþ\Server\MemLogServer(db)\MemLogServer(db)\MSGSERVER\WORLDKERNEL\NETWORK2\NetMsg.cpp(147) : warning C4065: switch statement contains 'default' but no 'case' labels
+Creating library...
+<h3>
+--------------------Configuration: MsgServer - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"..\..\..\..\MyBin\Release\NewDataServer/MsgServer.res" /d "NDEBUG" "F:\StyleDev\Óù½£½­ºþ\Server\MemLogServer(db)\MemLogServer(db)\MSGSERVER\MsgServer.rc"" 
+Creating temporary file "C:\Users\ADMINI~1.RTG\AppData\Local\Temp\RSP6B8.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /I "." /I "..\GameBaseCodeMT" /I "..\common" /I "..\comm" /I "..\share" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /FR"..\..\..\..\MyBin\Release\NewDataServer/" /Fo"..\..\..\..\MyBin\Release\NewDataServer/" /Fd"..\..\..\..\MyBin\Release\NewDataServer/" /FD /c 
+"F:\StyleDev\Óù½£½­ºþ\Server\MemLogServer(db)\MemLogServer(db)\MSGSERVER\DlgConfig.cpp"
+"F:\StyleDev\Óù½£½­ºþ\Server\MemLogServer(db)\MemLogServer(db)\MSGSERVER\MsgServer.cpp"
+"F:\StyleDev\Óù½£½­ºþ\Server\MemLogServer(db)\MemLogServer(db)\MSGSERVER\MsgServerDlg.cpp"
+"F:\StyleDev\Óù½£½­ºþ\Server\MemLogServer(db)\MemLogServer(db)\MSGSERVER\WorldThread.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1.RTG\AppData\Local\Temp\RSP6B8.tmp" 
+Creating temporary file "C:\Users\ADMINI~1.RTG\AppData\Local\Temp\RSP6C9.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /I "." /I "..\GameBaseCodeMT" /I "..\common" /I "..\comm" /I "..\share" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /FR"..\..\..\..\MyBin\Release\NewDataServer/" /Fp"..\..\..\..\MyBin\Release\NewDataServer/MsgServer.pch" /Yc"stdafx.h" /Fo"..\..\..\..\MyBin\Release\NewDataServer/" /Fd"..\..\..\..\MyBin\Release\NewDataServer/" /FD /c 
+"F:\StyleDev\Óù½£½­ºþ\Server\MemLogServer(db)\MemLogServer(db)\MSGSERVER\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1.RTG\AppData\Local\Temp\RSP6C9.tmp" 
+Creating temporary file "C:\Users\ADMINI~1.RTG\AppData\Local\Temp\RSP6CA.tmp" with contents
+[
+nafxcw.lib libcmt.lib ws2_32.lib libmysql.lib winmm.lib /nologo /subsystem:windows /incremental:no /pdb:"..\..\..\..\MyBin\Release\NewDataServer/dbmemlog_Release.pdb" /debug /machine:I386 /out:"F:\StyleDev\Óù½£½­ºþ\ServerFiles\memlog\dbmemlog_Release.exe" /libpath:"..\..\..\..\mysql\lib\opt" /libpath:"..\..\..\..\luaplus5\lib" 
+"\StyleDev\Óù½£½­ºþ\MyBin\Release\NewDataServer\DlgConfig.obj"
+"\StyleDev\Óù½£½­ºþ\MyBin\Release\NewDataServer\MsgServer.obj"
+"\StyleDev\Óù½£½­ºþ\MyBin\Release\NewDataServer\MsgServerDlg.obj"
+"\StyleDev\Óù½£½­ºþ\MyBin\Release\NewDataServer\StdAfx.obj"
+"\StyleDev\Óù½£½­ºþ\MyBin\Release\NewDataServer\WorldThread.obj"
+"\StyleDev\Óù½£½­ºþ\MyBin\Release\NewDataServer\MsgServer.res"
+"\StyleDev\MyBin\Releaselib\server\NewDataServer\Comm\Comm.lib"
+"\StyleDev\MyBin\Releaselib\server\NewDataServer\Common\Common.lib"
+"\StyleDev\MyBin\Releaselib\server\NewDataServer\GameBaseCodeMT.lib"
+"\StyleDev\Óù½£½­ºþ\MyBin\Releaselib\server\NewDataServer\WorldKernel\WorldKernel.lib"
+]
+Creating command line "link.exe @C:\Users\ADMINI~1.RTG\AppData\Local\Temp\RSP6CA.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+DlgConfig.cpp
+MsgServer.cpp
+MsgServerDlg.cpp
+WorldThread.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+dbmemlog_Release.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

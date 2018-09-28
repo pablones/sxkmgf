@@ -1,0 +1,43 @@
+8
+
+dir
+6874
+svn://192.168.6.200/ProgramData/newGame/DataServer
+svn://192.168.6.200
+
+
+
+2011-03-07T07:52:04.033203Z
+6874
+gezengyang
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+6f55198c-a458-c64c-a269-39b52fb26ff4
+
+GAMEBASECODEMT
+dir
+
+share
+dir
+
+COMMON
+dir
+
+comm
+dir
+
+MSGSERVER
+dir
+

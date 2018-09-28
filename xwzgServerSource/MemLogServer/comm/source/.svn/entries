@@ -1,0 +1,40 @@
+8
+
+dir
+6874
+svn://192.168.6.200/ProgramData/newGame/DataServer/comm/source
+svn://192.168.6.200
+
+
+
+2011-03-07T07:47:34.111328Z
+6869
+gezengyang
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+6f55198c-a458-c64c-a269-39b52fb26ff4
+
+messageport.cpp
+file
+
+
+
+
+2011-03-07T08:43:06.743375Z
+21a5d07f3570ae257d9c0d1886e2b5e0
+2011-03-07T07:47:34.111328Z
+6869
+gezengyang
+

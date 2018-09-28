@@ -1,0 +1,21 @@
+// VariantManager.cpp: implementation of the CVariantManager class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "VariantManager.h"
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+CVariantManager	g_VariantManager;// 彭正帮[6/18/2007] 临时变量表
+
+CVariantManager::CVariantManager()
+{
+	::InitializeCriticalSection(&m_sect);
+}
+
+CVariantManager::~CVariantManager()
+{
+
+}

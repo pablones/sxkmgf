@@ -1,0 +1,146 @@
+// WorldKernel.h: interface for the CWorldKernel class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#if !defined(AFX_WORLDKERNEL_H__9A393F65_C167_402E_8A17_7EA70AC5879E__INCLUDED_)
+#define AFX_WORLDKERNEL_H__9A393F65_C167_402E_8A17_7EA70AC5879E__INCLUDED_
+
+#include <time.h>
+#include <winsock2.h>
+#include "../../GameBaseCodeMT/I_mydb.h"
+#include "NetMsg.h"
+#include "I_Shell.h"
+#include "T_Singlemap.h"
+//#include "ClientSocket.h"
+#include "AutoPtr.h"
+
+#if _MSC_VER > 1000
+#pragma once
+#endif // _MSC_VER > 1000
+
+#include "protocol.h"
+using namespace world_kernel;
+//#include "AccountManage.h"
+//#include "GatewayInfo.h"
+
+
+
+#define NEW_ROLE_STR		"NEW_ROLE"			// 产生新人物
+const int	MAX_GM_ID			= 2000;			// 小于1000的ACCOUNT_ID，登录不受总人数限制
+
+struct ConnectInfo_ST
+{
+	OBJID			idAccount;
+	SOCKET_ID		idSocket;
+	char			szInfo[_MAX_NAMESIZE];
+};
+typedef vector<ConnectInfo_ST> CONNECT_INFO_SET;
+
+enum{
+	ERRORCON_OK = 1,
+	ERRORCON_ERRORPASSWORD,
+	ERRORCON_MAXCON,
+	ERRORCON_BAN,
+	ERRORCON_RELOGIN,
+};
+
+enum
+{
+	INDEX_GATEWAYMANAGE = 1,
+	INDEX_GATEWAY = 10,
+	INDEX_GATEWAYLAST = 19,
+	INDEX_ACC = 20,
+	INDEX_WORLD = 30,
+	INDEX_MAP = 40,
+	INDEX_MAPLAST = 49,
+	INDEX_DATA = 50,
+		
+		
+	INDEX_ALL = 1001,
+};
+
+enum
+{
+	STATUS_NULL		= 0,
+	STATUS_OPEN		= 1,
+	STATUS_CLOSED	= 2,
+		
+	STATUS_ALLOW	= 10001,
+};
+
+class CWorldKernel : IWorld, ISocket
+{
+public:
+	CWorldKernel() 
+	{
+		m_nState=0;
+		m_WorldTime = 0;
+//		m_pAccManage = NULL;
+//		m_pGateWayInfo = NULL;
+	}
+	virtual ~CWorldKernel() {}		// 建议留空
+public://功能接口相关
+	IWorld*		GetInterface()				{ return (IWorld*)this; }
+	ISocket*	GetSocketInterface()	{ return (ISocket*)this; }
+//	CAccountManage*	QueryAccManage()			{ ASSERT(m_pAccManage); return m_pAccManage; }
+//	CGatewayInfo*	QueryGatewayInfo()			{ ASSERT(m_pGateWayInfo); return m_pGateWayInfo; }
+
+protected: // IWorld
+	virtual bool	Create(IMessagePort* pPort);
+	virtual bool	ProcessMsg(OBJID idPacket, void* buf, int nType, int nFrom);
+	virtual bool	OnTimer(time_t tCurr);
+	virtual bool	Release();
+
+protected: // ISocket	
+	virtual bool SendServerMsg			(OBJID idMsg, const char* pBuf, int nMsgLen);	
+	virtual bool SendClientMsg			(SOCKET_ID idSocket, OBJID idMsg, const char* pBuf, int nMsgLen);
+public:// send
+	virtual bool SendServerMsg			(CNetMsg* pNetMsg);
+	virtual bool SendClientMsg			(SOCKET_ID idSocket,CNetMsg* pNetMsg);
+
+public://登陆
+	void SendErrorCon(SOCKET_ID idSocket,int nErrorCord);
+	void SendConPass(SOCKET_ID idSocket,OBJID idAcc,char* szGatewayPath,int  nGatewayPort);
+public://踢出
+	void KickOutSocket(OBJID idAccount);
+	void KickOutAll();
+public:
+	void SetServerConnect();
+public: 
+	virtual bool PrintText			(LPCTSTR szText);
+protected:
+	bool SendSocketKerMsg(OBJID idMsg, const char *pBuf, int nMsgLen, SOCKET_ID nSocket);
+	bool SendSocketKerAction(SOCKET_ID nSocketconst, int nAction);
+	
+	bool ProcessSocketMsg	(SOCKET_ID idSocket, OBJID idMsg, const char* pBuf, int nMsgLen);
+	bool ProcessSocketKerAction(SOCKET_ID nSocket,const int nAction);
+
+	bool SendClientKerMsg(OBJID idMsg, const char *pBuf, int nMsgLen);
+	bool SendClientKerAction(const int nAction);
+	
+	bool ProcessClientMsg	( OBJID idMsg, const char* pBuf, int nMsgLen);
+	bool ProcessClientKerAction(const int nAction);
+	PROCESS_ID	GetProcessID() { return m_idProcess; }
+public:
+	IMessagePort*	GetMsgPort()							{ return m_pMsgPort; }
+	IDatabase*		GetDatabase()							{ return m_pDb; }
+protected:
+	PROCESS_ID		m_idProcess;
+	IDatabase*		m_pDb;
+	IMessagePort*	m_pMsgPort;
+//	CAccountManage* m_pAccManage;
+//	CGatewayInfo*   m_pGateWayInfo;
+	static CWorldKernel*	m_pWorld;
+protected:
+	enum { STATE_NONE, STATE_CONNECTOK, STATE_ACCOUNTOK, STATE_NORMAL, STATE_STATEOK };
+	int			m_nState;
+	int			m_WorldTime;
+protected: 
+	SYSTEMTIME m_stLastDatabaseReconnectTime;
+	bool ReconnectDB();
+	friend CWorldKernel* GameWorld();
+};
+
+inline CWorldKernel* GameWorld()			{ ASSERT(CWorldKernel::m_pWorld); return CWorldKernel::m_pWorld; }
+
+#endif // !defined(AFX_WORLDKERNEL_H__9A393F65_C167_402E_8A17_7EA70AC5879E__INCLUDED_)

@@ -1,0 +1,180 @@
+// User.h: interface for the CUser class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#if !defined(AFX_USERTABLE_H__BF5C20F1_5DBE_4E65_9099_E96EFAD7ECBA__INCLUDED_1)
+#define AFX_USERTABLE_H__BF5C20F1_5DBE_4E65_9099_E96EFAD7ECBA__INCLUDED_1
+
+#if _MSC_VER > 1000
+#pragma once
+#endif // _MSC_VER > 1000
+
+#include "MagicType.h"
+#include "NpcType.h"
+#include "SynHomeLevData.h"
+#include "SynHomeChgData.h"
+#include "SynHomeTaskData.h"
+#include "SynHomeBuyData.h"
+#include "AnyBuyData.h"
+
+//////////////////////////////////////////////////////////////////////
+enum ACTIONDATA{
+		ACTIONDATA_ID_			=0,
+		ACTIONDATA_IDNEXT		=1,
+		ACTIONDATA_IDNEXTFAIL,
+		ACTIONDATA_TYPE,
+		ACTIONDATA_DATA,
+		ACTIONDATA_PARAM,
+};
+char	szActionTable[];
+typedef	CConstGameData<ACTIONDATA,szActionTable,ACTIONDATA_ID_>	CActionData;
+typedef	ISingleMap2<CActionData>	IActionSet;
+typedef	CSingleMap2<CActionData>	CActionSet;
+
+//////////////////////////////////////////////////////////////////////
+enum NPCTYPEDATA
+{
+		NPCTYPEDATA_TYPE = 0,
+		NPCTYPEDATA_NAME,
+		NPCTYPEDATA_LEVEL,
+		NPCTYPEDATA_PROFESSION,
+		NPCTYPEDATA_ATKRANGE,
+		NPCTYPEDATA_ATKSPEED,
+		NPCTYPEDATA_ATKUSER,
+		NPCTYPEDATA_VIEWRANGE,
+		NPCTYPEDATA_CHASE_RANGE,
+		NPCTYPEDATA_RUNSPEED,
+
+		NPCTYPEDATA_LIFE,
+		NPCTYPEDATA_MANA,
+		NPCTYPEDATA_ATK,
+		NPCTYPEDATA_MAGATK,
+		NPCTYPEDATA_DEF,
+		NPCTYPEDATA_MAGDEF,
+		NPCTYPEDATA_DODGE,
+		NPCTYPEDATA_HITRATE,
+		NPCTYPEDATA_CRIT,
+		NPCTYPEDATA_THOUGH,	
+		NPCTYPEDATA_ATTADD1,
+		NPCTYPEDATA_ATTADD2,
+		NPCTYPEDATA_ATTADD3,
+		NPCTYPEDATA_ATTADD4,
+		NPCTYPEDATA_DEFADD1,
+		NPCTYPEDATA_DEFADD2,
+		NPCTYPEDATA_DEFADD3,
+		NPCTYPEDATA_DEFADD4,
+
+		NPCTYPEDATA_DROP_MONEY_CHANCE,
+		NPCTYPEDATA_DROPMONEY_MIN,
+		NPCTYPEDATA_DROPMONEY_MAX,
+		NPCTYPEDATA_DROP_ITEM_RULE1,
+		NPCTYPEDATA_DROP_ITEM_RULE2,
+		NPCTYPEDATA_DROP_ITEM_RULE3,
+		NPCTYPEDATA_DROP_ITEM_RULE4,
+		NPCTYPEDATA_EXP,
+		NPCTYPEDATA_BOSSTYPE,
+		NPCTYPEDATA_LOOKFACE,
+		NPCTYPEDATA_KILLEDACTION,
+};
+char	szMonsterTypeTable[];
+typedef	CGameData<NPCTYPEDATA, szMonsterTypeTable, szID>	CMonsterTypeData;
+typedef	ISingleMap2<CMonsterTypeData>		IMonsterTypeSet;
+typedef	CSingleMap2<CMonsterTypeData>		CMonsterTypeSet;
+
+#define	CNpcType	CMonsterTypeData
+
+enum EUDEMONTYPEDATA
+{
+	EUDEMONTYPEDATA_Id = 0,
+	EUDEMONTYPEDATA_name,
+	EUDEMONTYPEDATA_lookface,
+	EUDEMONTYPEDATA_maxlifespan,
+	EUDEMONTYPEDATA_habit1,
+	EUDEMONTYPEDATA_habit2,
+	EUDEMONTYPEDATA_habit3,
+	EUDEMONTYPEDATA_habit4,
+	EUDEMONTYPEDATA_habit5,
+	EUDEMONTYPEDATA_needLev,
+	EUDEMONTYPEDATA_initgrow,
+	EUDEMONTYPEDATA_initstr,
+	EUDEMONTYPEDATA_randstr,
+	EUDEMONTYPEDATA_initstrChg,
+	EUDEMONTYPEDATA_randstrChg,
+	EUDEMONTYPEDATA_initint,
+	EUDEMONTYPEDATA_randint,
+	EUDEMONTYPEDATA_initintChg,
+	EUDEMONTYPEDATA_randintChg,
+	EUDEMONTYPEDATA_initsta,
+	EUDEMONTYPEDATA_randsta,
+	EUDEMONTYPEDATA_initstaChg,
+	EUDEMONTYPEDATA_randstaChg,
+	EUDEMONTYPEDATA_initspi,
+	EUDEMONTYPEDATA_randspi,
+	EUDEMONTYPEDATA_initspiChg,
+	EUDEMONTYPEDATA_randspiChg,
+	EUDEMONTYPEDATA_initagi,
+	EUDEMONTYPEDATA_randagi,
+	EUDEMONTYPEDATA_initagiChg,
+	EUDEMONTYPEDATA_randagiChg,
+	EUDEMONTYPEDATA_skill_1,
+	EUDEMONTYPEDATA_skill_rand1,
+	EUDEMONTYPEDATA_skill_2,
+	EUDEMONTYPEDATA_skill_rand2,
+	EUDEMONTYPEDATA_skill_3,
+	EUDEMONTYPEDATA_skill_rand3,
+	EUDEMONTYPEDATA_skill_4,
+	EUDEMONTYPEDATA_skill_rand4,
+	EUDEMONTYPEDATA_skill_5,
+	EUDEMONTYPEDATA_skill_rand5,
+	EUDEMONTYPEDATA_itemType,
+	EUDEMONTYPEDATA_getLev,
+};
+char	szEudemonTypeTable[];
+typedef	CGameData<EUDEMONTYPEDATA, szEudemonTypeTable, szID>	CEudemonTypeData;
+typedef	ISingleMap2<CEudemonTypeData>		IEudemonTypeSet;
+typedef	CSingleMap2<CEudemonTypeData>		CEudemonTypeSet;
+
+#define	CEudemonType	CEudemonTypeData
+
+
+enum PEIFANGTYPEDATA
+{
+	PEIFANGTYPEDATA_Id = 0,
+	PEIFANGTYPEDATA_SPENDITEM1,
+	PEIFANGTYPEDATA_SPENDNUM1,
+	PEIFANGTYPEDATA_SPENDITEM2,
+	PEIFANGTYPEDATA_SPENDNUM2,
+	PEIFANGTYPEDATA_SPENDITEM3,
+	PEIFANGTYPEDATA_SPENDNUM3,
+	PEIFANGTYPEDATA_SPENDITEM4,
+	PEIFANGTYPEDATA_SPENDNUM4,
+	PEIFANGTYPEDATA_SPENDVIT,
+	PEIFANGTYPEDATA_GETITEM1,
+	PEIFANGTYPEDATA_GETNUM1,
+	PEIFANGTYPEDATA_GETITEM2,
+	PEIFANGTYPEDATA_GETNUM2,
+	PEIFANGTYPEDATA_CARFTLEV,
+};
+char	szPeifangTypeTable[];
+typedef	CGameData<PEIFANGTYPEDATA, szPeifangTypeTable, szID>	CPeifangTypeData;
+typedef	ISingleMap2<CPeifangTypeData>		IPeifangTypeSet;
+typedef	CSingleMap2<CPeifangTypeData>		CPeifangTypeSet;
+
+#define	CPeifangType	CPeifangTypeData
+
+//////////////////////////////////////////////////////////////////////
+enum REBIRTHDATA
+{
+	REBIRTHDATA_NEED_PROF=1,
+	REBIRTHDATA_NEW_PROF,
+	REBIRTHDATA_NEED_LEVEL,
+	REBIRTHDATA_NEW_LEVEL,
+};
+char	szRebirthTable[];
+typedef	CGameData<REBIRTHDATA, szRebirthTable, szID>	CRebirthData;
+typedef	ISingleObjSet2<CRebirthData>		IRebirthSet;
+typedef	CSingleObjSet2<CRebirthData>		CRebirthSet;
+
+
+
+#endif // !defined(AFX_USERTABLE_H__BF5C20F1_5DBE_4E65_9099_E96EFAD7ECBA__INCLUDED_1)

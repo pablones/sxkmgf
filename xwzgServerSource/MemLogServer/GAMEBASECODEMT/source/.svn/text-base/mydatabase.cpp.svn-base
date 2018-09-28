@@ -1,0 +1,419 @@
+
+#include <windows.h>
+#include <stdio.h>
+#include <time.h>
+
+#include "mydb.h"
+#include "basefunc.h"
+#include "myrecordset.h"
+#include "myrecord.h"
+#include "IniFile.h"
+#include "define.h"
+
+
+extern	long	s_nDatabaseTimeSum;			//?? 用于统计数据库操作所消耗的时间
+#define	LOCKADD_TIMESUM		::InterlockedExchangeAdd(&s_nDatabaseTimeSum, clock() - tStart)
+
+
+CMyHeap	CMyDatabase::s_heap("CMyDatabase");
+
+long	g_DBDebug[5];
+
+#define		RELEASE_MUTEX(x)		::ReleaseMutex(x)
+
+//////////////////////////////////////////////////////////////////////
+IRecordset* CMyDatabase::CreateNewRecordset(LPCTSTR szSQL, bool bNoEmpty /*= true*/) 
+{ 
+	CMyRecordset* pRes = (CMyRecordset::CreateNew(this)); 
+	if(pRes)
+	{
+		if(pRes->Open(szSQL))
+		{
+			if(pRes->RecordCount())
+			{
+				return (IRecordset*)pRes;
+			}
+			else if(!bNoEmpty && pRes->GetDefauldField())
+			{
+				return (IRecordset*)pRes;
+			}
+		}
+
+		delete pRes;
+	}
+
+	return NULL;
+}
+
+//////////////////////////////////////////////////////////////////////
+CMyDatabase::CMyDatabase()
+{	
+	m_nMySQlErrorCode = 0;
+	m_hdbc = NULL;
+	m_bIsOpen = FALSE;
+	m_nRefCount = 0;
+	m_szDBName[0]	= 0;	//paled debug
+	m_nOpenCount=0;
+}
+
+CMyDatabase::~CMyDatabase()
+{
+	Destroy();
+}
+
+///////////////////////////////////////////////////////////////////////
+bool CMyDatabase::CheckSQL(const char* pszSQL)
+{
+	if (!pszSQL)
+		return false;
+
+	if (strstr(pszSQL, "UPDATE"))	// update sql
+	{
+		if (!strstr(pszSQL, "WHERE") || !strstr(pszSQL, "LIMIT"))
+		{
+			::LogSave("Invalid update SQL [%s], since not found WHERE or LIMIT.", pszSQL);
+			return false;
+		}
+	}
+
+	if (strstr(pszSQL, "DELETE"))	// delete sql
+	{
+		if (!strstr(pszSQL, "WHERE"))
+		{
+			::LogSave("Invalid SQL delete [%s].", pszSQL);
+			return false;
+		}
+	}
+
+	return true;
+}
+
+//////////////////////////////////////////////////////////////////////
+bool CMyDatabase::Open(char * szHost, char * szUser, char * szPasswd,char * szDB, 
+			unsigned int uiPort,char * charset, char * szSocket, unsigned int uiFlag )
+{	
+	if (m_bIsOpen)
+	{	
+		if (m_nRefCount == 0 )
+			Close();
+		else 
+		{
+			g_nMyDBError = 1000;
+			return FALSE;
+		}
+	}
+
+	m_hdbc = mysql_init(NULL);
+	if (m_hdbc == NULL) 
+	{	g_nMyDBError = 1001;
+		return FALSE;
+	}
+
+	mysql_options(m_hdbc, MYSQL_SET_CHARSET_NAME,charset);
+	if (szDB != NULL) 
+		strcpy(m_szDBName ,szDB);
+	
+	//设置自动重连机制
+	mysql_options(m_hdbc, MYSQL_OPT_RECONNECT,"1");
+
+	//连接
+	if ( mysql_real_connect(m_hdbc, szHost, szUser, szPasswd, 
+			szDB, uiPort, szSocket , uiFlag) == NULL )
+	{
+		g_nMyDBError = 1002;
+		m_nMySQlErrorCode = mysql_errno(m_hdbc);
+		return FALSE;
+	}
+
+	m_nMySQlErrorCode = 0;
+	m_bIsOpen = TRUE;
+	return TRUE;
+}
+
+
+
+//////////////////////////////////////////////////////////////////////
+void CMyDatabase::Close()
+{	
+	if ( m_hdbc != NULL )	
+		mysql_close( m_hdbc );
+	m_bIsOpen = false;
+	m_hdbc = NULL;
+
+	//paled debug
+	if(m_nRefCount)
+	{
+		LogSave("*DATABASE* warning: Found unclosed CRecordset.m_nRefCount:%d",m_nRefCount);
+	}
+}	
+
+//////////////////////////////////////////////////////////////////////
+bool CMyDatabase::ExecuteSQL(char * szSQL)		//, MYSQL_RES ** pRes
+{	
+	TimeCostChk("CMyDatabase::ExecuteSQL",szSQL);
+
+	if (!CMyDatabase::CheckSQL(szSQL))
+		return false;
+
+	try 
+	{
+		if (m_hdbc == NULL) 
+		{	
+			g_nMyDBError = 1003;
+			return false;
+		}
+	
+		InterlockedExchangeAdd(&g_DBDebug[4], 1);	//查询次数
+
+		time_t	tStart = clock();
+		time_t	tDBDebug0 = tStart;
+		DWORD dwWaitResult = ::WaitForSingleObject(m_hDbMutex, _MAX_DBACCESSTIME);
+		if( WAIT_OBJECT_0 == dwWaitResult)	
+		{
+			InterlockedExchangeAdd(&g_DBDebug[0], clock() - tDBDebug0);	//等待时间
+			char szLog[2048];
+			sprintf(szLog,"CMyDatabase::ExecuteSQL:%s",szSQL);
+
+			time_t	tDBDebug1 = clock();
+			if (mysql_query(m_hdbc, szSQL) != NULL) 
+			{	
+				InterlockedExchangeAdd(&g_DBDebug[1], clock() - tDBDebug1);	//执行时间
+				LOCKADD_TIMESUM;
+
+				RELEASE_MUTEX(m_hDbMutex);
+				g_nMyDBError = 1004;	
+				
+				if(mysql_errno(m_hdbc)==2013)//处理Lost connection to MySQL server during query
+				{
+					while(!ErrorRecon());
+				}
+
+				return false;
+			}
+			else
+			{
+				InterlockedExchangeAdd(&g_DBDebug[1], clock() - tDBDebug1);	//执行时间
+
+				clock_t tDBDebug2 = clock();
+
+				
+				MYSQL_RES * pRes=mysql_store_result(m_hdbc);
+				if (pRes) 
+				{
+					mysql_free_result(pRes);
+				}
+				
+				InterlockedExchangeAdd(&g_DBDebug[2], clock() - tDBDebug2);	//  [10/30/2007 朱斌]	取结果用时
+				LOCKADD_TIMESUM;
+				RELEASE_MUTEX(m_hDbMutex);
+				return true;
+			}
+		}
+		else
+		{
+			char szLog[2048];
+			sprintf(szLog,"*DATABASE* WARNING: ExecuteSQL() overtime(%d):%s",
+				dwWaitResult,szSQL);
+			::LogSave(szLog);
+			return false;
+		}
+	}
+	catch (...)
+	{
+		RELEASE_MUTEX(m_hDbMutex);
+
+		::LogSave("MyDataBase Exe Sql error: %s", szSQL);
+		return false;
+	}
+}
+
+//////////////////////////////////////////////////////////////////////
+int	CMyDatabase::CountRecord (const char* szSQL)
+{
+	if (!szSQL)
+		return -1;
+
+	TimeCostChk("CMyDatabase::CountRecord",szSQL);
+
+	if (NULL == strstr(szSQL, "SELECT"))
+	{
+		::LogSave("Error: invalid count record Sql: %s", szSQL);
+		return -1;
+	}
+
+	if (m_hdbc == NULL) 
+	{	
+		g_nMyDBError = 1003;
+		return -1;
+	}
+
+
+	DWORD dwWaitResult = ::WaitForSingleObject(m_hDbMutex, _MAX_DBACCESSTIME);
+	if( WAIT_OBJECT_0 == dwWaitResult)	
+	{
+		char szLog[2048];
+		sprintf(szLog,"CMyDatabase::CountRecord:%s",szSQL);
+		if (mysql_query(m_hdbc, szSQL) != NULL) 
+		{	
+			g_nMyDBError = 1004;
+			return -1;
+		}
+
+		MYSQL_RES* res = mysql_store_result(m_hdbc);
+		RELEASE_MUTEX(m_hDbMutex);
+
+		if (res == NULL)
+			return -1;
+		else
+		{
+			int rval = mysql_num_rows(res);
+			mysql_free_result(res);
+			return rval;
+		}
+	}
+	else
+	{
+		char szLog[2048];
+		sprintf(szLog,"*DATABASE* WARNING: ExecuteSQL() overtime(%d):%s",
+			dwWaitResult,szSQL);
+		::LogSave(szLog);
+		return -1;
+	}
+}
+
+
+//////////////////////////////////////////////////////////////////////
+int CMyDatabase::GetInsertId()
+{	
+	if (m_hdbc)
+		return (int)mysql_insert_id(m_hdbc);
+	else
+		return 0;
+}
+
+void CMyDatabase::GetDBErrorMsg(char * szErrorMsg)
+{	
+	strcpy(szErrorMsg, mysql_error(m_hdbc));
+}
+
+//-----------------------------------------------------end---------------------------------------
+BOOL CMyDatabase::Init()
+{
+	// init db
+	char szDBServer[256], szDBName[256], szDBUser[256], szPassword[256], szCharset[256];
+	int nPort = 0;
+
+	// 初始化数据库
+	CIniFile	ini(CONFIG_FILENAME, "Database");
+	ini.GetString(szDBServer,	"DB_IP",	DBSTR_SIZE);
+	ini.GetString(szDBUser,	"DB_USER",	DBSTR_SIZE);
+	ini.GetString(szPassword,	"DB_PW",	DBSTR_SIZE);
+	ini.GetString(szDBName,	"DB_DB",	DBSTR_SIZE);
+	ini.GetString(szCharset,	"DB_CHARSET",	DBSTR_SIZE);
+	nPort = ini.GetInt("DB_PORT");
+
+	if(Open(szDBServer, szDBUser, szPassword, szDBName,nPort,szCharset))
+	{
+		m_hDbMutex	=::CreateMutex(NULL, false, NULL);			// 允许多个连接 "GameDBMutex"
+		if (m_hDbMutex)
+			return true;
+		else
+		{
+			::MessageBox(NULL, "m_hDbMutex产生失败。", "Error",MB_OK|MB_ICONERROR);
+			return false;
+		}
+	}
+	else
+	{
+		::MessageBox(NULL, "数据库对象open失败。", "Error",MB_OK|MB_ICONERROR);
+		return false;
+	}
+}
+
+//////////////////////////////////////////////////////////////////////
+void CMyDatabase::Destroy	(void)
+{
+	if (m_hDbMutex)
+	{
+		::CloseHandle(m_hDbMutex);
+		m_hDbMutex	=NULL;
+	}
+	
+	Close();
+}
+
+//////////////////////////////////////////////////////////////////////
+IDatabase* CreateDatabase()
+{
+	CMyDatabase* pDb = CMyDatabase::CreateNew();
+	if(!pDb)
+		return NULL;;
+
+
+	if(pDb->Init())
+		return pDb->GetInterface();
+
+	delete pDb;
+	return NULL;
+}
+
+
+//////////////////////////////////////////////////////////////////////////
+BOOL ReconnectDatabase(IDatabase* pDb)
+{
+	if(!pDb)
+		return NULL;
+
+	if(((CMyDatabase*)pDb)->Reconnect())
+		return TRUE;
+
+	return FALSE;
+}
+
+bool CMyDatabase::ErrorRecon()
+{
+	BOOL bSuccess	= ::ReconnectDatabase(this);
+	
+	
+	if(!bSuccess)
+	{
+		LOGERROR("数据库重新连接失败!");
+		return false;
+	}
+	
+	return true;
+}
+
+BOOL CMyDatabase::Reconnect()
+{
+	char szDBServer[256], szDBName[256], szDBUser[256], szPassword[256], szCharset[256];
+	int nPort = 0;
+	
+	// 初始化数据库
+	CIniFile	ini(CONFIG_FILENAME, "Database");
+	ini.GetString(szDBServer,	"DB_IP",	DBSTR_SIZE);
+	ini.GetString(szDBUser,	"DB_USER",	DBSTR_SIZE);
+	ini.GetString(szPassword,	"DB_PW",	DBSTR_SIZE);
+	ini.GetString(szDBName,	"DB_DB",	DBSTR_SIZE);
+	ini.GetString(szCharset,	"DB_CHARSET",	DBSTR_SIZE);
+	nPort = ini.GetInt("DB_PORT");
+
+	Close();
+
+	if(Open(szDBServer, szDBUser, szPassword, szDBName,nPort,szCharset))
+	{
+		m_hDbMutex	=::CreateMutex(NULL, false, NULL);			// 允许多个连接 "GameDBMutex"
+		if (m_hDbMutex)
+			return true;
+		else
+		{
+			LOGERROR("CMyDatabase::Reconnect:m_hDbMutex产生失败。");
+			return false;
+		}
+	}
+	else
+	{
+		LOGERROR("CMyDatabase::Reconnect: 数据库对象open失败! m_nMySQlErrorCode=%d, g_nMyDBError=%d", m_nMySQlErrorCode, g_nMyDBError);
+		return false;
+	}
+}

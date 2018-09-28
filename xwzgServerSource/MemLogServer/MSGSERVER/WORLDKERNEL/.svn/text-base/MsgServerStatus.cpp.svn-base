@@ -1,0 +1,60 @@
+// MsgServerStatus.cpp: implementation of the CMsgServerStatus class.
+//
+//////////////////////////////////////////////////////////////////////
+#include "AllMsg.h"
+#include "logfile.h"
+using namespace world_kernel;
+#include "WorldKernel.h"
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+CMsgServerStatus::CMsgServerStatus()
+{
+	Init();
+	m_pInfo	=(MSG_Info *)m_bufMsg;
+}
+
+CMsgServerStatus::~CMsgServerStatus()
+{
+
+}
+
+BOOL CMsgServerStatus::Create(char* pbufMsg, DWORD dwMsgSize)
+{
+	if (!CNetMsg::Create(pbufMsg, dwMsgSize))
+		return false;
+	
+	if(_MSG_SERVER_STATUS != this->GetType())
+		return false;
+	
+	return true;
+}
+
+BOOL CMsgServerStatus::Create(int nIndex,int nStatus)
+{
+	this->Init();
+	
+	// fill
+	m_unMsgType		= _MSG_SERVER_STATUS;
+	m_unMsgSize		= sizeof(MSG_Info);
+	
+	m_pInfo->nIndex			= nIndex;
+	m_pInfo->nStatus		= nStatus;
+	return TRUE;
+}
+
+//////////////////////////////////////////////////////////////////////
+void CMsgServerStatus::Process(void* pSocket)
+{
+	if(m_pInfo->nIndex == INDEX_DATA)
+	{
+		if(m_pInfo->nStatus == STATUS_ALLOW)
+		{
+			GameWorld()->SetServerConnect();
+		}
+	}
+
+}
+

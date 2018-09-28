@@ -1,0 +1,50 @@
+// MsgServerConnect.cpp: implementation of the CMsgServerConnect class.
+//
+//////////////////////////////////////////////////////////////////////
+#include "AllMsg.h"
+#include "logfile.h"
+using namespace world_kernel;
+#include "WorldKernel.h"
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+CMsgServerConnect::CMsgServerConnect()
+{
+	Init();
+	m_pInfo	=(MSG_Info *)m_bufMsg;
+}
+
+CMsgServerConnect::~CMsgServerConnect()
+{
+
+}
+
+BOOL CMsgServerConnect::Create(char* pbufMsg, DWORD dwMsgSize)
+{
+	if (!CNetMsg::Create(pbufMsg, dwMsgSize))
+		return false;
+	
+	if(_MSG_SERVER_LOGIN != this->GetType())
+		return false;
+	
+	return true;
+}
+
+BOOL CMsgServerConnect::Create(int nKey)
+{
+	this->Init();
+	
+	// fill
+	m_unMsgType		= _MSG_SERVER_LOGIN;
+	m_unMsgSize		= sizeof(MSG_Info);
+	
+	m_pInfo->idKey			= nKey;
+	return TRUE;
+}
+
+//////////////////////////////////////////////////////////////////////
+void CMsgServerConnect::Process(void* pSocket)
+{
+}

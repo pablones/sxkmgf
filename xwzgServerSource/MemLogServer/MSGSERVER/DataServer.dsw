@@ -1,0 +1,119 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "ClientSocket"=.\ClientSocket\ClientSocket.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Comm"=..\comm\Comm.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Common"=..\COMMON\Common.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "GameBaseCodeMT"=..\GAMEBASECODEMT\GameBaseCodeMT.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "MsgServer"=.\MsgServer.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Comm
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name Common
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name GameBaseCodeMT
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ServerSocket
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name WorldKernel
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ClientSocket
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "ServerSocket"=.\serversocket\ServerSocket.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "WorldKernel"=.\WORLDKERNEL\WorldKernel.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

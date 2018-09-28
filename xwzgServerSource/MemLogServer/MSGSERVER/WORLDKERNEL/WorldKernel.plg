@@ -1,0 +1,81 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: WorldKernel - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP5F.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /I "." /I "NetWork2" /I "..\..\GameBaseCode" /I "..\..\common" /I "..\..\comm" /I "..\share" /D "ACCOUNT_ENABLE" /D "WORLD_KERNEL" /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /Fp"..\..\..\..\Bin\Debug\WorldKernel/WorldKernel.pch" /YX /Fo"..\..\..\..\Bin\Debug\WorldKernel/" /Fd"..\..\..\..\Bin\Debug\WorldKernel/" /FD /GZ /c 
+"F:\天晴数码\Projects\圣战（魔域）\source\server\MsgServer\worldkernel\ClientSocket.cpp"
+"F:\天晴数码\Projects\圣战（魔域）\source\server\MsgServer\worldkernel\ConnectUser.cpp"
+"F:\天晴数码\Projects\圣战（魔域）\source\server\MsgServer\worldkernel\MapList.cpp"
+"F:\天晴数码\Projects\圣战（魔域）\source\server\MsgServer\worldkernel\MessageBoard.cpp"
+"F:\天晴数码\Projects\圣战（魔域）\source\server\MsgServer\worldkernel\SupermanList.cpp"
+"F:\天晴数码\Projects\圣战（魔域）\source\server\MsgServer\worldkernel\SynWorldManager.cpp"
+"F:\天晴数码\Projects\圣战（魔域）\source\server\MsgServer\worldkernel\SynWorldShell.cpp"
+"F:\天晴数码\Projects\圣战（魔域）\source\server\MsgServer\worldkernel\UserList.cpp"
+"F:\天晴数码\Projects\圣战（魔域）\source\server\MsgServer\worldkernel\WorldKernel.cpp"
+"F:\天晴数码\Projects\圣战（魔域）\source\server\MsgServer\worldkernel\NETWORK2\MsgAiNpcInfo.cpp"
+"F:\天晴数码\Projects\圣战（魔域）\source\server\MsgServer\worldkernel\NETWORK2\MsgConnect.cpp"
+"F:\天晴数码\Projects\圣战（魔域）\source\server\MsgServer\worldkernel\NETWORK2\MsgDialog.cpp"
+"F:\天晴数码\Projects\圣战（魔域）\source\server\MsgServer\worldkernel\NETWORK2\MsgFriend.cpp"
+"F:\天晴数码\Projects\圣战（魔域）\source\server\MsgServer\worldkernel\NETWORK2\MsgLogin.cpp"
+"F:\天晴数码\Projects\圣战（魔域）\source\server\MsgServer\worldkernel\NETWORK2\MsgMessageBoard.cpp"
+"F:\天晴数码\Projects\圣战（魔域）\source\server\MsgServer\worldkernel\NETWORK2\MsgName.cpp"
+"F:\天晴数码\Projects\圣战（魔域）\source\server\MsgServer\worldkernel\NETWORK2\MsgRegister.cpp"
+"F:\天晴数码\Projects\圣战（魔域）\source\server\MsgServer\worldkernel\NETWORK2\MsgTalk.cpp"
+"F:\天晴数码\Projects\圣战（魔域）\source\server\MsgServer\worldkernel\NETWORK2\MsgTime.cpp"
+"F:\天晴数码\Projects\圣战（魔域）\source\server\MsgServer\worldkernel\NETWORK2\NetMsg.cpp"
+"F:\天晴数码\Projects\圣战（魔域）\source\server\MsgServer\worldkernel\ChatRoom.cpp"
+"F:\天晴数码\Projects\圣战（魔域）\source\server\MsgServer\worldkernel\ChatRoomManager.cpp"
+"F:\天晴数码\Projects\圣战（魔域）\source\server\MsgServer\worldkernel\NETWORK2\MsgChatRoom.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP5F.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP60.tmp" with contents
+[
+/nologo /out:"..\..\..\..\Bin\Lib\server\WorldKernel.lib" 
+"\天晴数码\Projects\圣战（魔域）\Bin\Debug\WorldKernel\ClientSocket.obj"
+"\天晴数码\Projects\圣战（魔域）\Bin\Debug\WorldKernel\ConnectUser.obj"
+"\天晴数码\Projects\圣战（魔域）\Bin\Debug\WorldKernel\MapList.obj"
+"\天晴数码\Projects\圣战（魔域）\Bin\Debug\WorldKernel\MessageBoard.obj"
+"\天晴数码\Projects\圣战（魔域）\Bin\Debug\WorldKernel\SupermanList.obj"
+"\天晴数码\Projects\圣战（魔域）\Bin\Debug\WorldKernel\SynWorldManager.obj"
+"\天晴数码\Projects\圣战（魔域）\Bin\Debug\WorldKernel\SynWorldShell.obj"
+"\天晴数码\Projects\圣战（魔域）\Bin\Debug\WorldKernel\UserList.obj"
+"\天晴数码\Projects\圣战（魔域）\Bin\Debug\WorldKernel\WorldKernel.obj"
+"\天晴数码\Projects\圣战（魔域）\Bin\Debug\WorldKernel\MsgAiNpcInfo.obj"
+"\天晴数码\Projects\圣战（魔域）\Bin\Debug\WorldKernel\MsgConnect.obj"
+"\天晴数码\Projects\圣战（魔域）\Bin\Debug\WorldKernel\MsgDialog.obj"
+"\天晴数码\Projects\圣战（魔域）\Bin\Debug\WorldKernel\MsgFriend.obj"
+"\天晴数码\Projects\圣战（魔域）\Bin\Debug\WorldKernel\MsgLogin.obj"
+"\天晴数码\Projects\圣战（魔域）\Bin\Debug\WorldKernel\MsgMessageBoard.obj"
+"\天晴数码\Projects\圣战（魔域）\Bin\Debug\WorldKernel\MsgName.obj"
+"\天晴数码\Projects\圣战（魔域）\Bin\Debug\WorldKernel\MsgRegister.obj"
+"\天晴数码\Projects\圣战（魔域）\Bin\Debug\WorldKernel\MsgTalk.obj"
+"\天晴数码\Projects\圣战（魔域）\Bin\Debug\WorldKernel\MsgTime.obj"
+"\天晴数码\Projects\圣战（魔域）\Bin\Debug\WorldKernel\NetMsg.obj"
+"\天晴数码\Projects\圣战（魔域）\Bin\Debug\WorldKernel\ChatRoom.obj"
+"\天晴数码\Projects\圣战（魔域）\Bin\Debug\WorldKernel\ChatRoomManager.obj"
+"\天晴数码\Projects\圣战（魔域）\Bin\Debug\WorldKernel\MsgChatRoom.obj"
+]
+Creating command line "link.exe -lib @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP60.tmp"
+<h3>Output Window</h3>
+Compiling...
+ClientSocket.cpp
+ConnectUser.cpp
+MapList.cpp
+MessageBoard.cpp
+SupermanList.cpp
+SynWorldManager.cpp
+SynWorldShell.cpp
+UserList.cpp
+WorldKernel.cpp
+MsgAiNpcInfo.cpp
+cl.exe terminated at user request.
+
+</pre>
+</body>
+</html>

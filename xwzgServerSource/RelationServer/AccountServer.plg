@@ -1,0 +1,199 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: GameBaseCode - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPE34.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /Zi /Od /I "..\..\..\..\mysql\include" /D "_COLOR_ENABLE" /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /FR"bin/Debug/ACCGameBaseCode/" /Fp"bin/Debug/ACCGameBaseCode/GameBaseCode.pch" /YX /Fo"bin/Debug/ACCGameBaseCode/" /Fd"bin/Debug/ACCGameBaseCode/" /FD /GZ /c 
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\GameBaseCode\MyDatabase.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\GameBaseCode\MyField.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\GameBaseCode\MyRecord.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\GameBaseCode\MyRecordset.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\GameBaseCode\MsgPacket.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\GameBaseCode\NetStringPacker.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\GameBaseCode\PrcHeap.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\GameBaseCode\BaseFunc.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPE34.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPE45.tmp" with contents
+[
+/nologo /out:"../bin/Debuglib/AccServer/GameBaseCode_d.lib" 
+".\bin\Debug\ACCGameBaseCode\MyDatabase.obj"
+".\bin\Debug\ACCGameBaseCode\MyField.obj"
+".\bin\Debug\ACCGameBaseCode\MyRecord.obj"
+".\bin\Debug\ACCGameBaseCode\MyRecordset.obj"
+".\bin\Debug\ACCGameBaseCode\MsgPacket.obj"
+".\bin\Debug\ACCGameBaseCode\NetStringPacker.obj"
+".\bin\Debug\ACCGameBaseCode\PrcHeap.obj"
+".\bin\Debug\ACCGameBaseCode\BaseFunc.obj"
+]
+Creating command line "link.exe -lib @C:\Users\ADMINI~1\AppData\Local\Temp\RSPE45.tmp"
+<h3>Output Window</h3>
+Compiling...
+MyDatabase.cpp
+MyField.cpp
+MyRecord.cpp
+MyRecordset.cpp
+MsgPacket.cpp
+NetStringPacker.cpp
+PrcHeap.cpp
+BaseFunc.cpp
+Creating library...
+<h3>
+--------------------Configuration: AccountServer - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"..\..\..\..\Bin\Debug\RServer/AccountServer.res" /d "NDEBUG" "F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\AccountServer.rc"" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP1D05.tmp" with contents
+[
+/nologo /MT /W3 /GX /ZI /Od /I "..\..\..\..\mysql\include" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fo"..\..\..\..\Bin\Debug\RServer/" /Fd"..\..\..\..\Bin\Debug\RServer/" /FD /c 
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\AccountServer.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\AccountServerDlg.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\DataInspectManage.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\Global.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\IniFile.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\ListenSocket.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\logfile.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\LoginThread.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\MsgAward.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\MsgBarAccount.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\MsgFee.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\MsgFriend.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\MsgMainServer.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\MsgManager.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\MsgNewPlayerExam.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\MsgQueryFee.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\MsgRelay.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\MsgSchoolMember.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\MsgStopAccount.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\MsgTalk.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\MsgVAS.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\MsgWeaponSoul.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\MyHeap.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\NetStringPacker.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\OnlineTable.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\PointThread.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\RC5_321216.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\RoleManager.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\StdAfx.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\SupplyVASService.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\ThreadBase.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\typedef.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\VASDBManager.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\VASSocket.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\VASStringPacket.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\Account.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\MsgAccount.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\MsgConnect.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\MsgLogin.cpp"
+"F:\StyleDev\Óù½£½­ºþ\all\Server\src\reServer\NetMsg.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP1D05.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP1D06.tmp" with contents
+[
+GameBaseCode_d.lib libmysql.lib winmm.lib /nologo /subsystem:windows /incremental:yes /pdb:"..\..\..\..\Bin\Debug\RServer/Relationserver_d.pdb" /debug /machine:I386 /out:"F:\StyleDev\Óù½£½­ºþ\ServerRelease\RServer\Relationserver_d.exe" /libpath:"bin/Debuglib/AccServer/" /libpath:"..\..\..\..\mysql\lib\debug" 
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\AccountServer.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\AccountServerDlg.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\DataInspectManage.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\Global.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\IniFile.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\ListenSocket.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\logfile.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\LoginThread.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\MsgAward.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\MsgBarAccount.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\MsgFee.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\MsgFriend.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\MsgMainServer.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\MsgManager.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\MsgNewPlayerExam.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\MsgQueryFee.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\MsgRelay.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\MsgSchoolMember.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\MsgStopAccount.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\MsgTalk.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\MsgVAS.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\MsgWeaponSoul.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\MyHeap.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\NetStringPacker.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\OnlineTable.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\PointThread.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\RC5_321216.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\RoleManager.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\StdAfx.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\SupplyVASService.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\ThreadBase.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\typedef.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\VASDBManager.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\VASSocket.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\VASStringPacket.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\Account.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\MsgAccount.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\MsgConnect.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\MsgLogin.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\NetMsg.obj"
+"\StyleDev\Óù½£½­ºþ\Bin\Debug\RServer\AccountServer.res"
+".\bin\Debuglib\AccServer\GameBaseCode_d.lib"
+]
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP1D06.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+AccountServer.cpp
+AccountServerDlg.cpp
+DataInspectManage.cpp
+Global.cpp
+IniFile.cpp
+ListenSocket.cpp
+logfile.cpp
+LoginThread.cpp
+MsgAward.cpp
+MsgBarAccount.cpp
+MsgFee.cpp
+MsgFriend.cpp
+MsgMainServer.cpp
+MsgManager.cpp
+MsgNewPlayerExam.cpp
+MsgQueryFee.cpp
+MsgRelay.cpp
+MsgSchoolMember.cpp
+MsgStopAccount.cpp
+MsgTalk.cpp
+Generating Code...
+Compiling...
+MsgVAS.cpp
+MsgWeaponSoul.cpp
+MyHeap.cpp
+NetStringPacker.cpp
+OnlineTable.cpp
+PointThread.cpp
+f:\styledev\Óù½£½­ºþ\all\server\src\reserver\pointthread.cpp(1729) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+RC5_321216.cpp
+RoleManager.cpp
+StdAfx.cpp
+SupplyVASService.cpp
+ThreadBase.cpp
+typedef.cpp
+VASDBManager.cpp
+VASSocket.cpp
+VASStringPacket.cpp
+Account.cpp
+MsgAccount.cpp
+MsgConnect.cpp
+MsgLogin.cpp
+NetMsg.cpp
+Generating Code...
+Linking...
+LINK : warning LNK4098: defaultlib "LIBCMT" conflicts with use of other libs; use /NODEFAULTLIB:library
+
+
+
+<h3>Results</h3>
+Relationserver_d.exe - 0 error(s), 2 warning(s)
+</pre>
+</body>
+</html>

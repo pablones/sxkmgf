@@ -1,0 +1,40 @@
+// MsgServerPost.h: interface for the CMsgServerPost class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#if !defined(AFX_MSGSERVERPOST_H__F858CACA_9CDD_4AE0_8427_5AB837433E8A__INCLUDED_)
+#define AFX_MSGSERVERPOST_H__F858CACA_9CDD_4AE0_8427_5AB837433E8A__INCLUDED_
+
+#if _MSC_VER > 1000
+#pragma once
+#endif // _MSC_VER > 1000
+
+#include "NetMsg.h"
+#include "NetStringPacker.h"
+
+class CMsgServerPost : public CNetMsg  
+{
+public:
+	CMsgServerPost();
+	virtual ~CMsgServerPost();
+
+public:	
+	BOOL			Create		(int nToIndex,int nMsg,int nLen,char* szMsg);
+	BOOL			Create		(char* pMsgBuf, DWORD dwSize);
+	void			Process		(void* pSocket);
+	
+protected:
+	typedef struct {
+		MSGHEAD_DEFINE
+		int	 nIndexTO;
+		int	 nMsg;
+		int  nLen;
+		char szbuf[1];
+	}MSG_Info;
+	
+	MSG_Info*	m_pInfo;
+private:
+	CNetStringPacker	m_StrPacker;
+};
+
+#endif // !defined(AFX_MSGSERVERPOST_H__F858CACA_9CDD_4AE0_8427_5AB837433E8A__INCLUDED_)

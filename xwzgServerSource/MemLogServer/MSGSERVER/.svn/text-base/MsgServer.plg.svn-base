@@ -1,0 +1,65 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: WorldKernel - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP88A.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /I "." /I ".\NetWork2" /I "..\..\common" /I "..\..\comm" /I "..\..\GameBaseCodeMT" /I "..\..\share" /D "ACCOUNT_ENABLE" /D "WORLD_KERNEL" /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /Fp"..\..\..\..\..\MyBin\Debug\NewAccServer\WorldKernel/WorldKernel.pch" /YX /Fo"..\..\..\..\..\MyBin\Debug\NewAccServer\WorldKernel/" /Fd"..\..\..\..\..\MyBin\Debug\NewAccServer\WorldKernel/" /FD /GZ /c 
+"E:\test\NewAccServer\MSGSERVER\WORLDKERNEL\MsgServerStatus.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP88A.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP88B.tmp" with contents
+[
+/nologo /out:"..\..\..\..\..\MyBin\Debuglib\server\NewAccServer\WorldKernel\WorldKernel_d.lib" 
+\MyBin\Debug\NewAccServer\WorldKernel\AccountManage.obj
+\MyBin\Debug\NewAccServer\WorldKernel\GatewayInfo.obj
+\MyBin\Debug\NewAccServer\WorldKernel\MsgClientConnect.obj
+\MyBin\Debug\NewAccServer\WorldKernel\MsgReconnect.obj
+\MyBin\Debug\NewAccServer\WorldKernel\MsgServerConnect.obj
+\MyBin\Debug\NewAccServer\WorldKernel\MsgServerStatus.obj
+\MyBin\Debug\NewAccServer\WorldKernel\WorldKernel.obj
+\MyBin\Debug\NewAccServer\WorldKernel\NetMsg.obj
+]
+Creating command line "link.exe -lib @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP88B.tmp"
+<h3>Output Window</h3>
+Compiling...
+MsgServerStatus.cpp
+Creating library...
+<h3>
+--------------------Configuration: MsgServer - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP88C.tmp" with contents
+[
+ws2_32.lib libmysql.lib winmm.lib nafxcwd.lib libcmtd.lib /nologo /subsystem:windows /incremental:yes /pdb:"..\..\..\..\MyBin\Debug\NewAccServer/AccServer_d.pdb" /debug /machine:I386 /out:"E:\test\work\acc\AccServer_d.exe" /pdbtype:sept /libpath:"..\..\..\..\mysql\lib\debug" /libpath:"..\..\..\..\luaplus5\lib" 
+\MyBin\Debug\NewAccServer\ClientThread.obj
+\MyBin\Debug\NewAccServer\DlgConfig.obj
+\MyBin\Debug\NewAccServer\MapGroupThread.obj
+\MyBin\Debug\NewAccServer\MsgServer.obj
+\MyBin\Debug\NewAccServer\MsgServerDlg.obj
+\MyBin\Debug\NewAccServer\SocketThread.obj
+\MyBin\Debug\NewAccServer\StdAfx.obj
+\MyBin\Debug\NewAccServer\WorldThread.obj
+\MyBin\Debug\NewAccServer\MsgServer.res
+\MyBin\Debuglib\server\NewAccServer\Comm\Comm_d.lib
+\MyBin\Debuglib\server\NewAccServer\Common\Common_d.lib
+\MyBin\Debuglib\server\NewAccServer\GameBaseCodeMT_d.lib
+\MyBin\Debuglib\server\NewAccServer\ServerSocket\ServerSocket_d.lib
+\MyBin\Debuglib\server\NewAccServer\WorldKernel\WorldKernel_d.lib
+\MyBin\Debuglib\server\NewAccServer\ClientSocket\ClientSocket_d.lib
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP88C.tmp"
+<h3>Output Window</h3>
+Linking...
+
+
+
+<h3>Results</h3>
+AccServer_d.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
